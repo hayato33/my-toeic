@@ -16,6 +16,8 @@ pnpm lint       # ESLint実行
 ## ドキュメント
 
 - `docs/requirements.md` — 要件定義（機能・技術スタック・データモデル・画面構成）
+- `docs/tasks.md` — MVP タスク一覧
+- `docs/husky-lint-staged.md` — コミット前チェック（husky + lint-staged）の設計
 
 ## アーキテクチャ
 
@@ -25,3 +27,18 @@ pnpm lint       # ESLint実行
 - **スタイリング** — Tailwind CSS v4（PostCSS経由）。グローバルスタイルとCSSカスタムプロパティ（ライト/ダークテーマ）は`src/app/globals.css`に記述。
 - **パスエイリアス** — `@/*` は `./src/*` にマップ。
 - **テストフレームワーク** — 未設定。
+
+## ブランチ戦略
+
+**main + 作業ブランチ** のシンプル構成。
+
+- `tasks.md` の各ステップ（0〜7）ごとに作業ブランチを切る
+- ブランチ名の規約: `<カテゴリ>/<ステップ内容>`（例: `setup/env`, `feat/db-schema`, `feat/api-routes`）
+- 各サブタスクごとにコミットを積む
+- 完了後に main へ PR & マージ
+
+```
+main ← setup/env ← (サブタスクごとにコミット)
+     ← feat/db-schema ← (サブタスクごとにコミット)
+     ← feat/api-routes ← ...
+```

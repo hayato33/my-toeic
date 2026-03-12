@@ -43,6 +43,7 @@ pnpm exec husky init
 ```
 
 これにより以下が自動で行われる:
+
 - `.husky/pre-commit` ファイルの生成
 - `package.json` に `prepare` スクリプトの追加（`"prepare": "husky"`）
 
@@ -61,13 +62,8 @@ pnpm exec lint-staged
 ```json
 {
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{json,css,md}": [
-      "prettier --write"
-    ]
+    "*.{ts,tsx}": ["eslint --fix", "prettier --write"],
+    "*.{json,css,md}": ["prettier --write"]
   }
 }
 ```
@@ -92,22 +88,22 @@ pnpm tsc --noEmit
 
 ## よく使うコマンド
 
-| コマンド | 説明 |
-|----------|------|
-| `pnpm exec husky init` | husky を初期化（初回のみ） |
-| `pnpm exec lint-staged` | lint-staged を手動実行 |
+| コマンド                 | 説明                                       |
+| ------------------------ | ------------------------------------------ |
+| `pnpm exec husky init`   | husky を初期化（初回のみ）                 |
+| `pnpm exec lint-staged`  | lint-staged を手動実行                     |
 | `git commit --no-verify` | フックをスキップしてコミット（緊急時のみ） |
 
 ---
 
 ## pre-commit.com との比較（採用理由）
 
-| 観点 | pre-commit.com | husky + lint-staged |
-|------|---------------|-------------------|
-| ランタイム依存 | Python が必要 | **Node.js のみ（pnpm で完結）** |
-| セットアップ | `pnpm install` + 別途 `brew install` | **`pnpm install` だけで完了** |
-| staged files の扱い | フック定義で個別対応 | **lint-staged が自動で処理** |
-| エコシステムの親和性 | 多言語向き | **Node.js プロジェクトのデファクト** |
+| 観点                 | pre-commit.com                       | husky + lint-staged                  |
+| -------------------- | ------------------------------------ | ------------------------------------ |
+| ランタイム依存       | Python が必要                        | **Node.js のみ（pnpm で完結）**      |
+| セットアップ         | `pnpm install` + 別途 `brew install` | **`pnpm install` だけで完了**        |
+| staged files の扱い  | フック定義で個別対応                 | **lint-staged が自動で処理**         |
+| エコシステムの親和性 | 多言語向き                           | **Node.js プロジェクトのデファクト** |
 
 本プロジェクトは FE/BE ともに Next.js（Node.js）で完結するため、husky + lint-staged を採用。
 
@@ -115,10 +111,10 @@ pnpm tsc --noEmit
 
 ## CI との関係
 
-| | husky + lint-staged | CI（GitHub Actions 等） |
-|---|-------------------|------------------------|
-| 実行タイミング | コミット前（ローカル） | プッシュ後（リモート） |
-| 目的 | 問題のあるコミットを手元で防ぐ | チーム全体のコード品質を保証 |
-| セットアップコスト | 低い | 高い |
+|                    | husky + lint-staged            | CI（GitHub Actions 等）      |
+| ------------------ | ------------------------------ | ---------------------------- |
+| 実行タイミング     | コミット前（ローカル）         | プッシュ後（リモート）       |
+| 目的               | 問題のあるコミットを手元で防ぐ | チーム全体のコード品質を保証 |
+| セットアップコスト | 低い                           | 高い                         |
 
 **CI の代替ではなく補完**の関係。CI 導入前の暫定手段としても十分機能する。

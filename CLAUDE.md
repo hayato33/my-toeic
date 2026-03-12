@@ -5,10 +5,15 @@
 ## コマンド
 
 ```bash
-pnpm dev        # 開発サーバー起動
-pnpm build      # 本番ビルド
-pnpm start      # 本番サーバー起動
-pnpm lint       # ESLint実行
+pnpm dev          # 開発サーバー起動
+pnpm build        # 本番ビルド
+pnpm start        # 本番サーバー起動
+pnpm lint         # ESLint実行（Prettier連携あり）
+pnpm format       # Prettier でフォーマット
+pnpm format:check # Prettier フォーマットチェック
+pnpm test         # Vitest 実行
+pnpm test:watch   # Vitest ウォッチモード
+pnpm test:e2e     # Playwright E2E テスト
 ```
 
 > パッケージマネージャーは `pnpm` を使用すること（npm/yarn/bunは不可）。
@@ -26,7 +31,10 @@ pnpm lint       # ESLint実行
 - **`src/app/`** — App Routerのルート。`layout.tsx`がルートレイアウト、`page.tsx`がホームルート。
 - **スタイリング** — Tailwind CSS v4（PostCSS経由）。グローバルスタイルとCSSカスタムプロパティ（ライト/ダークテーマ）は`src/app/globals.css`に記述。
 - **パスエイリアス** — `@/*` は `./src/*` にマップ。
-- **テストフレームワーク** — 未設定。
+- **ユニットテスト** — Vitest（`vitest.config.ts`）。テストファイルは `src/**/*.test.{ts,tsx}`。
+- **E2E テスト** — Playwright（`playwright.config.ts`）。テストファイルは `e2e/` ディレクトリ。
+- **DB** — Prisma + SQLite（`prisma/schema.prisma`）。
+- **コミット前チェック** — husky + lint-staged（ESLint --fix、Prettier --write、tsc --noEmit）。
 
 ## ブランチ戦略
 

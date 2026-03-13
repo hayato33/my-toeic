@@ -2,22 +2,22 @@
 
 ## 0. 環境セットアップ
 
-- [ ] Prisma + SQLite の導入・初期設定
-- [ ] Vitest の導入・設定
-- [ ] Playwright の導入・設定
-- [ ] ESLint の設定整備
-  - [ ] `eslint-plugin-prettier` / `eslint-config-prettier` の導入
-  - [ ] ESLint ルールの確認・調整（Next.js デフォルト + Prettier 連携）
-- [ ] Prettier の導入・設定
-  - [ ] `prettier` のインストール（`pnpm add -D prettier`）
-  - [ ] `.prettierrc` の作成（設定方針の決定）
-  - [ ] `.prettierignore` の作成
-  - [ ] `pnpm format` / `pnpm format:check` スクリプトの追加
-- [ ] husky + lint-staged の導入・設定（→ 詳細は [`docs/husky-lint-staged.md`](./husky-lint-staged.md)）
-  - [ ] `husky` / `lint-staged` のインストール
-  - [ ] `husky init` で Git フックを初期化
-  - [ ] `.husky/pre-commit` の作成
-  - [ ] `lint-staged` の設定（ESLint・Prettier・型チェック）
+- [x] Prisma + SQLite の導入・初期設定
+- [x] Vitest の導入・設定
+- [x] Playwright の導入・設定
+- [x] ESLint の設定整備
+  - [x] `eslint-plugin-prettier` / `eslint-config-prettier` の導入
+  - [x] ESLint ルールの確認・調整（Next.js デフォルト + Prettier 連携）
+- [x] Prettier の導入・設定
+  - [x] `prettier` のインストール（`pnpm add -D prettier`）
+  - [x] `.prettierrc` の作成（設定方針の決定）
+  - [x] `.prettierignore` の作成
+  - [x] `pnpm format` / `pnpm format:check` スクリプトの追加
+- [x] husky + lint-staged の導入・設定（→ 詳細は [`docs/husky-lint-staged.md`](./husky-lint-staged.md)）
+  - [x] `husky` / `lint-staged` のインストール
+  - [x] `husky init` で Git フックを初期化
+  - [x] `.husky/pre-commit` の作成
+  - [x] `lint-staged` の設定（ESLint・Prettier・型チェック）
 
 ---
 

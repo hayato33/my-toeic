@@ -5,10 +5,15 @@
 ## コマンド
 
 ```bash
-pnpm dev        # 開発サーバー起動
-pnpm build      # 本番ビルド
-pnpm start      # 本番サーバー起動
-pnpm lint       # ESLint実行
+pnpm dev          # 開発サーバー起動
+pnpm build        # 本番ビルド
+pnpm start        # 本番サーバー起動
+pnpm lint         # ESLint実行（Prettier連携あり）
+pnpm format       # Prettier でフォーマット
+pnpm format:check # Prettier フォーマットチェック
+pnpm test         # Vitest 実行
+pnpm test:watch   # Vitest ウォッチモード
+pnpm test:e2e     # Playwright E2E テスト
 ```
 
 > パッケージマネージャーは `pnpm` を使用すること（npm/yarn/bunは不可）。
@@ -26,7 +31,10 @@ pnpm lint       # ESLint実行
 - **`src/app/`** — App Routerのルート。`layout.tsx`がルートレイアウト、`page.tsx`がホームルート。
 - **スタイリング** — Tailwind CSS v4（PostCSS経由）。グローバルスタイルとCSSカスタムプロパティ（ライト/ダークテーマ）は`src/app/globals.css`に記述。
 - **パスエイリアス** — `@/*` は `./src/*` にマップ。
-- **テストフレームワーク** — 未設定。
+- **ユニットテスト** — Vitest（`vitest.config.ts`）。テストファイルは `src/**/*.test.{ts,tsx}`。
+- **E2E テスト** — Playwright（`playwright.config.ts`）。テストファイルは `e2e/` ディレクトリ。
+- **DB** — Prisma + SQLite（`prisma/schema.prisma`）。
+- **コミット前チェック** — husky + lint-staged（ESLint --fix、Prettier --write、tsc --noEmit）。
 
 ## ブランチ戦略
 
@@ -35,6 +43,8 @@ pnpm lint       # ESLint実行
 - `tasks.md` の各ステップ（0〜7）ごとに作業ブランチを切る
 - ブランチ名の規約: `<カテゴリ>/<ステップ内容>`（例: `setup/env`, `feat/db-schema`, `feat/api-routes`）
 - 各サブタスクごとにコミットを積む
+- サブタスク完了時は `docs/tasks.md` のチェックボックスを `[x]` に更新する
+- ステップの全サブタスク完了後、`coderabbit --prompt-only` を実行してコードレビューを受け、指摘事項を修正する
 - 完了後に main へ PR & マージ
 
 ```

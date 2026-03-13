@@ -1,8 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Get a free hosted Postgres database in seconds: `npx create-db`
-
 generator client {
   provider = "prisma-client"
   output   = "../src/generated/prisma"
@@ -10,4 +5,50 @@ generator client {
 
 datasource db {
   provider = "sqlite"
+}
+
+enum QuestionType {
+  vocabulary
+  grammar
+}
+
+/// 問題（単語・文法）
+model Question {
+  id          String       @id @default(cuid())
+  type        QuestionType
+  content     String   // 問題文
+  choices     String   // JSON 配列（例: '["apple","banana","cherry","dog"]'）
+  answer      String   // 正解テキスト
+  explanation String   // 解説
+  createdAt   DateTime @default(now())
+
+  userAnswers    UserAnswer[]
+  reviewSchedule ReviewSchedule?
+}
+
+/// 回答履歴
+model UserAnswer {
+  id         String   @id @default(cuid())
+  questionId String
+  isCorrect  Boolean
+  answeredAt DateTime @default(now())
+
+  question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@index([questionId])
+  @@index([answeredAt])
+}
+
+/// 復習スケジュール（SM-2）
+model ReviewSchedule {
+  id           String   @id @default(cuid())
+  questionId   String   @unique
+  nextReviewAt DateTime
+  interval     Int      @default(1) // 日数
+  easeFactor   Float    @default(2.5) // SM-2 の ease factor
+  repetitions  Int      @default(0) // 連続正解回数
+
+  question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@index([nextReviewAt])
 }

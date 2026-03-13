@@ -14,6 +14,7 @@ pnpm format:check # Prettier フォーマットチェック
 pnpm test         # Vitest 実行
 pnpm test:watch   # Vitest ウォッチモード
 pnpm test:e2e     # Playwright E2E テスト
+pnpm db:seed      # シードデータ投入
 ```
 
 > パッケージマネージャーは `pnpm` を使用すること（npm/yarn/bunは不可）。
@@ -33,7 +34,7 @@ pnpm test:e2e     # Playwright E2E テスト
 - **パスエイリアス** — `@/*` は `./src/*` にマップ。
 - **ユニットテスト** — Vitest（`vitest.config.ts`）。テストファイルは `src/**/*.test.{ts,tsx}`。
 - **E2E テスト** — Playwright（`playwright.config.ts`）。テストファイルは `e2e/` ディレクトリ。
-- **DB** — Prisma + SQLite（`prisma/schema.prisma`）。
+- **DB** — Prisma 7 + SQLite（`prisma/schema.prisma`）。アダプターは `@prisma/adapter-better-sqlite3`。Prisma クライアントのシングルトンは `src/lib/prisma.ts`。シードデータは `prisma/seeds/`。
 - **コミット前チェック** — husky + lint-staged（ESLint --fix、Prettier --write、tsc --noEmit）。
 
 ## ブランチ戦略
@@ -44,8 +45,10 @@ pnpm test:e2e     # Playwright E2E テスト
 - ブランチ名の規約: `<カテゴリ>/<ステップ内容>`（例: `setup/env`, `feat/db-schema`, `feat/api-routes`）
 - 各サブタスクごとにコミットを積む
 - サブタスク完了時は `docs/tasks.md` のチェックボックスを `[x]` に更新する
-- ステップの全サブタスク完了後、`coderabbit --prompt-only` を実行してコードレビューを受け、指摘事項を修正する
-- 完了後に main へ PR & マージ
+- ステップの全サブタスク完了後、push → `coderabbit --prompt-only` を実行してコードレビューを受け、指摘事項を修正する
+- CodeRabbit レビュー完了・修正後に PR を作成し、main へマージ
+- PR の body には `@Copilot レビューは日本語でお願いします。` を含めること（GitHub Copilot の自動レビューを日本語で受けるため）
+- `/pr-comments` 実行後は、各コメントの修正要否を自動判断し、必要な修正を実施した上で、対応状況をまとめたコメントを PR に追加すること
 
 ```
 main ← setup/env ← (サブタスクごとにコミット)

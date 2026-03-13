@@ -45,8 +45,8 @@ pnpm db:seed      # シードデータ投入
 - ブランチ名の規約: `<カテゴリ>/<ステップ内容>`（例: `setup/env`, `feat/db-schema`, `feat/api-routes`）
 - 各サブタスクごとにコミットを積む
 - サブタスク完了時は `docs/tasks.md` のチェックボックスを `[x]` に更新する
-- ステップの全サブタスク完了後、`coderabbit --prompt-only` を実行してコードレビューを受け、指摘事項を修正する
-- 完了後に main へ PR & マージ
+- ステップの全サブタスク完了後、push → `coderabbit --prompt-only` を実行してコードレビューを受け、指摘事項を修正する
+- CodeRabbit レビュー完了・修正後に PR を作成し、main へマージ
 
 ```
 main ← setup/env ← (サブタスクごとにコミット)

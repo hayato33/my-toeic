@@ -47,6 +47,7 @@ pnpm db:seed      # シードデータ投入
 - サブタスク完了時は `docs/tasks.md` のチェックボックスを `[x]` に更新する
 - ステップの全サブタスク完了後、push → `coderabbit --prompt-only` を実行してコードレビューを受け、指摘事項を修正する
 - CodeRabbit レビュー完了・修正後に PR を作成し、main へマージ
+- PR の body には `@Copilot レビューは日本語でお願いします。` を含めること（GitHub Copilot の自動レビューを日本語で受けるため）
 
 ```
 main ← setup/env ← (サブタスクごとにコミット)

@@ -47,40 +47,46 @@ export async function GET() {
   });
 }
 
+function toUTCDateString(date: Date): string {
+  return date.toISOString().split('T')[0];
+}
+
 async function calculateStreak(): Promise<number> {
-  // 回答履歴から日付ごとにグループ化し、連続日数を計算
-  const answers = await prisma.userAnswer.findMany({
-    select: { answeredAt: true },
+  // DB 側で日付ごとにグループ化して取得（全行メモリロード回避）
+  const grouped = await prisma.userAnswer.groupBy({
+    by: ['answeredAt'],
+    _count: true,
     orderBy: { answeredAt: 'desc' },
   });
 
-  if (answers.length === 0) return 0;
+  if (grouped.length === 0) return 0;
 
-  const uniqueDates = new Set<string>();
-  for (const a of answers) {
-    const dateStr = a.answeredAt.toISOString().split('T')[0];
-    uniqueDates.add(dateStr);
-  }
+  // UTC ベースでユニーク日付を抽出
+  const uniqueDates = Array.from(
+    new Set(grouped.map((g) => toUTCDateString(g.answeredAt))),
+  )
+    .sort()
+    .reverse();
 
-  const sortedDates = Array.from(uniqueDates).sort().reverse();
-
-  const today = new Date();
-  const todayStr = today.toISOString().split('T')[0];
-  const yesterday = new Date(today);
-  yesterday.setDate(yesterday.getDate() - 1);
-  const yesterdayStr = yesterday.toISOString().split('T')[0];
+  const now = new Date();
+  const todayStr = toUTCDateString(now);
+  const yesterday = new Date(
+    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - 1),
+  );
+  const yesterdayStr = toUTCDateString(yesterday);
 
   // 今日か昨日に学習していなければストリークは0
-  if (sortedDates[0] !== todayStr && sortedDates[0] !== yesterdayStr) {
+  if (uniqueDates[0] !== todayStr && uniqueDates[0] !== yesterdayStr) {
     return 0;
   }
 
   let streak = 1;
-  for (let i = 1; i < sortedDates.length; i++) {
-    const current = new Date(sortedDates[i - 1]);
-    const prev = new Date(sortedDates[i]);
-    const diffMs = current.getTime() - prev.getTime();
-    const diffDays = diffMs / (1000 * 60 * 60 * 24);
+  for (let i = 1; i < uniqueDates.length; i++) {
+    const currentDate = new Date(uniqueDates[i - 1] + 'T00:00:00Z');
+    const prevDate = new Date(uniqueDates[i] + 'T00:00:00Z');
+    const diffDays = Math.round(
+      (currentDate.getTime() - prevDate.getTime()) / (1000 * 60 * 60 * 24),
+    );
 
     if (diffDays === 1) {
       streak++;

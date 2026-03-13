@@ -28,7 +28,9 @@ export async function GET(request: NextRequest) {
 
   const questions = await prisma.question.findMany({
     where,
-    ...(limit ? { take: parseInt(limit, 10) } : {}),
+    ...(limit && Number.isFinite(Number(limit)) && Number(limit) > 0
+      ? { take: Math.floor(Number(limit)) }
+      : {}),
     orderBy: { createdAt: 'asc' },
   });
 

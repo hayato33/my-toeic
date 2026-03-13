@@ -138,4 +138,28 @@ describe('sm2', () => {
       expect(state.interval).toBe(6);
     });
   });
+
+  describe('入力バリデーション', () => {
+    it('quality が範囲外のとき RangeError を投げる', () => {
+      expect(() => sm2(makeInput({ quality: -1 }))).toThrow(RangeError);
+      expect(() => sm2(makeInput({ quality: 6 }))).toThrow(RangeError);
+    });
+
+    it('quality が小数のとき RangeError を投げる', () => {
+      expect(() => sm2(makeInput({ quality: 3.5 }))).toThrow(RangeError);
+    });
+
+    it('repetitions が負のとき RangeError を投げる', () => {
+      expect(() => sm2(makeInput({ repetitions: -1 }))).toThrow(RangeError);
+    });
+
+    it('interval が 0 以下のとき RangeError を投げる', () => {
+      expect(() => sm2(makeInput({ interval: 0 }))).toThrow(RangeError);
+      expect(() => sm2(makeInput({ interval: -1 }))).toThrow(RangeError);
+    });
+
+    it('easeFactor が 0 以下のとき RangeError を投げる', () => {
+      expect(() => sm2(makeInput({ easeFactor: 0 }))).toThrow(RangeError);
+    });
+  });
 });

@@ -23,6 +23,27 @@ const MIN_EASE_FACTOR = 1.3;
 export function sm2(input: SM2Input): SM2Output {
   const { repetitions, interval, easeFactor, quality } = input;
 
+  if (!Number.isInteger(quality) || quality < 0 || quality > 5) {
+    throw new RangeError(
+      `sm2: invalid quality ${quality}, expected integer 0-5`,
+    );
+  }
+  if (!Number.isInteger(repetitions) || repetitions < 0) {
+    throw new RangeError(
+      `sm2: invalid repetitions ${repetitions}, expected non-negative integer`,
+    );
+  }
+  if (!Number.isFinite(interval) || interval <= 0) {
+    throw new RangeError(
+      `sm2: invalid interval ${interval}, expected positive number`,
+    );
+  }
+  if (!Number.isFinite(easeFactor) || easeFactor <= 0) {
+    throw new RangeError(
+      `sm2: invalid easeFactor ${easeFactor}, expected positive number`,
+    );
+  }
+
   // quality が 3 未満 → リセット
   if (quality < 3) {
     return {

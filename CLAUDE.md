@@ -43,6 +43,7 @@ pnpm test:e2e     # Playwright E2E テスト
 - `tasks.md` の各ステップ（0〜7）ごとに作業ブランチを切る
 - ブランチ名の規約: `<カテゴリ>/<ステップ内容>`（例: `setup/env`, `feat/db-schema`, `feat/api-routes`）
 - 各サブタスクごとにコミットを積む
+- サブタスク完了時は `docs/tasks.md` のチェックボックスを `[x]` に更新する
 - 完了後に main へ PR & マージ
 
 ```

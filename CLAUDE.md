@@ -14,6 +14,7 @@ pnpm format:check # Prettier フォーマットチェック
 pnpm test         # Vitest 実行
 pnpm test:watch   # Vitest ウォッチモード
 pnpm test:e2e     # Playwright E2E テスト
+pnpm db:seed      # シードデータ投入
 ```
 
 > パッケージマネージャーは `pnpm` を使用すること（npm/yarn/bunは不可）。
@@ -33,7 +34,7 @@ pnpm test:e2e     # Playwright E2E テスト
 - **パスエイリアス** — `@/*` は `./src/*` にマップ。
 - **ユニットテスト** — Vitest（`vitest.config.ts`）。テストファイルは `src/**/*.test.{ts,tsx}`。
 - **E2E テスト** — Playwright（`playwright.config.ts`）。テストファイルは `e2e/` ディレクトリ。
-- **DB** — Prisma + SQLite（`prisma/schema.prisma`）。
+- **DB** — Prisma 7 + SQLite（`prisma/schema.prisma`）。アダプターは `@prisma/adapter-better-sqlite3`。Prisma クライアントのシングルトンは `src/lib/prisma.ts`。シードデータは `prisma/seeds/`。
 - **コミット前チェック** — husky + lint-staged（ESLint --fix、Prettier --write、tsc --noEmit）。
 
 ## ブランチ戦略

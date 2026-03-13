@@ -26,11 +26,15 @@ export async function GET(request: NextRequest) {
     }
   }
 
+  const take = limit ? Number(limit) : undefined;
+  const validTake =
+    take !== undefined && Number.isFinite(take) && take > 0
+      ? Math.floor(take)
+      : undefined;
+
   const questions = await prisma.question.findMany({
     where,
-    ...(limit && Number.isFinite(Number(limit)) && Number(limit) > 0
-      ? { take: Math.floor(Number(limit)) }
-      : {}),
+    ...(validTake !== undefined ? { take: validTake } : {}),
     orderBy: { createdAt: 'asc' },
   });
 

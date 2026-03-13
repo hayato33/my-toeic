@@ -11,7 +11,7 @@ export async function GET() {
 
   const schedules = await prisma.reviewSchedule.findMany({
     where: {
-      nextReviewAt: { lte: endOfToday },
+      nextReviewAt: { lt: endOfToday },
     },
     include: {
       question: true,

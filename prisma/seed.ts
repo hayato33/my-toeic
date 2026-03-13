@@ -4,9 +4,13 @@ import { PrismaBetterSqlite3 } from '@prisma/adapter-better-sqlite3';
 import { vocabularyQuestions } from './seeds/vocabulary';
 import { grammarQuestions } from './seeds/grammar';
 
-const adapter = new PrismaBetterSqlite3({
-  url: process.env['DATABASE_URL']!,
-});
+const databaseUrl = process.env['DATABASE_URL'];
+if (!databaseUrl) {
+  console.error('DATABASE_URL is not set. Please check your .env file.');
+  process.exit(1);
+}
+
+const adapter = new PrismaBetterSqlite3({ url: databaseUrl });
 const prisma = new PrismaClient({ adapter });
 
 async function main() {

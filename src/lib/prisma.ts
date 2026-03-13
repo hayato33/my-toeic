@@ -6,9 +6,11 @@ const globalForPrisma = globalThis as unknown as {
 };
 
 function createPrismaClient() {
-  const adapter = new PrismaBetterSqlite3({
-    url: process.env['DATABASE_URL']!,
-  });
+  const databaseUrl = process.env['DATABASE_URL'];
+  if (!databaseUrl) {
+    throw new Error('DATABASE_URL is not set.');
+  }
+  const adapter = new PrismaBetterSqlite3({ url: databaseUrl });
   return new PrismaClient({ adapter });
 }
 

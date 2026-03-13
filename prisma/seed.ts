@@ -19,7 +19,13 @@ async function main() {
   for (const q of allQuestions) {
     await prisma.question.upsert({
       where: { id: q.id },
-      update: {},
+      update: {
+        type: q.type,
+        content: q.content,
+        choices: JSON.stringify(q.choices),
+        answer: q.answer,
+        explanation: q.explanation,
+      },
       create: {
         id: q.id,
         type: q.type,

@@ -34,10 +34,10 @@
 
 ## 2. API Routes
 
-- [ ] `GET /api/questions` — 問題一覧取得（タイプ・日付フィルタ対応）
-- [ ] `POST /api/answers` — 回答の記録
-- [ ] `GET /api/review` — 今日の復習キュー取得
-- [ ] `GET /api/dashboard` — ダッシュボード用データ取得（ノルマ・ストリーク）
+- [x] `GET /api/questions` — 問題一覧取得（タイプ・日付フィルタ対応）
+- [x] `POST /api/answers` — 回答の記録
+- [x] `GET /api/review` — 今日の復習キュー取得
+- [x] `GET /api/dashboard` — ダッシュボード用データ取得（ノルマ・ストリーク）
 
 ---
 

@@ -1,5 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
+import { sm2 } from '@/lib/sm2';
+
+const QUALITY_CORRECT = 4;
+const QUALITY_INCORRECT = 1;
 
 export async function POST(request: NextRequest) {
   let body;
@@ -29,6 +33,41 @@ export async function POST(request: NextRequest) {
     data: {
       questionId,
       isCorrect,
+    },
+  });
+
+  // SM-2 で ReviewSchedule を更新
+  const quality = isCorrect ? QUALITY_CORRECT : QUALITY_INCORRECT;
+
+  const existing = await prisma.reviewSchedule.findUnique({
+    where: { questionId },
+  });
+
+  const current = {
+    repetitions: existing?.repetitions ?? 0,
+    interval: existing?.interval ?? 1,
+    easeFactor: existing?.easeFactor ?? 2.5,
+    quality,
+  };
+
+  const result = sm2(current);
+  const nextReviewAt = new Date();
+  nextReviewAt.setDate(nextReviewAt.getDate() + result.interval);
+
+  await prisma.reviewSchedule.upsert({
+    where: { questionId },
+    update: {
+      repetitions: result.repetitions,
+      interval: result.interval,
+      easeFactor: result.easeFactor,
+      nextReviewAt,
+    },
+    create: {
+      questionId,
+      repetitions: result.repetitions,
+      interval: result.interval,
+      easeFactor: result.easeFactor,
+      nextReviewAt,
     },
   });
 

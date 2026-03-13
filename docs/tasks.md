@@ -43,9 +43,9 @@
 
 ## 3. SM-2 アルゴリズム
 
-- [ ] SM-2 ロジックの実装（`interval`・`easeFactor` の更新）
-- [ ] 回答記録時に `ReviewSchedule` を更新する処理
-- [ ] Vitest でユニットテスト
+- [x] SM-2 ロジックの実装（`interval`・`easeFactor` の更新）
+- [x] 回答記録時に `ReviewSchedule` を更新する処理
+- [x] Vitest でユニットテスト
 
 ---
 

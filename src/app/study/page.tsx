@@ -1,18 +1,16 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { QuizSession, Question } from '@/components/QuizSession';
+import type { Question } from '@/types';
+import { QuizSession } from '@/components/QuizSession';
+import { apiFetch } from '@/lib/api-client';
 
 export default function StudyPage() {
   const [questions, setQuestions] = useState<Question[] | null>(null);
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch('/api/questions?limit=10')
-      .then((res) => {
-        if (!res.ok) throw new Error();
-        return res.json();
-      })
+    apiFetch<Question[]>('/api/questions?limit=10')
       .then(setQuestions)
       .catch(() => setError(true));
   }, []);

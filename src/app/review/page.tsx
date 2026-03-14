@@ -1,21 +1,17 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { QuizSession, Question } from '@/components/QuizSession';
+import type { Question } from '@/types';
+import { QuizSession } from '@/components/QuizSession';
+import { apiFetch } from '@/lib/api-client';
 
 export default function ReviewPage() {
   const [questions, setQuestions] = useState<Question[] | null>(null);
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch('/api/review')
-      .then((res) => {
-        if (!res.ok) throw new Error();
-        return res.json();
-      })
-      .then((data) =>
-        setQuestions(data.map((s: { question: Question }) => s.question)),
-      )
+    apiFetch<Array<{ question: Question }>>('/api/review')
+      .then((data) => setQuestions(data.map((s) => s.question)))
       .catch(() => setError(true));
   }, []);
 

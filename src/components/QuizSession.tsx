@@ -2,15 +2,9 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import type { Question } from '@/types';
 
-export type Question = {
-  id: string;
-  type: 'vocabulary' | 'grammar';
-  content: string;
-  choices: string[];
-  answer: string;
-  explanation: string;
-};
+export type { Question };
 
 type StudyState = 'question' | 'result' | 'feedback' | 'complete';
 

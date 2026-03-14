@@ -60,7 +60,7 @@
 | Phase 2  | シードデータの増量（各 100 問→拡充）             |
 | Phase 3  | Part 1〜4（リスニング）対応                      |
 | Phase 3  | 模擬テスト形式（時間制限あり）                   |
-| Phase 3  | ログイン機能（複数デバイス対応時に検討）         |
+| Phase 3  | ~~ログイン機能~~ → Step 10 で前倒し実装済み      |
 
 ---
 
@@ -70,7 +70,9 @@
 | -------------- | ------------------------------ | ---------------------------------------- |
 | フロントエンド | Next.js 16 + React 19          | 既存構成                                 |
 | スタイリング   | Tailwind CSS v4                | 既存構成                                 |
-| DB             | SQLite + Prisma                | 型安全なORM、マイグレーション管理が楽    |
+| DB             | Neon PostgreSQL + Prisma       | サーバーレス対応、Vercel デプロイ可能    |
+| 認証           | Neon Auth（Better Auth）       | Google OAuth、DB と統合管理              |
+| デプロイ       | Vercel                         | Next.js との親和性、自動プレビュー       |
 | API            | Next.js API Routes             | サーバー/クライアント一体で管理しやすい  |
 | AI             | Claude API（claude-haiku-4-5） | 速度・コスト面でフィードバック用途に最適 |
 | 問題データ     | シードデータ（JSON or SQL）    | MVP は単語・文法各 100 問、完成後に増量  |
@@ -92,9 +94,9 @@ ReviewSchedule（復習スケジュール）
   - id, questionId, nextReviewAt, interval, easeFactor（SM-2パラメータ）
 ```
 
-- ログイン機能は現時点では不要
-- ユーザーIDは固定値（`local-user`）でシンプルに運用
-- 将来的にログインを追加する場合は **Google ログイン（Auth.js）** を想定。その際は DB もクラウド（Postgres 等）への移行が必要になる
+- **Neon Auth（Better Auth ベース）** で Google ログインを導入
+- ユーザーごとに回答履歴・復習スケジュールを管理
+- 認証データは Neon PostgreSQL の `neon_auth` スキーマに格納
 
 ---
 
@@ -113,4 +115,4 @@ ReviewSchedule（復習スケジュール）
 
 - **頻度**: 毎日 15〜30 分
 - **デバイス**: PC メイン
-- **データ保存**: SQLite（ローカル）
+- **データ保存**: Neon PostgreSQL（クラウド）

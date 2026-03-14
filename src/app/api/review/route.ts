@@ -1,13 +1,9 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
+import { getEndOfDay } from '@/lib/date-utils';
 
 export async function GET() {
-  const now = new Date();
-  const endOfToday = new Date(
-    now.getFullYear(),
-    now.getMonth(),
-    now.getDate() + 1,
-  );
+  const endOfToday = getEndOfDay();
 
   const schedules = await prisma.reviewSchedule.findMany({
     where: {

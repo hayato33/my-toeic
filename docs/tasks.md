@@ -51,8 +51,8 @@
 
 ## 4. AI フィードバック
 
-- [ ] Claude API（claude-haiku-4-5）の接続設定
-- [ ] `POST /api/feedback` — 解答内容を渡してフィードバック生成
+- [x] Claude API（claude-haiku-4-5）の接続設定
+- [x] `POST /api/feedback` — 解答内容を渡してフィードバック生成
 - [ ] ローディング・エラー状態のハンドリング
 - [ ] フォールバック UI の実装（API エラー時に「再読み込み」「スキップ」を表示、学習セッションは継続）
 

@@ -95,3 +95,13 @@
 - [ ] レスポンシブ対応（PC メイン）
 - [ ] ダークモード対応（`globals.css` のカスタムプロパティ活用）
 - [ ] ビルドエラー・lint エラーの解消
+
+---
+
+## 8. リファクタリング
+
+- [ ] 共通型定義の整理（`src/types.ts` に `Question` / `Dashboard` 型を集約）
+- [ ] 定数の集約（`src/lib/constants.ts` に SM-2 品質値・1日ノルマ値を集約）
+- [ ] 日付ユーティリティの抽出（`src/lib/date-utils.ts` に今日の開始・終了計算を集約）
+- [ ] フィードバックプロンプトの分離（`src/lib/prompts/feedback.ts` に移動）
+- [ ] API フェッチヘルパーの作成（`src/lib/api-client.ts` に fetch ラッパーを集約）

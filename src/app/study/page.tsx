@@ -1,35 +1,18 @@
-'use client';
+export const dynamic = 'force-dynamic';
 
-import { useEffect, useState } from 'react';
-import type { Question } from '@/types';
+import { prisma } from '@/lib/prisma';
 import { QuizSession } from '@/components/QuizSession';
-import { apiFetch } from '@/lib/api-client';
 
-export default function StudyPage() {
-  const [questions, setQuestions] = useState<Question[] | null>(null);
-  const [error, setError] = useState(false);
+export default async function StudyPage() {
+  const raw = await prisma.question.findMany({
+    take: 10,
+    orderBy: { createdAt: 'asc' },
+  });
 
-  useEffect(() => {
-    apiFetch<Question[]>('/api/questions?limit=10')
-      .then(setQuestions)
-      .catch(() => setError(true));
-  }, []);
-
-  if (error) {
-    return (
-      <div className="flex min-h-[50vh] items-center justify-center">
-        データの読み込みに失敗しました
-      </div>
-    );
-  }
-
-  if (!questions) {
-    return (
-      <div className="flex min-h-[50vh] items-center justify-center">
-        読み込み中...
-      </div>
-    );
-  }
+  const questions = raw.map((q) => ({
+    ...q,
+    choices: JSON.parse(q.choices) as string[],
+  }));
 
   return (
     <QuizSession

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useTransition } from 'react';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import type { Question } from '@/types';
@@ -27,7 +27,7 @@ export function QuizSession({
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
   const [feedback, setFeedback] = useState<string | null>(null);
-  const [feedbackLoading, setFeedbackLoading] = useState(false);
+  const [feedbackPending, startFeedbackTransition] = useTransition();
   const [feedbackError, setFeedbackError] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -53,32 +53,31 @@ export function QuizSession({
     }).catch(() => {});
   }
 
-  async function handleFeedback() {
+  function handleFeedback() {
     if (!question || selectedAnswer === null || isCorrect === null) return;
-    setFeedbackLoading(true);
     setFeedbackError(false);
 
-    try {
-      const res = await fetch('/api/feedback', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          questionId: question.id,
-          userAnswer: selectedAnswer,
-          isCorrect,
-        }),
-      });
+    startFeedbackTransition(async () => {
+      try {
+        const res = await fetch('/api/feedback', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            questionId: question.id,
+            userAnswer: selectedAnswer,
+            isCorrect,
+          }),
+        });
 
-      if (!res.ok) throw new Error();
+        if (!res.ok) throw new Error();
 
-      const data = await res.json();
-      setFeedback(data.feedback);
-      setState('feedback');
-    } catch {
-      setFeedbackError(true);
-    } finally {
-      setFeedbackLoading(false);
-    }
+        const data = await res.json();
+        setFeedback(data.feedback);
+        setState('feedback');
+      } catch {
+        setFeedbackError(true);
+      }
+    });
   }
 
   function handleNext() {
@@ -218,15 +217,15 @@ export function QuizSession({
             {!feedbackError && (
               <button
                 onClick={handleFeedback}
-                disabled={feedbackLoading}
+                disabled={feedbackPending}
                 className="rounded-lg border border-zinc-300 px-6 py-3 hover:bg-zinc-100 disabled:opacity-50 dark:border-zinc-700 dark:hover:bg-zinc-800"
               >
-                {feedbackLoading ? '生成中...' : 'フィードバックを見る'}
+                {feedbackPending ? '生成中...' : 'フィードバックを見る'}
               </button>
             )}
             <button
               onClick={handleNext}
-              disabled={feedbackLoading}
+              disabled={feedbackPending}
               className="rounded-lg bg-blue-600 px-6 py-3 text-white hover:bg-blue-700 disabled:opacity-50"
             >
               次の問題へ

@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { sm2 } from '@/lib/sm2';
-
-const QUALITY_CORRECT = 4;
-const QUALITY_INCORRECT = 1;
+import { SM2_QUALITY, DEFAULT_EASE_FACTOR } from '@/lib/constants';
+import { addDays } from '@/lib/date-utils';
 
 export async function POST(request: NextRequest) {
   let body;
@@ -39,7 +38,7 @@ export async function POST(request: NextRequest) {
     });
 
     // SM-2 で ReviewSchedule を更新
-    const quality = isCorrect ? QUALITY_CORRECT : QUALITY_INCORRECT;
+    const quality = isCorrect ? SM2_QUALITY.CORRECT : SM2_QUALITY.INCORRECT;
 
     const existing = await tx.reviewSchedule.findUnique({
       where: { questionId },
@@ -48,13 +47,12 @@ export async function POST(request: NextRequest) {
     const current = {
       repetitions: existing?.repetitions ?? 0,
       interval: existing?.interval ?? 1,
-      easeFactor: existing?.easeFactor ?? 2.5,
+      easeFactor: existing?.easeFactor ?? DEFAULT_EASE_FACTOR,
       quality,
     };
 
     const result = sm2(current);
-    const nextReviewAt = new Date();
-    nextReviewAt.setDate(nextReviewAt.getDate() + result.interval);
+    const nextReviewAt = addDays(new Date(), result.interval);
 
     await tx.reviewSchedule.upsert({
       where: { questionId },

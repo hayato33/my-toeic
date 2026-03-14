@@ -23,6 +23,7 @@ pnpm db:seed      # シードデータ投入
 
 - `docs/requirements.md` — 要件定義（機能・技術スタック・データモデル・画面構成）
 - `docs/tasks.md` — MVP タスク一覧
+- `docs/implementation-plan.md` — Step 4〜7 の詳細実装計画書（ファイルパス・コード例・UI 仕様を含む）
 - `docs/husky-lint-staged.md` — コミット前チェック（husky + lint-staged）の設計
 
 ## アーキテクチャ

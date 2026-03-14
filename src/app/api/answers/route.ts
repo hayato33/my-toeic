@@ -29,46 +29,51 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Question not found.' }, { status: 404 });
   }
 
-  const answer = await prisma.userAnswer.create({
-    data: {
-      questionId,
-      isCorrect,
-    },
-  });
+  // UserAnswer 作成と ReviewSchedule 更新をトランザクションでまとめる
+  const answer = await prisma.$transaction(async (tx) => {
+    const created = await tx.userAnswer.create({
+      data: {
+        questionId,
+        isCorrect,
+      },
+    });
 
-  // SM-2 で ReviewSchedule を更新
-  const quality = isCorrect ? QUALITY_CORRECT : QUALITY_INCORRECT;
+    // SM-2 で ReviewSchedule を更新
+    const quality = isCorrect ? QUALITY_CORRECT : QUALITY_INCORRECT;
 
-  const existing = await prisma.reviewSchedule.findUnique({
-    where: { questionId },
-  });
+    const existing = await tx.reviewSchedule.findUnique({
+      where: { questionId },
+    });
 
-  const current = {
-    repetitions: existing?.repetitions ?? 0,
-    interval: existing?.interval ?? 1,
-    easeFactor: existing?.easeFactor ?? 2.5,
-    quality,
-  };
+    const current = {
+      repetitions: existing?.repetitions ?? 0,
+      interval: existing?.interval ?? 1,
+      easeFactor: existing?.easeFactor ?? 2.5,
+      quality,
+    };
 
-  const result = sm2(current);
-  const nextReviewAt = new Date();
-  nextReviewAt.setDate(nextReviewAt.getDate() + result.interval);
+    const result = sm2(current);
+    const nextReviewAt = new Date();
+    nextReviewAt.setDate(nextReviewAt.getDate() + result.interval);
 
-  await prisma.reviewSchedule.upsert({
-    where: { questionId },
-    update: {
-      repetitions: result.repetitions,
-      interval: result.interval,
-      easeFactor: result.easeFactor,
-      nextReviewAt,
-    },
-    create: {
-      questionId,
-      repetitions: result.repetitions,
-      interval: result.interval,
-      easeFactor: result.easeFactor,
-      nextReviewAt,
-    },
+    await tx.reviewSchedule.upsert({
+      where: { questionId },
+      update: {
+        repetitions: result.repetitions,
+        interval: result.interval,
+        easeFactor: result.easeFactor,
+        nextReviewAt,
+      },
+      create: {
+        questionId,
+        repetitions: result.repetitions,
+        interval: result.interval,
+        easeFactor: result.easeFactor,
+        nextReviewAt,
+      },
+    });
+
+    return created;
   });
 
   return NextResponse.json(answer, { status: 201 });

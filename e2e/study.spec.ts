@@ -27,7 +27,9 @@ test.describe('学習セッション', () => {
     for (let i = 0; i < 10; i++) {
       await page.locator('[data-testid="choice"]').first().waitFor();
       await page.locator('[data-testid="choice"]').first().click();
-      await page.waitForTimeout(300);
+      await expect(
+        page.locator('text=正解').or(page.locator('text=不正解')),
+      ).toBeVisible();
       const nextBtn = page.locator('text=次の問題へ');
       if (await nextBtn.isVisible()) {
         await nextBtn.click();

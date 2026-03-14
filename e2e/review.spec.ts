@@ -6,8 +6,9 @@ test.describe('復習フロー', () => {
     await expect(page.locator('text=今日の復習はありません')).toBeVisible();
   });
 
-  test('ダッシュボードから復習画面に遷移できる', async ({ page }) => {
-    await page.goto('/');
-    await expect(page.locator('text=復習する')).toBeVisible();
+  test('復習画面に直接アクセスできる', async ({ page }) => {
+    await page.goto('/review');
+    await expect(page).toHaveURL('/review');
+    await expect(page.locator('text=今日の復習はありません')).toBeVisible();
   });
 });

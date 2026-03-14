@@ -117,7 +117,7 @@ export function QuizSession({
   if (state === 'complete') {
     return (
       <main>
-        <div className="mx-auto max-w-lg">
+        <div className="mx-auto max-w-lg py-8">
           <div className="flex flex-col items-center gap-6 py-16 text-center">
             <p className="text-5xl">🎉</p>
             <h1 className="text-2xl font-bold">{completeTitle}</h1>
@@ -144,7 +144,7 @@ export function QuizSession({
 
   return (
     <main>
-      <div className="mx-auto max-w-lg">
+      <div className="mx-auto max-w-lg py-8">
         <p className="mb-4 text-sm text-zinc-500 dark:text-zinc-400">
           問題 {currentIndex + 1} / {questions.length}
         </p>

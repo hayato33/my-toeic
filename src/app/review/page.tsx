@@ -5,14 +5,27 @@ import { QuizSession, Question } from '@/components/QuizSession';
 
 export default function ReviewPage() {
   const [questions, setQuestions] = useState<Question[] | null>(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     fetch('/api/review')
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error();
+        return res.json();
+      })
       .then((data) =>
         setQuestions(data.map((s: { question: Question }) => s.question)),
-      );
+      )
+      .catch(() => setError(true));
   }, []);
+
+  if (error) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-background text-foreground">
+        データの読み込みに失敗しました
+      </div>
+    );
+  }
 
   if (!questions) {
     return (

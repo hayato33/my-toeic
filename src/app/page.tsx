@@ -12,12 +12,25 @@ type Dashboard = {
 
 export default function Home() {
   const [dashboard, setDashboard] = useState<Dashboard | null>(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     fetch('/api/dashboard')
-      .then((res) => res.json())
-      .then(setDashboard);
+      .then((res) => {
+        if (!res.ok) throw new Error();
+        return res.json();
+      })
+      .then(setDashboard)
+      .catch(() => setError(true));
   }, []);
+
+  if (error) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-background text-foreground">
+        データの読み込みに失敗しました
+      </div>
+    );
+  }
 
   if (!dashboard) {
     return (

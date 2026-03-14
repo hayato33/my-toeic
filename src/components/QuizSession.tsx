@@ -35,25 +35,37 @@ export function QuizSession({
   const [feedbackLoading, setFeedbackLoading] = useState(false);
   const [feedbackError, setFeedbackError] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const question = questions[currentIndex];
 
   async function handleAnswer(choice: string) {
+    if (isSubmitting || state !== 'question' || !question) return;
+    setIsSubmitting(true);
+
     const correct = choice === question.answer;
     setSelectedAnswer(choice);
     setIsCorrect(correct);
     if (correct) setCorrectCount((c) => c + 1);
 
-    await fetch('/api/answers', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ questionId: question.id, isCorrect: correct }),
-    });
+    try {
+      const res = await fetch('/api/answers', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ questionId: question.id, isCorrect: correct }),
+      });
+      if (!res.ok) throw new Error();
+    } catch {
+      // 記録失敗しても学習は継続する
+    } finally {
+      setIsSubmitting(false);
+    }
 
     setState('result');
   }
 
   async function handleFeedback() {
+    if (!question) return;
     setFeedbackLoading(true);
     setFeedbackError(false);
 
@@ -97,6 +109,8 @@ export function QuizSession({
     if (state === 'question') {
       return 'border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800';
     }
+    if (!question)
+      return 'border border-zinc-200 dark:border-zinc-700 opacity-50';
     if (choice === question.answer) {
       return 'border border-green-500 bg-green-100 dark:bg-green-900/30';
     }
@@ -132,6 +146,8 @@ export function QuizSession({
     );
   }
 
+  if (!question) return null;
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       <div className="mx-auto max-w-lg px-4 py-8">
@@ -144,11 +160,12 @@ export function QuizSession({
         </div>
 
         <div className="mb-6 flex flex-col gap-2">
-          {question.choices.map((choice) => (
+          {question.choices.map((choice, idx) => (
             <button
-              key={choice}
+              key={`${choice}-${idx}`}
               data-testid="choice"
-              onClick={() => state === 'question' && handleAnswer(choice)}
+              onClick={() => handleAnswer(choice)}
+              disabled={isSubmitting || state !== 'question'}
               className={`rounded-lg px-4 py-3 text-left transition-colors ${getChoiceClass(choice)}`}
             >
               {choice}

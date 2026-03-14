@@ -24,6 +24,7 @@ pnpm db:seed      # シードデータ投入
 - `docs/requirements.md` — 要件定義（機能・技術スタック・データモデル・画面構成）
 - `docs/tasks.md` — MVP タスク一覧
 - `docs/implementation-plan.md` — Step 4〜7 の詳細実装計画書（ファイルパス・コード例・UI 仕様を含む）
+- `docs/neon-migration-plan.md` — Neon PostgreSQL 移行 & Neon Auth 導入の実装計画（Step 9〜11）
 - `docs/husky-lint-staged.md` — コミット前チェック（husky + lint-staged）の設計
 
 ## アーキテクチャ
@@ -50,6 +51,7 @@ pnpm db:seed      # シードデータ投入
 - CodeRabbit ローカルレビュー完了・修正後に PR を作成する
 - PR 作成後は GitHub 上でも CodeRabbit が自動レビューを行う。CodeRabbit のレビューが完了したことを確認してから `/pr-comments` を実行し、レビュー内容を確認・対応すること
 - `/pr-comments` 実行後は、各コメントの修正要否を自動判断し、必要な修正を実施した上で、対応状況をまとめたコメントを PR に追加すること。対応完了後は GraphQL API (`resolveReviewThread`) で各レビュースレッドを resolve すること
+- CodeRabbit レビューで指摘が 0 件、または全指摘への対応・修正が完了した場合は、そのまま main にマージしてよい
 - レビューは CodeRabbit（ローカル CLI + GitHub クラウド）のみを使用する。GitHub Copilot のレビューは使用しない（PR body に `@Copilot` を含めないこと）
 
 ```

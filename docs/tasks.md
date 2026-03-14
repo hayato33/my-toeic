@@ -107,3 +107,47 @@
 - [x] API フェッチヘルパーの作成（`src/lib/api-client.ts` に fetch ラッパーを集約）
 - [x] calculateStreak の抽出（`src/lib/streak.ts` に分離）
 - [x] 日付ユーティリティのテスト追加（`src/lib/date-utils.test.ts`）
+
+---
+
+## 9. Neon PostgreSQL 移行
+
+> 詳細: [`docs/neon-migration-plan.md`](./neon-migration-plan.md)
+
+- [ ] Neon プロジェクトのセットアップ（Console でプロジェクト作成、接続文字列取得）
+- [ ] Prisma スキーマの PostgreSQL 対応（provider 変更、userId カラム追加）
+- [ ] パッケージの入れ替え（better-sqlite3 → @prisma/adapter-neon）
+- [ ] Prisma クライアントの更新（`src/lib/prisma.ts`）
+- [ ] マイグレーション実行・Prisma クライアント再生成
+- [ ] シードデータの投入確認
+- [ ] 既存テストの修正・通過確認
+
+---
+
+## 10. Neon Auth 導入
+
+> 詳細: [`docs/neon-migration-plan.md`](./neon-migration-plan.md)
+
+- [ ] Neon Auth の有効化・Google OAuth 設定
+- [ ] Better Auth パッケージの導入・設定（`src/lib/auth.ts`）
+- [ ] Auth API ルートの作成（`/api/auth/[...all]`）
+- [ ] Auth クライアントの作成（`src/lib/auth-client.ts`）
+- [ ] ログイン画面の作成（`/login`）
+- [ ] 認証ミドルウェアの作成（`src/middleware.ts`）
+- [ ] API ルートの認証対応（全 API に userId フィルタ追加）
+- [ ] Server Component の認証対応
+- [ ] ヘッダーにユーザー情報・ログアウト追加
+- [ ] テスト修正・通過確認
+
+---
+
+## 11. Vercel デプロイ
+
+> 詳細: [`docs/neon-migration-plan.md`](./neon-migration-plan.md)
+
+- [ ] Vercel プロジェクト作成・GitHub 連携
+- [ ] 環境変数の設定
+- [ ] Prisma のビルド設定（postinstall）
+- [ ] Neon Vercel Integration の有効化
+- [ ] `.env.example` の更新
+- [ ] デプロイ動作確認

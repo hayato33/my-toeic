@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { QuestionType } from '@/generated/prisma/client';
+import { addDays } from '@/lib/date-utils';
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
@@ -20,8 +21,7 @@ export async function GET(request: NextRequest) {
   if (date) {
     const start = new Date(date);
     if (!isNaN(start.getTime())) {
-      const end = new Date(start);
-      end.setDate(end.getDate() + 1);
+      const end = addDays(start, 1);
       where.createdAt = { gte: start, lt: end };
     }
   }

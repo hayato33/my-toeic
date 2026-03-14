@@ -100,8 +100,10 @@
 
 ## 8. リファクタリング
 
-- [ ] 共通型定義の整理（`src/types.ts` に `Question` / `Dashboard` 型を集約）
-- [ ] 定数の集約（`src/lib/constants.ts` に SM-2 品質値・1日ノルマ値を集約）
-- [ ] 日付ユーティリティの抽出（`src/lib/date-utils.ts` に今日の開始・終了計算を集約）
-- [ ] フィードバックプロンプトの分離（`src/lib/prompts/feedback.ts` に移動）
-- [ ] API フェッチヘルパーの作成（`src/lib/api-client.ts` に fetch ラッパーを集約）
+- [x] 共通型定義の整理（`src/types.ts` に `Question` / `Dashboard` 型を集約）
+- [x] 定数の集約（`src/lib/constants.ts` に SM-2 品質値・1日ノルマ値を集約）
+- [x] 日付ユーティリティの抽出（`src/lib/date-utils.ts` に今日の開始・終了計算を集約）
+- [x] フィードバックプロンプトの分離（`src/lib/prompts/feedback.ts` に移動）
+- [x] API フェッチヘルパーの作成（`src/lib/api-client.ts` に fetch ラッパーを集約）
+- [x] calculateStreak の抽出（`src/lib/streak.ts` に分離）
+- [x] 日付ユーティリティのテスト追加（`src/lib/date-utils.test.ts`）

@@ -2,24 +2,15 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-
-type Dashboard = {
-  reviewCount: number;
-  newQuotaRemaining: number;
-  answeredTodayCount: number;
-  streak: number;
-};
+import type { Dashboard } from '@/types';
+import { apiFetch } from '@/lib/api-client';
 
 export default function Home() {
   const [dashboard, setDashboard] = useState<Dashboard | null>(null);
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch('/api/dashboard')
-      .then((res) => {
-        if (!res.ok) throw new Error();
-        return res.json();
-      })
+    apiFetch<Dashboard>('/api/dashboard')
       .then(setDashboard)
       .catch(() => setError(true));
   }, []);

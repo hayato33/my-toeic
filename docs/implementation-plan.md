@@ -1002,7 +1002,7 @@ export type Dashboard = {
 
 各ファイルのインポートを `@/types` に変更する。
 
-### 8-2. 定数の集約
+### 8-2. 定数の集約（`DEFAULT_EASE_FACTOR` 含む）
 
 **ファイル:** `src/lib/constants.ts`（新規作成）
 
@@ -1015,6 +1015,8 @@ export const SM2_QUALITY = {
 export const DAILY_QUOTA = {
   NEW_QUESTIONS: 10,
 } as const;
+
+export const DEFAULT_EASE_FACTOR = 2.5;
 ```
 
 - `src/app/api/answers/route.ts` の `QUALITY_CORRECT` / `QUALITY_INCORRECT` を置き換え
@@ -1077,7 +1079,29 @@ export async function apiFetch<T>(
 - `src/app/study/page.tsx` の fetch 処理を置き換え
 - `src/app/review/page.tsx` の fetch 処理を置き換え
 
-### 8-6. docs/tasks.md の更新
+### 8-6. `calculateStreak` の抽出
+
+**ファイル:** `src/lib/streak.ts`（新規作成）
+
+`dashboard/route.ts` の `calculateStreak` 関数（約40行）をそのまま抽出し、`src/lib/streak.ts` に分離する。
+
+```typescript
+import { prisma } from '@/lib/prisma';
+
+export async function calculateStreak(): Promise<number> {
+  // dashboard/route.ts から移動
+}
+```
+
+`src/app/api/dashboard/route.ts` では `import { calculateStreak } from '@/lib/streak'` に変更する。
+
+### 8-7. 日付ユーティリティのテスト
+
+**ファイル:** `src/lib/date-utils.test.ts`（新規作成）
+
+`getStartOfDay`, `getEndOfDay`, `addDays` の 3 関数に対して境界値含む 8 ケース程度のテストを作成する。
+
+### 8-8. docs/tasks.md の更新
 
 Step 8 の各チェックボックスを `[x]` に更新。
 

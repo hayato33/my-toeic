@@ -42,7 +42,7 @@ SQLite → Neon PostgreSQL への DB 移行と、Neon Auth（Google 認証）の
 
 ```
 # Neon PostgreSQL
-DATABASE_URL="postgresql://user:pass@ep-xxx.ap-northeast-1.aws.neon.tech/my-toeic?sslmode=require"
+DATABASE_URL="postgresql://user:pass@ep-xxx-pooler.ap-northeast-1.aws.neon.tech/my-toeic?sslmode=require"
 
 # Prisma マイグレーション用（direct connection、pooling なし）
 DIRECT_DATABASE_URL="postgresql://user:pass@ep-xxx.ap-northeast-1.aws.neon.tech/my-toeic?sslmode=require"
@@ -90,7 +90,7 @@ model UserAnswer {
   questionId String
   isCorrect  Boolean
   answeredAt DateTime @default(now())
-  userId     String   // 追加: 認証ユーザー ID
+  userId     String   @default("local-user") // Step 9 ではデフォルト値、Step 10 で認証ユーザー ID に切替
 
   question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
 
@@ -106,7 +106,7 @@ model ReviewSchedule {
   interval     Int      @default(1)
   easeFactor   Float    @default(2.5)
   repetitions  Int      @default(0)
-  userId       String   // 追加: 認証ユーザー ID
+  userId       String   @default("local-user") // Step 9 ではデフォルト値、Step 10 で認証ユーザー ID に切替
 
   question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
 
@@ -120,8 +120,76 @@ model ReviewSchedule {
 
 - `provider`: `sqlite` → `postgresql`
 - `directUrl` の追加（マイグレーション用）
-- `UserAnswer`・`ReviewSchedule` に `userId` カラムを追加
+- `UserAnswer`・`ReviewSchedule` に `userId` カラムを追加（`@default("local-user")` で既存動作を維持）
 - `ReviewSchedule` のユニーク制約を `questionId` 単体 → `[questionId, userId]` 複合に変更
+
+> **注**: Better Auth が必要とするモデル（`User`, `Session`, `Account`, `Verification`）は Step 10 のマイグレーションで追加する。Step 9 では既存のアプリモデルのみを PostgreSQL に移行する。
+
+### Better Auth 用モデル（Step 10 で追加）
+
+Step 10 の `prisma migrate dev --name add-auth-models` で以下のモデルを追加する:
+
+```prisma
+model User {
+  id            String    @id
+  name          String
+  email         String    @unique
+  emailVerified Boolean   @default(false)
+  image         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  sessions Session[]
+  accounts Account[]
+}
+
+model Session {
+  id        String   @id
+  userId    String
+  token     String   @unique
+  expiresAt DateTime
+  ipAddress String?
+  userAgent String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model Account {
+  id                String  @id
+  userId            String
+  accountId         String
+  providerId        String
+  accessToken       String?
+  refreshToken      String?
+  accessTokenExpiresAt  DateTime?
+  refreshTokenExpiresAt DateTime?
+  scope             String?
+  idToken           String?
+  password          String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([providerId, accountId])
+  @@index([userId])
+}
+
+model Verification {
+  id         String   @id
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([identifier, value])
+}
+```
 
 ### 9-3. パッケージの入れ替え
 
@@ -316,12 +384,20 @@ export default function LoginPage() {
 ```typescript
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import { auth } from '@/lib/auth';
 
-export function middleware(request: NextRequest) {
-  const sessionToken = request.cookies.get('better-auth.session_token');
+export async function middleware(request: NextRequest) {
+  // Better Auth のサーバーサイドセッション検証
+  const session = await auth.api.getSession({
+    headers: request.headers,
+  });
 
-  // 未認証ユーザーをログインページにリダイレクト
-  if (!sessionToken) {
+  // 未認証またはセッション無効/期限切れの場合はログインへリダイレクト
+  if (!session) {
+    // API ルートには 401 を返す
+    if (request.nextUrl.pathname.startsWith('/api/')) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
     return NextResponse.redirect(new URL('/login', request.url));
   }
 
@@ -339,6 +415,8 @@ export const config = {
   ],
 };
 ```
+
+> **注**: Edge Runtime で `auth.api.getSession` が動作しない場合は、ミドルウェアでは Cookie の存在チェックのみ行い、実際のセッション検証は各 Server Component / API ルート内で実施する方式にフォールバックする。
 
 ### 10-8. API ルートの認証対応
 
@@ -470,8 +548,9 @@ export default async function Page() {
 **ファイル:** `.env.example`
 
 ```
-# Neon PostgreSQL
-DATABASE_URL="postgresql://user:pass@ep-xxx.ap-northeast-1.aws.neon.tech/my-toeic?sslmode=require"
+# Neon PostgreSQL（pooled endpoint for application）
+DATABASE_URL="postgresql://user:pass@ep-xxx-pooler.ap-northeast-1.aws.neon.tech/my-toeic?sslmode=require"
+# Neon PostgreSQL（direct endpoint for migrations）
 DIRECT_DATABASE_URL="postgresql://user:pass@ep-xxx.ap-northeast-1.aws.neon.tech/my-toeic?sslmode=require"
 
 # Claude API
@@ -544,5 +623,6 @@ BETTER_AUTH_URL=http://localhost:3000
 ### 段階的移行
 
 - Step 9（DB 移行）と Step 10（認証）は独立して進められる
-- Step 9 完了時点では `userId` にデフォルト値（`'local-user'`）を設定し、既存の動作を維持
-- Step 10 で実際の認証ユーザー ID に切り替える
+- **userId の移行戦略**: Step 9 では `userId` に `@default("local-user")` を設定し、既存コードの変更を最小限にする。API ルートや `calculateStreak` は `userId = 'local-user'` 固定で動作する
+- Step 10 で Better Auth モデルを追加するマイグレーションを実行し、`@default` を削除。既存レコードの `userId` は `'local-user'` のまま残る（新規ユーザーのデータとは分離される）
+- Step 10 完了後、API ルート・Server Component でセッションから取得した `userId` を使用するように切り替える

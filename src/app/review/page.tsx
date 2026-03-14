@@ -21,7 +21,7 @@ export default function ReviewPage() {
 
   if (error) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-background text-foreground">
+      <div className="flex min-h-[50vh] items-center justify-center">
         データの読み込みに失敗しました
       </div>
     );
@@ -29,7 +29,7 @@ export default function ReviewPage() {
 
   if (!questions) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-background text-foreground">
+      <div className="flex min-h-[50vh] items-center justify-center">
         読み込み中...
       </div>
     );

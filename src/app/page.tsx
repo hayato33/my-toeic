@@ -26,7 +26,7 @@ export default function Home() {
 
   if (error) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-background text-foreground">
+      <div className="flex min-h-[50vh] items-center justify-center">
         データの読み込みに失敗しました
       </div>
     );
@@ -34,16 +34,16 @@ export default function Home() {
 
   if (!dashboard) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-background text-foreground">
+      <div className="flex min-h-[50vh] items-center justify-center">
         読み込み中...
       </div>
     );
   }
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      <div className="mx-auto max-w-lg px-4 py-8">
-        <h1 className="mb-8 text-3xl font-bold">My TOEIC</h1>
+    <main>
+      <div className="mx-auto max-w-lg">
+        <h1 className="mb-8 text-3xl font-bold">ダッシュボード</h1>
 
         <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div className="rounded-xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">

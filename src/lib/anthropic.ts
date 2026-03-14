@@ -4,16 +4,19 @@ const globalForAnthropic = globalThis as unknown as {
   anthropic: Anthropic | undefined;
 };
 
-function createClient() {
+function getClient(): Anthropic {
+  if (globalForAnthropic.anthropic) {
+    return globalForAnthropic.anthropic;
+  }
   const apiKey = process.env['ANTHROPIC_API_KEY'];
   if (!apiKey) {
     throw new Error('ANTHROPIC_API_KEY is not set.');
   }
-  return new Anthropic({ apiKey });
+  const client = new Anthropic({ apiKey });
+  if (process.env.NODE_ENV !== 'production') {
+    globalForAnthropic.anthropic = client;
+  }
+  return client;
 }
 
-export const anthropic = globalForAnthropic.anthropic ?? createClient();
-
-if (process.env.NODE_ENV !== 'production') {
-  globalForAnthropic.anthropic = anthropic;
-}
+export { getClient as getAnthropicClient };

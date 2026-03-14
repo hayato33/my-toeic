@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
-import { anthropic } from '@/lib/anthropic';
+import { getAnthropicClient } from '@/lib/anthropic';
 
 export async function POST(request: NextRequest) {
   let body: unknown;
@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const message = await anthropic.messages.create({
+    const message = await getAnthropicClient().messages.create({
       model: 'claude-haiku-4-5-20251001',
       max_tokens: 500,
       messages: [
@@ -73,13 +73,11 @@ ${isCorrect ? '- なぜこれが正解なのか簡単な補足\n- 関連する�
       ],
     });
 
-    const firstContent = message.content[0];
-    const feedback =
-      Array.isArray(message.content) &&
-      message.content.length > 0 &&
-      firstContent.type === 'text'
-        ? firstContent.text
-        : '';
+    const firstContent =
+      Array.isArray(message.content) && message.content.length > 0
+        ? message.content[0]
+        : null;
+    const feedback = firstContent?.type === 'text' ? firstContent.text : '';
 
     return NextResponse.json({ feedback });
   } catch {

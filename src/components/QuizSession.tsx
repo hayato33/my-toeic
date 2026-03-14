@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import ReactMarkdown from 'react-markdown';
 import type { Question } from '@/types';
 
 export type { Question };
@@ -185,9 +186,9 @@ export function QuizSession({
                 <p className="mb-1 text-sm font-medium text-zinc-700 dark:text-zinc-300">
                   AI フィードバック
                 </p>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  {feedback}
-                </p>
+                <div className="prose prose-sm prose-zinc dark:prose-invert max-w-none text-sm text-zinc-600 dark:text-zinc-400">
+                  <ReactMarkdown>{feedback}</ReactMarkdown>
+                </div>
               </div>
             )}
           </div>

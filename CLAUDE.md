@@ -48,6 +48,7 @@ pnpm db:seed      # シードデータ投入
 - サブタスク完了時は `docs/tasks.md` のチェックボックスを `[x]` に更新する
 - ステップの全サブタスク完了後、push → `coderabbit --prompt-only` を実行してコードレビューを受け、指摘事項を修正する
 - CodeRabbit レビュー完了・修正後に PR を作成し、main へマージ
+- PR 作成後は GitHub 上でも CodeRabbit が自動レビューを行う。`/pr-comments` で取得してレビュー内容を確認・対応すること
 - PR の body には `@Copilot レビューは日本語でお願いします。` を含めること（GitHub Copilot の自動レビューを日本語で受けるため）
 - `/pr-comments` 実行後は、各コメントの修正要否を自動判断し、必要な修正を実施した上で、対応状況をまとめたコメントを PR に追加すること。対応完了後は GraphQL API (`resolveReviewThread`) で各レビュースレッドを resolve すること
 

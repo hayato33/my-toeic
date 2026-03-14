@@ -50,6 +50,13 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  if (question.type !== 'vocabulary' && question.type !== 'grammar') {
+    return NextResponse.json(
+      { error: '不正な問題タイプです。' },
+      { status: 500 },
+    );
+  }
+
   try {
     const message = await getAnthropicClient().messages.create({
       model: 'claude-haiku-4-5-20251001',
@@ -58,7 +65,7 @@ export async function POST(request: NextRequest) {
         {
           role: 'user',
           content: buildFeedbackPrompt({
-            type: question.type as 'vocabulary' | 'grammar',
+            type: question.type,
             content: question.content,
             choices,
             answer: question.answer,

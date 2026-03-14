@@ -12,11 +12,16 @@ export async function calculateStreak(): Promise<number> {
   if (rows.length === 0) return 0;
 
   const now = new Date();
-  const todayStr = now.toISOString().split('T')[0];
-  const yesterday = new Date(
+  const todayStr = new Date(
+    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()),
+  )
+    .toISOString()
+    .split('T')[0];
+  const yesterdayStr = new Date(
     Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - 1),
-  );
-  const yesterdayStr = yesterday.toISOString().split('T')[0];
+  )
+    .toISOString()
+    .split('T')[0];
 
   // 今日か昨日に学習していなければストリークは0
   if (

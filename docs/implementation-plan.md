@@ -972,6 +972,117 @@ Step 7 の各チェックボックスを `[x]` に更新。
 
 ---
 
+## Step 8: リファクタリング
+
+### ブランチ名: `refactor/cleanup`
+
+### 8-1. 共通型定義の整理
+
+**ファイル:** `src/types.ts`（新規作成）
+
+`Question` 型を `QuizSession.tsx` から移動し、`Dashboard` 型を `page.tsx` から移動して集約する。
+
+```typescript
+export type Question = {
+  id: string;
+  type: 'vocabulary' | 'grammar';
+  content: string;
+  choices: string[];
+  answer: string;
+  explanation: string;
+};
+
+export type Dashboard = {
+  reviewCount: number;
+  newQuotaRemaining: number;
+  answeredTodayCount: number;
+  streak: number;
+};
+```
+
+各ファイルのインポートを `@/types` に変更する。
+
+### 8-2. 定数の集約
+
+**ファイル:** `src/lib/constants.ts`（新規作成）
+
+```typescript
+export const SM2_QUALITY = {
+  CORRECT: 4,
+  INCORRECT: 1,
+} as const;
+
+export const DAILY_QUOTA = {
+  NEW_QUESTIONS: 10,
+} as const;
+```
+
+- `src/app/api/answers/route.ts` の `QUALITY_CORRECT` / `QUALITY_INCORRECT` を置き換え
+- `src/app/api/dashboard/route.ts` の `NEW_QUESTIONS_PER_DAY` を置き換え
+
+### 8-3. 日付ユーティリティの抽出
+
+**ファイル:** `src/lib/date-utils.ts`（新規作成）
+
+```typescript
+export function getStartOfDay(date = new Date()): Date {
+  return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+}
+
+export function getEndOfDay(date = new Date()): Date {
+  return new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
+}
+```
+
+- `src/app/api/dashboard/route.ts` の日付計算を置き換え
+- `src/app/api/review/route.ts` の日付計算を置き換え
+
+### 8-4. フィードバックプロンプトの分離
+
+**ファイル:** `src/lib/prompts/feedback.ts`（新規作成）
+
+```typescript
+type FeedbackPromptParams = {
+  type: 'vocabulary' | 'grammar';
+  content: string;
+  choices: string[];
+  answer: string;
+  userAnswer: string;
+  isCorrect: boolean;
+};
+
+export function buildFeedbackPrompt(params: FeedbackPromptParams): string {
+  // feedback/route.ts のプロンプト文字列をここに移動
+}
+```
+
+`src/app/api/feedback/route.ts` でインポートして使用する。
+
+### 8-5. API フェッチヘルパーの作成
+
+**ファイル:** `src/lib/api-client.ts`（新規作成）
+
+```typescript
+export async function apiFetch<T>(
+  url: string,
+  options?: RequestInit,
+): Promise<T> {
+  const res = await fetch(url, options);
+  if (!res.ok) throw new Error(`API error: ${res.status}`);
+  return res.json() as Promise<T>;
+}
+```
+
+- `src/app/page.tsx` の fetch 処理を置き換え
+- `src/app/study/page.tsx` の fetch 処理を置き換え
+- `src/app/review/page.tsx` の fetch 処理を置き換え
+
+### 8-6. docs/tasks.md の更新
+
+Step 8 の各チェックボックスを `[x]` に更新。
+
+---
+
 ## 全体のワークフロー（各ステップ共通）
 
 1. `main` ブランチから作業ブランチを切る

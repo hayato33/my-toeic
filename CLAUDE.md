@@ -46,11 +46,11 @@ pnpm db:seed      # シードデータ投入
 - ブランチ名の規約: `<カテゴリ>/<ステップ内容>`（例: `setup/env`, `feat/db-schema`, `feat/api-routes`）
 - 各サブタスクごとにコミットを積む
 - サブタスク完了時は `docs/tasks.md` のチェックボックスを `[x]` に更新する
-- ステップの全サブタスク完了後、push → `coderabbit --prompt-only` を実行してコードレビューを受け、指摘事項を修正する
-- CodeRabbit レビュー完了・修正後に PR を作成し、main へマージ
-- PR 作成後は GitHub 上でも CodeRabbit が自動レビューを行う。`/pr-comments` で取得してレビュー内容を確認・対応すること
-- PR の body には `@Copilot レビューは日本語でお願いします。` を含めること（GitHub Copilot の自動レビューを日本語で受けるため）
+- ステップの全サブタスク完了後、push → `coderabbit --prompt-only` を実行してローカルでコードレビューを受け、指摘事項を修正する
+- CodeRabbit ローカルレビュー完了・修正後に PR を作成する
+- PR 作成後は GitHub 上でも CodeRabbit が自動レビューを行う。CodeRabbit のレビューが完了したことを確認してから `/pr-comments` を実行し、レビュー内容を確認・対応すること
 - `/pr-comments` 実行後は、各コメントの修正要否を自動判断し、必要な修正を実施した上で、対応状況をまとめたコメントを PR に追加すること。対応完了後は GraphQL API (`resolveReviewThread`) で各レビュースレッドを resolve すること
+- レビューは CodeRabbit（ローカル CLI + GitHub クラウド）のみを使用する。GitHub Copilot のレビューは使用しない（PR body に `@Copilot` を含めないこと）
 
 ```
 main ← setup/env ← (サブタスクごとにコミット)

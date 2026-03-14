@@ -74,16 +74,18 @@ export default function Home() {
           >
             学習を始める
           </Link>
-          <Link
-            href="/review"
-            className={`block rounded-lg border border-zinc-300 px-6 py-3 text-center hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800 ${
-              dashboard.reviewCount === 0
-                ? 'pointer-events-none opacity-50'
-                : ''
-            }`}
-          >
-            復習する
-          </Link>
+          {dashboard.reviewCount === 0 ? (
+            <span className="block rounded-lg border border-zinc-300 px-6 py-3 text-center opacity-50 dark:border-zinc-700">
+              復習する
+            </span>
+          ) : (
+            <Link
+              href="/review"
+              className="block rounded-lg border border-zinc-300 px-6 py-3 text-center hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
+            >
+              復習する
+            </Link>
+          )}
         </div>
 
         <p className="mt-6 text-center text-sm text-zinc-500 dark:text-zinc-400">

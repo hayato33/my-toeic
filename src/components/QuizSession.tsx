@@ -47,25 +47,19 @@ export function QuizSession({
     setSelectedAnswer(choice);
     setIsCorrect(correct);
     if (correct) setCorrectCount((c) => c + 1);
-
-    try {
-      const res = await fetch('/api/answers', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ questionId: question.id, isCorrect: correct }),
-      });
-      if (!res.ok) throw new Error();
-    } catch {
-      // 記録失敗しても学習は継続する
-    } finally {
-      setIsSubmitting(false);
-    }
-
     setState('result');
+    setIsSubmitting(false);
+
+    // 記録は非同期で実行（失敗しても学習は継続する）
+    fetch('/api/answers', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ questionId: question.id, isCorrect: correct }),
+    }).catch(() => {});
   }
 
   async function handleFeedback() {
-    if (!question) return;
+    if (!question || selectedAnswer === null || isCorrect === null) return;
     setFeedbackLoading(true);
     setFeedbackError(false);
 
@@ -237,7 +231,8 @@ export function QuizSession({
             )}
             <button
               onClick={handleNext}
-              className="rounded-lg bg-blue-600 px-6 py-3 text-white hover:bg-blue-700"
+              disabled={feedbackLoading}
+              className="rounded-lg bg-blue-600 px-6 py-3 text-white hover:bg-blue-700 disabled:opacity-50"
             >
               次の問題へ
             </button>

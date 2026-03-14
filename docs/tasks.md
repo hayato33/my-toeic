@@ -105,3 +105,5 @@
 - [ ] 日付ユーティリティの抽出（`src/lib/date-utils.ts` に今日の開始・終了計算を集約）
 - [ ] フィードバックプロンプトの分離（`src/lib/prompts/feedback.ts` に移動）
 - [ ] API フェッチヘルパーの作成（`src/lib/api-client.ts` に fetch ラッパーを集約）
+- [ ] calculateStreak の抽出（`src/lib/streak.ts` に分離）
+- [ ] 日付ユーティリティのテスト追加（`src/lib/date-utils.test.ts`）

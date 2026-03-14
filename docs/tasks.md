@@ -84,9 +84,9 @@
 ## 6. テスト
 
 - [x] SM-2 ロジックのユニットテスト（Vitest）
-- [ ] API Routes のユニットテスト（Vitest）
-- [ ] 学習セッション全体の E2E テスト（Playwright）
-- [ ] 復習フローの E2E テスト（Playwright）
+- [x] API Routes のユニットテスト（Vitest）
+- [x] 学習セッション全体の E2E テスト（Playwright）
+- [x] 復習フローの E2E テスト（Playwright）
 
 ---
 

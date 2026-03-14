@@ -43,9 +43,9 @@
 
 ## 3. SM-2 アルゴリズム
 
-- [ ] SM-2 ロジックの実装（`interval`・`easeFactor` の更新）
-- [ ] 回答記録時に `ReviewSchedule` を更新する処理
-- [ ] Vitest でユニットテスト
+- [x] SM-2 ロジックの実装（`interval`・`easeFactor` の更新）
+- [x] 回答記録時に `ReviewSchedule` を更新する処理
+- [x] Vitest でユニットテスト
 
 ---
 
@@ -83,7 +83,7 @@
 
 ## 6. テスト
 
-- [ ] SM-2 ロジックのユニットテスト（Vitest）
+- [x] SM-2 ロジックのユニットテスト（Vitest）
 - [ ] API Routes のユニットテスト（Vitest）
 - [ ] 学習セッション全体の E2E テスト（Playwright）
 - [ ] 復習フローの E2E テスト（Playwright）

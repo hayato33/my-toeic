@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import Link from 'next/link';
 import './globals.css';
 
 const geistSans = Geist({
@@ -25,9 +26,16 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-background text-foreground antialiased`}
       >
-        {children}
+        <header className="border-b border-zinc-200 dark:border-zinc-800">
+          <div className="mx-auto max-w-4xl px-4 py-3">
+            <Link href="/" className="text-lg font-bold hover:opacity-80">
+              My TOEIC
+            </Link>
+          </div>
+        </header>
+        <div className="mx-auto max-w-4xl px-4 py-8">{children}</div>
       </body>
     </html>
   );

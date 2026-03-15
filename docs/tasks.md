@@ -129,15 +129,15 @@
 > 詳細: [`docs/neon-migration-plan.md`](./neon-migration-plan.md)
 
 - [ ] Neon Auth の有効化・Google OAuth 設定
-- [ ] Better Auth パッケージの導入・設定（`src/lib/auth.ts`）
-- [ ] Auth API ルートの作成（`/api/auth/[...all]`）
-- [ ] Auth クライアントの作成（`src/lib/auth-client.ts`）
-- [ ] ログイン画面の作成（`/login`）
-- [ ] 認証ミドルウェアの作成（`src/middleware.ts`）
-- [ ] API ルートの認証対応（全 API に userId フィルタ追加）
-- [ ] Server Component の認証対応
-- [ ] ヘッダーにユーザー情報・ログアウト追加
-- [ ] テスト修正・通過確認
+- [x] Better Auth パッケージの導入・設定（`src/lib/auth.ts`）
+- [x] Auth API ルートの作成（`/api/auth/[...all]`）
+- [x] Auth クライアントの作成（`src/lib/auth-client.ts`）
+- [x] ログイン画面の作成（`/login`）
+- [x] 認証ミドルウェアの作成（`src/middleware.ts`）
+- [x] API ルートの認証対応（全 API に userId フィルタ追加）
+- [x] Server Component の認証対応
+- [x] ヘッダーにユーザー情報・ログアウト追加
+- [x] テスト修正・通過確認
 
 ---
 

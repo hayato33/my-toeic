@@ -1,10 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { headers } from 'next/headers';
 import { prisma } from '@/lib/prisma';
+import { auth } from '@/lib/auth';
 import { sm2 } from '@/lib/sm2';
 import { SM2_QUALITY, DEFAULT_EASE_FACTOR } from '@/lib/constants';
 import { addDays } from '@/lib/date-utils';
 
 export async function POST(request: NextRequest) {
+  const session = await auth.api.getSession({ headers: await headers() });
+  if (!session) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
   let body;
   try {
     body = await request.json();
@@ -34,13 +41,14 @@ export async function POST(request: NextRequest) {
       data: {
         questionId,
         isCorrect,
+        userId: session.user.id,
       },
     });
 
     // SM-2 で ReviewSchedule を更新
     const quality = isCorrect ? SM2_QUALITY.CORRECT : SM2_QUALITY.INCORRECT;
 
-    const userId = 'local-user';
+    const userId = session.user.id;
 
     const existing = await tx.reviewSchedule.findUnique({
       where: { questionId_userId: { questionId, userId } },

@@ -24,6 +24,7 @@
     "@prisma/adapter-neon": "^7.5.0",
     "@prisma/client": "^7.5.0",
     "@tailwindcss/typography": "^0.5.19",
+    "better-auth": "^1.5.5",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",

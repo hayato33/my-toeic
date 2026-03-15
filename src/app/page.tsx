@@ -1,16 +1,22 @@
 export const dynamic = 'force-dynamic';
 
 import Link from 'next/link';
+import { headers } from 'next/headers';
+import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
+import { auth } from '@/lib/auth';
 import { DAILY_QUOTA } from '@/lib/constants';
 import { getStartOfDay, getEndOfDay } from '@/lib/date-utils';
 import { calculateStreak } from '@/lib/streak';
 
 export default async function Home() {
+  const session = await auth.api.getSession({ headers: await headers() });
+  if (!session) redirect('/login');
+
   const startOfToday = getStartOfDay();
   const endOfToday = getEndOfDay();
 
-  const userId = 'local-user';
+  const userId = session.user.id;
 
   const [reviewCount, answeredTodayCount, streak] = await Promise.all([
     prisma.reviewSchedule.count({

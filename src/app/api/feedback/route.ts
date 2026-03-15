@@ -1,9 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { headers } from 'next/headers';
 import { prisma } from '@/lib/prisma';
+import { auth } from '@/lib/auth';
 import { getAnthropicClient } from '@/lib/anthropic';
 import { buildFeedbackPrompt } from '@/lib/prompts/feedback';
 
 export async function POST(request: NextRequest) {
+  const session = await auth.api.getSession({ headers: await headers() });
+  if (!session) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
   let body: unknown;
   try {
     body = await request.json();

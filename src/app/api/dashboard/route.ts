@@ -1,14 +1,21 @@
 import { NextResponse } from 'next/server';
+import { headers } from 'next/headers';
 import { prisma } from '@/lib/prisma';
+import { auth } from '@/lib/auth';
 import { DAILY_QUOTA } from '@/lib/constants';
 import { getStartOfDay, getEndOfDay } from '@/lib/date-utils';
 import { calculateStreak } from '@/lib/streak';
 
 export async function GET() {
+  const session = await auth.api.getSession({ headers: await headers() });
+  if (!session) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
   const startOfToday = getStartOfDay();
   const endOfToday = getEndOfDay();
 
-  const userId = 'local-user';
+  const userId = session.user.id;
 
   const [reviewCount, answeredTodayCount, streak] = await Promise.all([
     // 今日の復習対象数

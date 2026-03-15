@@ -114,13 +114,13 @@
 
 > 詳細: [`docs/neon-migration-plan.md`](./neon-migration-plan.md)
 
-- [ ] Neon プロジェクトのセットアップ（Console でプロジェクト作成、接続文字列取得）
-- [ ] Prisma スキーマの PostgreSQL 対応（provider 変更、userId カラム追加）
-- [ ] パッケージの入れ替え（better-sqlite3 → @prisma/adapter-neon）
-- [ ] Prisma クライアントの更新（`src/lib/prisma.ts`）
-- [ ] マイグレーション実行・Prisma クライアント再生成
-- [ ] シードデータの投入確認
-- [ ] 既存テストの修正・通過確認
+- [x] Neon プロジェクトのセットアップ（Console でプロジェクト作成、接続文字列取得）
+- [x] Prisma スキーマの PostgreSQL 対応（provider 変更、userId カラム追加）
+- [x] パッケージの入れ替え（better-sqlite3 → @prisma/adapter-neon）
+- [x] Prisma クライアントの更新（`src/lib/prisma.ts`）
+- [x] マイグレーション実行・Prisma クライアント再生成
+- [x] シードデータの投入確認
+- [x] 既存テストの修正・通過確認
 
 ---
 

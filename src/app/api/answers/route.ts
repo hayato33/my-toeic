@@ -40,8 +40,10 @@ export async function POST(request: NextRequest) {
     // SM-2 で ReviewSchedule を更新
     const quality = isCorrect ? SM2_QUALITY.CORRECT : SM2_QUALITY.INCORRECT;
 
+    const userId = 'local-user';
+
     const existing = await tx.reviewSchedule.findUnique({
-      where: { questionId },
+      where: { questionId_userId: { questionId, userId } },
     });
 
     const current = {
@@ -55,7 +57,7 @@ export async function POST(request: NextRequest) {
     const nextReviewAt = addDays(new Date(), result.interval);
 
     await tx.reviewSchedule.upsert({
-      where: { questionId },
+      where: { questionId_userId: { questionId, userId } },
       update: {
         repetitions: result.repetitions,
         interval: result.interval,
@@ -64,6 +66,7 @@ export async function POST(request: NextRequest) {
       },
       create: {
         questionId,
+        userId,
         repetitions: result.repetitions,
         interval: result.interval,
         easeFactor: result.easeFactor,

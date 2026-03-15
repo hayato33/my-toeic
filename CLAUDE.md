@@ -36,7 +36,7 @@ pnpm db:seed      # シードデータ投入
 - **パスエイリアス** — `@/*` は `./src/*` にマップ。
 - **ユニットテスト** — Vitest（`vitest.config.ts`）。テストファイルは `src/**/*.test.{ts,tsx}`。
 - **E2E テスト** — Playwright（`playwright.config.ts`）。テストファイルは `e2e/` ディレクトリ。
-- **DB** — Prisma 7 + SQLite（`prisma/schema.prisma`）。アダプターは `@prisma/adapter-better-sqlite3`。Prisma クライアントのシングルトンは `src/lib/prisma.ts`。シードデータは `prisma/seeds/`。
+- **DB** — Prisma 7 + Neon PostgreSQL（`prisma/schema.prisma`）。アダプターは `@prisma/adapter-neon`。Prisma クライアントのシングルトンは `src/lib/prisma.ts`。シードデータは `prisma/seeds/`。マイグレーション用の接続設定は `prisma.config.ts`。
 - **コミット前チェック** — husky + lint-staged（ESLint --fix、Prettier --write、tsc --noEmit）。
 
 ## ブランチ戦略

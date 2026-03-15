@@ -10,14 +10,16 @@ export default async function Home() {
   const startOfToday = getStartOfDay();
   const endOfToday = getEndOfDay();
 
+  const userId = 'local-user';
+
   const [reviewCount, answeredTodayCount, streak] = await Promise.all([
     prisma.reviewSchedule.count({
-      where: { nextReviewAt: { lt: endOfToday } },
+      where: { userId, nextReviewAt: { lt: endOfToday } },
     }),
     prisma.userAnswer.count({
-      where: { answeredAt: { gte: startOfToday, lt: endOfToday } },
+      where: { userId, answeredAt: { gte: startOfToday, lt: endOfToday } },
     }),
-    calculateStreak(),
+    calculateStreak(userId),
   ]);
 
   const newQuotaRemaining = Math.max(

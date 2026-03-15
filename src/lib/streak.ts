@@ -1,11 +1,14 @@
 import { prisma } from '@/lib/prisma';
 
-export async function calculateStreak(): Promise<number> {
-  // SQLite の date() で日単位に集約（全行メモリロード回避）
+export async function calculateStreak(
+  userId: string = 'local-user',
+): Promise<number> {
+  // PostgreSQL の DATE() で日単位に集約（全行メモリロード回避）
   const rows = await prisma.$queryRaw<{ answer_date: string }[]>`
-    SELECT date(answeredAt) as answer_date
-    FROM UserAnswer
-    GROUP BY date(answeredAt)
+    SELECT DATE("answeredAt")::text as answer_date
+    FROM "UserAnswer"
+    WHERE "userId" = ${userId}
+    GROUP BY DATE("answeredAt")
     ORDER BY answer_date DESC
   `;
 

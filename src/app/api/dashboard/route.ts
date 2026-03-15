@@ -8,21 +8,25 @@ export async function GET() {
   const startOfToday = getStartOfDay();
   const endOfToday = getEndOfDay();
 
+  const userId = 'local-user';
+
   const [reviewCount, answeredTodayCount, streak] = await Promise.all([
     // 今日の復習対象数
     prisma.reviewSchedule.count({
       where: {
+        userId,
         nextReviewAt: { lt: endOfToday },
       },
     }),
     // 今日すでに回答した問題数
     prisma.userAnswer.count({
       where: {
+        userId,
         answeredAt: { gte: startOfToday, lt: endOfToday },
       },
     }),
     // ストリーク計算（連続学習日数）
-    calculateStreak(),
+    calculateStreak(userId),
   ]);
 
   // 新規問題のノルマ（固定10問/日）

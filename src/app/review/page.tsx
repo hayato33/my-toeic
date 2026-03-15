@@ -7,8 +7,10 @@ import { getEndOfDay } from '@/lib/date-utils';
 export default async function ReviewPage() {
   const endOfToday = getEndOfDay();
 
+  const userId = 'local-user';
+
   const schedules = await prisma.reviewSchedule.findMany({
-    where: { nextReviewAt: { lt: endOfToday } },
+    where: { userId, nextReviewAt: { lt: endOfToday } },
     include: { question: true },
     orderBy: { nextReviewAt: 'asc' },
   });

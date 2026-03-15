@@ -4,7 +4,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
 }
 
 enum QuestionType {
@@ -23,7 +23,7 @@ model Question {
   createdAt   DateTime @default(now())
 
   userAnswers    UserAnswer[]
-  reviewSchedule ReviewSchedule?
+  reviewSchedules ReviewSchedule[]
 }
 
 /// 回答履歴
@@ -32,23 +32,28 @@ model UserAnswer {
   questionId String
   isCorrect  Boolean
   answeredAt DateTime @default(now())
+  userId     String   @default("local-user")
 
   question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
 
   @@index([questionId])
   @@index([answeredAt])
+  @@index([userId])
 }
 
 /// 復習スケジュール（SM-2）
 model ReviewSchedule {
   id           String   @id @default(cuid())
-  questionId   String   @unique
+  questionId   String
   nextReviewAt DateTime
   interval     Int      @default(1) // 日数
   easeFactor   Float    @default(2.5) // SM-2 の ease factor
   repetitions  Int      @default(0) // 連続正解回数
+  userId       String   @default("local-user")
 
   question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
 
+  @@unique([questionId, userId])
   @@index([nextReviewAt])
+  @@index([userId])
 }

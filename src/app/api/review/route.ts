@@ -5,8 +5,11 @@ import { getEndOfDay } from '@/lib/date-utils';
 export async function GET() {
   const endOfToday = getEndOfDay();
 
+  const userId = 'local-user';
+
   const schedules = await prisma.reviewSchedule.findMany({
     where: {
+      userId,
       nextReviewAt: { lt: endOfToday },
     },
     include: {

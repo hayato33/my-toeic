@@ -1,7 +1,6 @@
 'use client';
 
 import { authClient } from '@/lib/auth-client';
-import { useRouter } from 'next/navigation';
 
 interface UserMenuProps {
   name: string;
@@ -9,12 +8,11 @@ interface UserMenuProps {
 }
 
 export function UserMenu({ name, email }: UserMenuProps) {
-  const router = useRouter();
-
   async function handleSignOut() {
     try {
       await authClient.signOut();
-      router.push('/login');
+      // フルリロードで layout (Server Component) の auth UI を確実に更新
+      window.location.assign('/login');
     } catch (error) {
       console.error('Sign out failed:', error);
     }

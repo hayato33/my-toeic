@@ -128,7 +128,7 @@
 
 > 詳細: [`docs/neon-migration-plan.md`](./neon-migration-plan.md)
 
-- [ ] Neon Auth の有効化・Google OAuth 設定
+- [x] Neon Auth の有効化・Google OAuth 設定
 - [x] Better Auth パッケージの導入・設定（`src/lib/auth.ts`）
 - [x] Auth API ルートの作成（`/api/auth/[...all]`）
 - [x] Auth クライアントの作成（`src/lib/auth-client.ts`）

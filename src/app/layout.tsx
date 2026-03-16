@@ -38,8 +38,11 @@ export default async function RootLayout({
             <Link href="/" className="text-lg font-bold hover:opacity-80">
               My TOEIC
             </Link>
-            {session && (
-              <UserMenu name={session.user.name} email={session.user.email} />
+            {session?.user && (
+              <UserMenu
+                name={session.user.name ?? ''}
+                email={session.user.email}
+              />
             )}
           </div>
         </header>

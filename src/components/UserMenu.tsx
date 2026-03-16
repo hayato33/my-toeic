@@ -12,9 +12,12 @@ export function UserMenu({ name, email }: UserMenuProps) {
   const router = useRouter();
 
   async function handleSignOut() {
-    await authClient.signOut();
-    router.push('/login');
-    router.refresh();
+    try {
+      await authClient.signOut();
+      router.push('/login');
+    } catch (error) {
+      console.error('Sign out failed:', error);
+    }
   }
 
   return (

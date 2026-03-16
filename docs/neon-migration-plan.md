@@ -261,6 +261,8 @@ npx prisma generate
 - E2E テストは Neon に接続して実行（テスト用ブランチの利用を検討）
 - テスト用の Neon ブランチを作成し、`DATABASE_URL` を切り替えて実行する方法を推奨
 
+> ⚠️ **現状の制限（Step 11 で対応予定）**: 現在の E2E テストは開発用 DB（`DATABASE_URL`）に直接書き込む。`POST /api/answers` 等が実際のレコードを作成するため、Vercel デプロイ後に本番 DB で E2E テストを走らせると本番データが汚染される。Step 11 で Neon ブランチを使ったテスト用 DB 分離を実施すること（→ Step 11-6 参照）。
+
 ---
 
 ## Step 10: Neon Auth 導入
@@ -542,6 +544,37 @@ export default async function Page() {
 
 - Vercel の Preview デプロイ用に Neon ブランチを活用
 - Neon の Vercel Integration を有効化すると、PR ごとに DB ブランチが自動作成される
+
+### 11-6. E2E テスト用 DB の分離（本番データ汚染防止）
+
+**背景:**
+
+現在の E2E テストは `DATABASE_URL`（開発 DB）に直接書き込む。Vercel デプロイ後に本番 DB で E2E テストを実行すると実データが混在するリスクがある。
+
+**対応方針:**
+
+Neon のブランチ機能を使い、E2E テスト専用の DB ブランチを用意する。
+
+**作業内容:**
+
+1. Neon Console でテスト用ブランチを作成（例: `e2e-test` ブランチ）
+2. テスト用ブランチの接続文字列を取得
+3. `.env.test.local`（gitignore 済み）にテスト用 DB URL を設定:
+
+```
+DATABASE_URL="postgresql://...e2e-test-branch.../neondb?sslmode=require"
+```
+
+4. `pnpm test:e2e` 実行時に `.env.test.local` を優先して読み込むよう設定:
+
+```json
+// package.json
+"test:e2e": "dotenv -e .env.test.local -- playwright test"
+```
+
+5. `e2e/global-setup.ts` で DB クリーンアップ（テストごとにテストユーザーを削除・再作成）
+
+> Neon の Vercel Integration（Step 11-4）を有効化すると、PR ごとに DB ブランチが自動作成されるため、CI 上での E2E テストも安全に実行できる。
 
 ### 11-5. `.env.example` の更新
 

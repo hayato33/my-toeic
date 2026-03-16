@@ -39,6 +39,11 @@ pnpm db:seed      # シードデータ投入
 - **DB** — Prisma 7 + Neon PostgreSQL（`prisma/schema.prisma`）。アダプターは `@prisma/adapter-neon`。Prisma クライアントのシングルトンは `src/lib/prisma.ts`。シードデータは `prisma/seeds/`。マイグレーション用の接続設定は `prisma.config.ts`。
 - **コミット前チェック** — husky + lint-staged（ESLint --fix、Prettier --write、tsc --noEmit）。
 
+## 環境変数
+
+- **`.env` は絶対に編集しない**。環境変数の追加・変更はユーザーが行う。
+- 新しい環境変数が必要になった場合は `.env.example` に追記したうえで、ユーザーに報告すること。
+
 ## ブランチ戦略
 
 **main + 作業ブランチ** のシンプル構成。

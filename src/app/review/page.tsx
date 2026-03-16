@@ -1,13 +1,19 @@
 export const dynamic = 'force-dynamic';
 
+import { headers } from 'next/headers';
+import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
+import { auth } from '@/lib/auth';
 import { QuizSession } from '@/components/QuizSession';
 import { getEndOfDay } from '@/lib/date-utils';
 
 export default async function ReviewPage() {
+  const session = await auth.api.getSession({ headers: await headers() });
+  if (!session) redirect('/login');
+
   const endOfToday = getEndOfDay();
 
-  const userId = 'local-user';
+  const userId = session.user.id;
 
   const schedules = await prisma.reviewSchedule.findMany({
     where: { userId, nextReviewAt: { lt: endOfToday } },

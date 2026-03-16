@@ -2,6 +2,19 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { GET } from './route';
 
 vi.mock('@/lib/prisma', () => import('@/lib/__mocks__/prisma'));
+vi.mock('next/headers', () => ({
+  headers: vi.fn().mockResolvedValue(new Headers()),
+}));
+vi.mock('@/lib/auth', () => ({
+  auth: {
+    api: {
+      getSession: vi.fn().mockResolvedValue({
+        user: { id: 'test-user', name: 'Test', email: 'test@example.com' },
+        session: { id: 'session-1' },
+      }),
+    },
+  },
+}));
 
 import { prisma } from '@/lib/prisma';
 

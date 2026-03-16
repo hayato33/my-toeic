@@ -32,7 +32,7 @@ model UserAnswer {
   questionId String
   isCorrect  Boolean
   answeredAt DateTime @default(now())
-  userId     String   @default("local-user")
+  userId     String
 
   question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
 
@@ -49,11 +49,72 @@ model ReviewSchedule {
   interval     Int      @default(1) // 日数
   easeFactor   Float    @default(2.5) // SM-2 の ease factor
   repetitions  Int      @default(0) // 連続正解回数
-  userId       String   @default("local-user")
+  userId       String
 
   question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
 
   @@unique([questionId, userId])
   @@index([nextReviewAt])
   @@index([userId])
+}
+
+// Better Auth モデル
+model User {
+  id            String    @id
+  name          String
+  email         String    @unique
+  emailVerified Boolean   @default(false)
+  image         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  sessions Session[]
+  accounts Account[]
+}
+
+model Session {
+  id        String   @id
+  userId    String
+  token     String   @unique
+  expiresAt DateTime
+  ipAddress String?
+  userAgent String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model Account {
+  id                       String    @id
+  userId                   String
+  accountId                String
+  providerId               String
+  accessToken              String?
+  refreshToken             String?
+  accessTokenExpiresAt     DateTime?
+  refreshTokenExpiresAt    DateTime?
+  scope                    String?
+  idToken                  String?
+  password                 String?
+  createdAt                DateTime  @default(now())
+  updatedAt                DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([providerId, accountId])
+  @@index([userId])
+}
+
+model Verification {
+  id         String   @id
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([identifier, value])
 }

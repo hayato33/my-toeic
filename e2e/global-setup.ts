@@ -7,7 +7,9 @@ const TEST_EMAIL = 'e2e-test@example.com';
 const TEST_PASSWORD = 'e2e-test-password-123';
 
 export default async function globalSetup(_config: FullConfig) {
-  config(); // .env を読み込む
+  // E2E テスト用 DB が設定されている場合はそちらを優先する
+  config({ path: '.env.test.local', override: true });
+  config();
 
   // 既存テストユーザーをクリーンアップ（パスワード無しで作成された場合を含む）
   const databaseUrl = process.env['DATABASE_URL'];

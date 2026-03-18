@@ -1,4 +1,9 @@
 import { defineConfig, devices } from '@playwright/test';
+import { config } from 'dotenv';
+
+// E2E テスト用 DB が設定されている場合はそちらを優先する（本番・開発 DB を汚染しない）
+config({ path: '.env.test.local', override: true });
+config();
 
 export default defineConfig({
   testDir: './e2e',

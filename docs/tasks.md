@@ -145,10 +145,10 @@
 
 > 詳細: [`docs/neon-migration-plan.md`](./neon-migration-plan.md)
 
-- [ ] Vercel プロジェクト作成・GitHub 連携
-- [ ] 環境変数の設定
-- [ ] Prisma のビルド設定（postinstall）
-- [ ] Neon Vercel Integration の有効化
-- [ ] `.env.example` の更新
-- [ ] **E2E テスト用 DB 分離**（Neon ブランチ + `.env.test.local`）⚠️ 現在は開発 DB に直接書き込んでいるため本番デプロイ前に必ず対応すること
+- [x] Vercel プロジェクト作成・GitHub 連携
+- [x] 環境変数の設定
+- [x] Prisma のビルド設定（postinstall）
+- [x] Neon Vercel Integration の有効化
+- [x] `.env.example` の更新
+- [x] **E2E テスト用 DB 分離**（Neon ブランチ + `.env.test.local`）
 - [ ] デプロイ動作確認

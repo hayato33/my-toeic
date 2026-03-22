@@ -61,14 +61,20 @@ export default async function StudyPage() {
     DAILY_QUOTA.STUDY_QUESTIONS,
   );
 
-  const questions = selected.map((q) => {
-    let choices: string[] = [];
+  const questions = selected.flatMap((q) => {
     try {
-      choices = JSON.parse(q.choices) as string[];
-    } catch {
-      console.error(`Failed to parse choices for question ${q.id}`);
+      const parsed: unknown = JSON.parse(q.choices);
+      if (
+        !Array.isArray(parsed) ||
+        !parsed.every((choice) => typeof choice === 'string')
+      ) {
+        throw new Error('choices must be string[]');
+      }
+      return [{ ...q, choices: parsed }];
+    } catch (error) {
+      console.error(`Failed to parse choices for question ${q.id}`, error);
+      return [];
     }
-    return { ...q, choices };
   });
 
   return (

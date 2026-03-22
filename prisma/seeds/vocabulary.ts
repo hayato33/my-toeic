@@ -6591,4 +6591,2434 @@ export const vocabularyQuestions: SeedQuestion[] = [
     explanation:
       'develop は「開発する」という意味です。ビジネスモデル・製品・人材の開発文脈でTOEICに非常に頻出します。',
   },
+  {
+    id: 'vocab-731',
+    type: 'vocabulary',
+    content: 'differentiate the product from competitors',
+    choices: ['差別化する', '統合する', '維持する', '廃止する'],
+    answer: '差別化する',
+    explanation:
+      'differentiate は「差別化する」という意味です。競合との差別化・製品ポジショニングの文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-732',
+    type: 'vocabulary',
+    content: 'discard the outdated inventory',
+    choices: ['廃棄する', '補充する', '保管する', '発注する'],
+    answer: '廃棄する',
+    explanation:
+      'discard は「廃棄する、捨てる」という意味です。在庫管理・不要品処分の文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-733',
+    type: 'vocabulary',
+    content: 'drive continuous improvement across the organization',
+    choices: ['推進する', '廃止する', '延期する', '記録する'],
+    answer: '推進する',
+    explanation:
+      'drive は「推進する」という意味です。改善・変革を推し進める文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-734',
+    type: 'vocabulary',
+    content: 'earmark funds for research and development',
+    choices: ['確保する', '削減する', '移転する', '廃棄する'],
+    answer: '確保する',
+    explanation:
+      'earmark は「確保する、充当する」という意味です。特定目的への資金確保文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-735',
+    type: 'vocabulary',
+    content: 'empower employees to make independent decisions',
+    choices: ['権限を与える', '制限する', '評価する', '採用する'],
+    answer: '権限を与える',
+    explanation:
+      'empower は「権限を与える」という意味です。従業員の意思決定権付与・自律促進文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-736',
+    type: 'vocabulary',
+    content: 'engage customers through digital channels',
+    choices: ['引き込む', '無視する', '記録する', '分析する'],
+    answer: '引き込む',
+    explanation:
+      'engage は「引き込む、関与させる」という意味です。顧客エンゲージメント・SNS活用の文脈で頻出します。',
+  },
+  {
+    id: 'vocab-737',
+    type: 'vocabulary',
+    content: "enforce the company's code of ethics",
+    choices: ['徹底する', '廃止する', '緩和する', '記録する'],
+    answer: '徹底する',
+    explanation:
+      'enforce は「徹底する、強制する」という意味です。倫理・規則の厳格な執行文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-738',
+    type: 'vocabulary',
+    content: 'establish a clear chain of command',
+    choices: ['確立する', '廃止する', '修正する', '延期する'],
+    answer: '確立する',
+    explanation:
+      'establish は「確立する」という意味です。指揮系統・体制・規則の確立文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-739',
+    type: 'vocabulary',
+    content: "evaluate the vendor's track record thoroughly",
+    choices: ['評価する', '無視する', '承認する', '記録する'],
+    answer: '評価する',
+    explanation:
+      'evaluate は「評価する」という意味です。業者・施策・業績の評価文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-740',
+    type: 'vocabulary',
+    content: 'explore new partnership opportunities abroad',
+    choices: ['探る', '無視する', '廃棄する', '延期する'],
+    answer: '探る',
+    explanation:
+      'explore は「探る、検討する」という意味です。海外展開・新しい機会の模索文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-741',
+    type: 'vocabulary',
+    content: 'facilitate knowledge transfer between departments',
+    choices: ['促進する', '妨げる', '廃止する', '記録する'],
+    answer: '促進する',
+    explanation:
+      'facilitate は「促進する」という意味です。知識共有・プロセス推進の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-742',
+    type: 'vocabulary',
+    content: 'flag potential compliance issues early',
+    choices: ['指摘する', '無視する', '記録する', '承認する'],
+    answer: '指摘する',
+    explanation:
+      'flag は「指摘する、注意を促す」という意味です。問題の早期発見・報告文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-743',
+    type: 'vocabulary',
+    content: 'forge strategic alliances with key partners',
+    choices: ['結ぶ', '解消する', '評価する', '記録する'],
+    answer: '結ぶ',
+    explanation:
+      'forge は「結ぶ、築く」という意味です。戦略的提携・関係構築の文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-744',
+    type: 'vocabulary',
+    content: 'gather competitive intelligence on market rivals',
+    choices: ['収集する', '無視する', '廃棄する', '記録する'],
+    answer: '収集する',
+    explanation:
+      'gather は「収集する」という意味です。情報・データ・意見収集の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-745',
+    type: 'vocabulary',
+    content: 'generate additional revenue streams',
+    choices: ['生み出す', '削減する', '廃止する', '記録する'],
+    answer: '生み出す',
+    explanation:
+      'generate は「生み出す」という意味です。収益・価値・リードを生み出す文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-746',
+    type: 'vocabulary',
+    content: 'handle confidential information with discretion',
+    choices: ['取り扱う', '開示する', '削除する', '共有する'],
+    answer: '取り扱う',
+    explanation:
+      'handle は「取り扱う」という意味です。機密情報・危険物の取り扱い文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-747',
+    type: 'vocabulary',
+    content: 'harmonize the processes across all offices',
+    choices: ['統一する', '分散する', '廃止する', '記録する'],
+    answer: '統一する',
+    explanation:
+      'harmonize は「統一する、調和させる」という意味です。業務プロセスの標準化文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-748',
+    type: 'vocabulary',
+    content: 'implement a robust data security framework',
+    choices: ['導入する', '廃止する', '延期する', '修正する'],
+    answer: '導入する',
+    explanation:
+      'implement は「導入する、実施する」という意味です。システム・方針・戦略の実施文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-749',
+    type: 'vocabulary',
+    content: 'impose stricter controls on expenses',
+    choices: ['課す', '撤廃する', '緩和する', '記録する'],
+    answer: '課す',
+    explanation:
+      'impose は「課す」という意味です。制限・税・ルールを課す文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-750',
+    type: 'vocabulary',
+    content: 'increase the efficiency of the supply chain',
+    choices: ['向上させる', '維持する', '低下させる', '測定する'],
+    answer: '向上させる',
+    explanation:
+      'increase は「向上させる」という意味です。効率・売上・能力向上の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-751',
+    type: 'vocabulary',
+    content: 'keep all documentation up to date',
+    choices: ['最新に保つ', '廃棄する', '提出する', '修正する'],
+    answer: '最新に保つ',
+    explanation:
+      'keep up to date は「最新に保つ」という意味です。文書・情報の最新維持文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-752',
+    type: 'vocabulary',
+    content: 'launch an employee wellness initiative',
+    choices: ['開始する', '廃止する', '延期する', '承認する'],
+    answer: '開始する',
+    explanation:
+      'launch は「開始する」という意味です。イニシアティブ・プログラムの立ち上げ文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-753',
+    type: 'vocabulary',
+    content: 'leverage technology to improve customer service',
+    choices: ['活用する', '廃棄する', '削減する', '購入する'],
+    answer: '活用する',
+    explanation:
+      'leverage は「活用する」という意味です。技術・強みの最大活用文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-754',
+    type: 'vocabulary',
+    content: 'limit access to sensitive business data',
+    choices: ['制限する', '拡大する', '廃止する', '記録する'],
+    answer: '制限する',
+    explanation:
+      'limit は「制限する」という意味です。アクセス制限・予算上限の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-755',
+    type: 'vocabulary',
+    content: 'maintain open communication with all stakeholders',
+    choices: ['維持する', '削除する', '修正する', '提出する'],
+    answer: '維持する',
+    explanation:
+      'maintain は「維持する」という意味です。記録・関係・品質の維持文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-756',
+    type: 'vocabulary',
+    content: 'map out the implementation roadmap',
+    choices: ['立案する', '廃棄する', '延期する', '承認する'],
+    answer: '立案する',
+    explanation:
+      'map out は「立案する、詳細に計画する」という意味です。戦略・ロードマップの詳細設計文脈で使われます。',
+  },
+  {
+    id: 'vocab-757',
+    type: 'vocabulary',
+    content: 'mediate between conflicting departments',
+    choices: ['仲裁する', '支持する', '廃棄する', '記録する'],
+    answer: '仲裁する',
+    explanation:
+      'mediate は「仲裁する」という意味です。紛争・意見対立の調停文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-758',
+    type: 'vocabulary',
+    content: 'mentor junior employees on professional growth',
+    choices: ['指導する', '評価する', '採用する', '解雇する'],
+    answer: '指導する',
+    explanation:
+      'mentor は「指導する」という意味です。人材育成・後輩指導の文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-759',
+    type: 'vocabulary',
+    content: "modernize the company's legacy systems",
+    choices: ['近代化する', '廃止する', '維持する', '縮小する'],
+    answer: '近代化する',
+    explanation:
+      'modernize は「近代化する」という意味です。システム・施設の刷新文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-760',
+    type: 'vocabulary',
+    content: 'navigate complex regulatory requirements',
+    choices: ['対処する', '無視する', '廃棄する', '記録する'],
+    answer: '対処する',
+    explanation:
+      'navigate は「対処する、乗り切る」という意味です。複雑な規制・状況への対応文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-761',
+    type: 'vocabulary',
+    content: 'offset the increased production costs',
+    choices: ['相殺する', '増やす', '削減する', '記録する'],
+    answer: '相殺する',
+    explanation:
+      'offset は「相殺する、埋め合わせる」という意味です。コスト・損失の相殺文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-762',
+    type: 'vocabulary',
+    content: 'operate within the approved budget limits',
+    choices: ['運営する', '超える', '廃止する', '記録する'],
+    answer: '運営する',
+    explanation:
+      'operate は「運営する」という意味です。予算・制約内での業務運営文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-763',
+    type: 'vocabulary',
+    content: 'phase in the new requirements gradually',
+    choices: ['段階的に導入する', '即時廃止する', '承認する', '記録する'],
+    answer: '段階的に導入する',
+    explanation:
+      'phase in は「段階的に導入する」という意味です。規制・制度の段階的実施文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-764',
+    type: 'vocabulary',
+    content: 'place an urgent order with the supplier',
+    choices: ['発注する', 'キャンセルする', '確認する', '変更する'],
+    answer: '発注する',
+    explanation:
+      'place an order は「発注する」という意味です。購買・調達の発注文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-765',
+    type: 'vocabulary',
+    content: 'prioritize high-value strategic accounts',
+    choices: ['優先する', '無視する', '廃棄する', '記録する'],
+    answer: '優先する',
+    explanation:
+      'prioritize は「優先する」という意味です。顧客・タスク・資源の優先付け文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-766',
+    type: 'vocabulary',
+    content: 'probe the root cause of the quality defect',
+    choices: ['調査する', '無視する', '記録する', '修正する'],
+    answer: '調査する',
+    explanation:
+      'probe は「調査する、深掘りする」という意味です。問題の根本原因追求文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-767',
+    type: 'vocabulary',
+    content: 'promote transparency in financial reporting',
+    choices: ['促進する', '阻害する', '廃止する', '記録する'],
+    answer: '促進する',
+    explanation:
+      'promote は「促進する」という意味です。透明性・文化・行動の推進文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-768',
+    type: 'vocabulary',
+    content: 'restructure the pricing model for competitiveness',
+    choices: ['再編する', '廃止する', '維持する', '分析する'],
+    answer: '再編する',
+    explanation:
+      'restructure は「再編する」という意味です。価格モデル・組織の再構築文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-769',
+    type: 'vocabulary',
+    content: 'roll out the new policy across all regions',
+    choices: ['展開する', '廃止する', '縮小する', '試験する'],
+    answer: '展開する',
+    explanation:
+      'roll out は「展開する」という意味です。方針・製品・サービスの全地域展開文脈で頻出します。',
+  },
+  {
+    id: 'vocab-770',
+    type: 'vocabulary',
+    content: "safeguard the company's intellectual property",
+    choices: ['保護する', '売却する', '開示する', '移転する'],
+    answer: '保護する',
+    explanation:
+      'safeguard は「保護する」という意味です。知的財産・データ保護の文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-771',
+    type: 'vocabulary',
+    content: 'scale up production to meet seasonal demand',
+    choices: ['拡大する', '縮小する', '維持する', '廃止する'],
+    answer: '拡大する',
+    explanation:
+      'scale up は「拡大する」という意味です。生産拡大・事業成長の文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-772',
+    type: 'vocabulary',
+    content: 'secure long-term funding for expansion',
+    choices: ['確保する', '要請する', '承認する', '削減する'],
+    answer: '確保する',
+    explanation:
+      'secure は「確保する、獲得する」という意味です。資金調達・契約獲得の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-773',
+    type: 'vocabulary',
+    content: 'seek feedback from customers regularly',
+    choices: ['求める', '提供する', '無視する', '延期する'],
+    answer: '求める',
+    explanation:
+      'seek は「求める」という意味です。フィードバック・意見・解決策の要請文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-774',
+    type: 'vocabulary',
+    content: 'set measurable goals for the team',
+    choices: ['設定する', '延期する', '修正する', '承認する'],
+    answer: '設定する',
+    explanation:
+      'set は「設定する」という意味です。目標・期限・基準の設定文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-775',
+    type: 'vocabulary',
+    content: 'simplify the approval workflow',
+    choices: ['簡素化する', '複雑にする', '廃止する', '延期する'],
+    answer: '簡素化する',
+    explanation:
+      'simplify は「簡素化する」という意味です。手続き・プロセスの効率化・簡略化文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-776',
+    type: 'vocabulary',
+    content: 'solicit bids from qualified contractors',
+    choices: ['募る', '承認する', '評価する', '拒否する'],
+    answer: '募る',
+    explanation:
+      'solicit は「募る、求める」という意味です。入札・応募・意見の募集文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-777',
+    type: 'vocabulary',
+    content: "strengthen the company's market position",
+    choices: ['強化する', '終了する', '修正する', '維持する'],
+    answer: '強化する',
+    explanation:
+      'strengthen は「強化する」という意味です。市場地位・パートナーシップ強化文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-778',
+    type: 'vocabulary',
+    content: 'submit the expense report by month-end',
+    choices: ['提出する', '撤回する', '修正する', '承認する'],
+    answer: '提出する',
+    explanation:
+      'submit は「提出する」という意味です。経費精算書・報告書の提出文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-779',
+    type: 'vocabulary',
+    content: 'tackle the root causes of low morale',
+    choices: ['取り組む', '回避する', '記録する', '延期する'],
+    answer: '取り組む',
+    explanation:
+      'tackle は「取り組む」という意味です。課題・問題への積極的対応文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-780',
+    type: 'vocabulary',
+    content: 'take corrective action to fix the defect',
+    choices: ['講じる', '無視する', '延期する', '記録する'],
+    answer: '講じる',
+    explanation:
+      'take action は「措置を講じる」という意味です。是正・改善措置の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-781',
+    type: 'vocabulary',
+    content: 'track the delivery of all shipments',
+    choices: ['追跡する', '完了する', '延期する', '記録する'],
+    answer: '追跡する',
+    explanation:
+      'track は「追跡する」という意味です。荷物・進捗・指標の追跡文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-782',
+    type: 'vocabulary',
+    content: 'transfer the account to a new representative',
+    choices: ['移管する', '削除する', '保管する', '承認する'],
+    answer: '移管する',
+    explanation:
+      'transfer は「移管する、移転する」という意味です。口座・権限・データの移転文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-783',
+    type: 'vocabulary',
+    content: 'trial the new software before full deployment',
+    choices: ['試験する', '展開する', '廃棄する', '更新する'],
+    answer: '試験する',
+    explanation:
+      'trial は「試験する」という意味です。新製品・システムの試験導入文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-784',
+    type: 'vocabulary',
+    content: 'turn around the underperforming division',
+    choices: ['立て直す', '廃止する', '縮小する', '維持する'],
+    answer: '立て直す',
+    explanation:
+      'turn around は「立て直す、回復させる」という意味です。業績回復・組織改革の文脈で使われます。',
+  },
+  {
+    id: 'vocab-785',
+    type: 'vocabulary',
+    content: 'underline the key benefits of the proposal',
+    choices: ['強調する', '無視する', '廃棄する', '記録する'],
+    answer: '強調する',
+    explanation:
+      'underline は「強調する」という意味です。重要性・優先事項の強調文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-786',
+    type: 'vocabulary',
+    content: 'update the employee handbook with new policies',
+    choices: ['更新する', '廃棄する', '配布する', '作成する'],
+    answer: '更新する',
+    explanation:
+      'update は「更新する」という意味です。規則集・情報・システムの更新文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-787',
+    type: 'vocabulary',
+    content: 'utilize data analytics to drive decisions',
+    choices: ['活用する', '廃棄する', '購入する', '開発する'],
+    answer: '活用する',
+    explanation:
+      'utilize は「活用する」という意味です。ツール・データ・リソースの活用文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-788',
+    type: 'vocabulary',
+    content: 'validate the new process before going live',
+    choices: ['検証する', '記録する', '修正する', '承認する'],
+    answer: '検証する',
+    explanation:
+      'validate は「検証する」という意味です。プロセス・データの有効性確認文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-789',
+    type: 'vocabulary',
+    content: 'verify the credentials of the job applicant',
+    choices: ['確認する', '修正する', '承認する', '送付する'],
+    answer: '確認する',
+    explanation:
+      'verify は「確認する、検証する」という意味です。資格・情報・事実の確認文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-790',
+    type: 'vocabulary',
+    content: 'win the bid for the government contract',
+    choices: ['獲得する', '失う', '延期する', '交渉する'],
+    answer: '獲得する',
+    explanation:
+      'win は「獲得する」という意味です。契約・入札・競争の勝者になる文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-791',
+    type: 'vocabulary',
+    content: 'work toward achieving long-term objectives',
+    choices: ['取り組む', '完了する', '延期する', '記録する'],
+    answer: '取り組む',
+    explanation:
+      'work toward は「取り組む、向けて努力する」という意味です。目標達成への努力文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-792',
+    type: 'vocabulary',
+    content: 'accelerate time-to-market for new products',
+    choices: ['加速する', '遅延させる', '延長する', '修正する'],
+    answer: '加速する',
+    explanation:
+      'accelerate は「加速する」という意味です。製品開発・市場投入の迅速化文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-793',
+    type: 'vocabulary',
+    content: "acknowledge the team's outstanding contributions",
+    choices: ['認める', '無視する', '記録する', '延期する'],
+    answer: '認める',
+    explanation:
+      'acknowledge は「認める、感謝する」という意味です。チームの功績・受領確認の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-794',
+    type: 'vocabulary',
+    content: 'adapt the strategy to changing market conditions',
+    choices: ['適応させる', '維持する', '廃止する', '延期する'],
+    answer: '適応させる',
+    explanation:
+      'adapt は「適応させる」という意味です。変化する環境への対応・戦略変更文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-795',
+    type: 'vocabulary',
+    content: 'address the backlog of pending requests',
+    choices: ['対処する', '無視する', '記録する', '転送する'],
+    answer: '対処する',
+    explanation:
+      'address は「対処する」という意味です。積み残し課題・顧客懸念への対応文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-796',
+    type: 'vocabulary',
+    content: "align the team's goals with company strategy",
+    choices: ['整合させる', '廃棄する', '無視する', '延期する'],
+    answer: '整合させる',
+    explanation:
+      'align は「整合させる、一致させる」という意味です。目標・戦略の整合文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-797',
+    type: 'vocabulary',
+    content: 'amplify the marketing message on social platforms',
+    choices: ['強化する', '縮小する', '廃止する', '維持する'],
+    answer: '強化する',
+    explanation:
+      'amplify は「強化する、増幅する」という意味です。メッセージ・影響力の拡大文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-798',
+    type: 'vocabulary',
+    content: 'anticipate demand fluctuations in the market',
+    choices: ['予測する', '無視する', '記録する', '報告する'],
+    answer: '予測する',
+    explanation:
+      'anticipate は「予測する」という意味です。需要変動・リスクの事前予測文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-799',
+    type: 'vocabulary',
+    content: 'arrange a follow-up meeting with the client',
+    choices: ['設定する', 'キャンセルする', '確認する', '延期する'],
+    answer: '設定する',
+    explanation:
+      'arrange は「設定する、手配する」という意味です。会議・出張・フォローアップの手配文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-800',
+    type: 'vocabulary',
+    content: 'assess the long-term viability of the plan',
+    choices: ['評価する', '承認する', '修正する', '記録する'],
+    answer: '評価する',
+    explanation:
+      'assess は「評価する、査定する」という意味です。計画の実現可能性・リスク査定の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-801',
+    type: 'vocabulary',
+    content: 'boost employee engagement through recognition',
+    choices: ['高める', '低下させる', '維持する', '測定する'],
+    answer: '高める',
+    explanation:
+      'boost は「高める」という意味です。エンゲージメント・売上・モチベーション向上の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-802',
+    type: 'vocabulary',
+    content: 'broaden the scope of the market research',
+    choices: ['広げる', '縮小する', '廃止する', '維持する'],
+    answer: '広げる',
+    explanation:
+      'broaden は「広げる」という意味です。調査範囲・知識・機会の拡大文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-803',
+    type: 'vocabulary',
+    content: 'capture a larger share of the market',
+    choices: ['獲得する', '失う', '維持する', '計算する'],
+    answer: '獲得する',
+    explanation:
+      'capture は「獲得する」という意味です。市場シェア・顧客・機会の獲得文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-804',
+    type: 'vocabulary',
+    content: 'centralize the procurement process',
+    choices: ['一元化する', '分散する', '廃止する', '延期する'],
+    answer: '一元化する',
+    explanation:
+      'centralize は「一元化する」という意味です。調達・管理機能の集中化文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-805',
+    type: 'vocabulary',
+    content: 'clarify the expectations for the new role',
+    choices: ['明確にする', '変更する', '承認する', '記録する'],
+    answer: '明確にする',
+    explanation:
+      'clarify は「明確にする」という意味です。期待値・要件・目標の明確化文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-806',
+    type: 'vocabulary',
+    content: 'collaborate on joint product development',
+    choices: ['協力する', '競争する', '監督する', '記録する'],
+    answer: '協力する',
+    explanation:
+      'collaborate は「協力する」という意味です。共同開発・チームワークの文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-807',
+    type: 'vocabulary',
+    content: 'compile a comprehensive list of requirements',
+    choices: ['まとめる', '提出する', '承認する', '修正する'],
+    answer: 'まとめる',
+    explanation:
+      'compile は「まとめる」という意味です。データ集計・要件一覧作成の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-808',
+    type: 'vocabulary',
+    content: 'complete the mandatory compliance training',
+    choices: ['完了する', '延期する', '廃棄する', '修正する'],
+    answer: '完了する',
+    explanation:
+      'complete は「完了する」という意味です。研修・書類・手続きの完了文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-809',
+    type: 'vocabulary',
+    content: 'concentrate on delivering measurable results',
+    choices: ['集中する', '分散する', '廃棄する', '記録する'],
+    answer: '集中する',
+    explanation:
+      'concentrate は「集中する」という意味です。成果・コア業務への集中投入文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-810',
+    type: 'vocabulary',
+    content: 'consider the long-term implications of the decision',
+    choices: ['検討する', '無視する', '承認する', '記録する'],
+    answer: '検討する',
+    explanation:
+      'consider は「検討する」という意味です。意思決定・リスク評価の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-811',
+    type: 'vocabulary',
+    content: 'contract with an external audit firm',
+    choices: ['契約する', '解約する', '延期する', '承認する'],
+    answer: '契約する',
+    explanation:
+      'contract は「契約する」という意味です。外部委託・サービス契約の締結文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-812',
+    type: 'vocabulary',
+    content: 'convince the board to approve the budget',
+    choices: ['説得する', '無視する', '記録する', '承認する'],
+    answer: '説得する',
+    explanation:
+      'convince は「説得する」という意味です。経営陣・顧客への説得文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-813',
+    type: 'vocabulary',
+    content: 'create a positive workplace culture',
+    choices: ['作り上げる', '廃棄する', '維持する', '評価する'],
+    answer: '作り上げる',
+    explanation:
+      'create は「作り上げる」という意味です。文化・環境・価値の創出文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-814',
+    type: 'vocabulary',
+    content: 'cross-check the figures in the financial report',
+    choices: ['照合する', '修正する', '承認する', '削除する'],
+    answer: '照合する',
+    explanation:
+      'cross-check は「照合する」という意味です。数値・情報の突き合わせ確認文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-815',
+    type: 'vocabulary',
+    content: 'customize the solution for each client',
+    choices: ['カスタマイズする', '標準化する', '廃止する', '維持する'],
+    answer: 'カスタマイズする',
+    explanation:
+      'customize は「カスタマイズする」という意味です。顧客ニーズへの個別対応文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-816',
+    type: 'vocabulary',
+    content: 'decrease the time required for order processing',
+    choices: ['短縮する', '延長する', '増加させる', '記録する'],
+    answer: '短縮する',
+    explanation:
+      'decrease は「短縮する、削減する」という意味です。処理時間・コストの削減文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-817',
+    type: 'vocabulary',
+    content: 'deepen the relationship with key accounts',
+    choices: ['深める', '終了する', '維持する', '記録する'],
+    answer: '深める',
+    explanation:
+      'deepen は「深める」という意味です。顧客・パートナーとの関係強化文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-818',
+    type: 'vocabulary',
+    content: 'deploy a new customer relationship management system',
+    choices: ['導入する', '廃棄する', 'テストする', '承認する'],
+    answer: '導入する',
+    explanation:
+      'deploy は「導入する、展開する」という意味です。システム・ソリューションの展開文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-819',
+    type: 'vocabulary',
+    content: 'describe the scope of work in detail',
+    choices: ['説明する', '承認する', '修正する', '廃棄する'],
+    answer: '説明する',
+    explanation:
+      'describe は「説明する」という意味です。業務範囲・要件の詳細説明文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-820',
+    type: 'vocabulary',
+    content: 'detect signs of financial irregularities',
+    choices: ['発見する', '修正する', '記録する', '報告する'],
+    answer: '発見する',
+    explanation:
+      'detect は「発見する」という意味です。不正・異常の発見文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-821',
+    type: 'vocabulary',
+    content: 'distribute the workload equitably among staff',
+    choices: ['分配する', '集中する', '削減する', '廃棄する'],
+    answer: '分配する',
+    explanation:
+      'distribute は「分配する」という意味です。業務・資料の配布・分配文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-822',
+    type: 'vocabulary',
+    content: 'document the standard operating procedures',
+    choices: ['記録する', '削除する', '共有する', '廃棄する'],
+    answer: '記録する',
+    explanation:
+      'document は「記録する」という意味です。手順・知見の文書化文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-823',
+    type: 'vocabulary',
+    content: 'draw on past experience to solve the problem',
+    choices: ['活用する', '無視する', '記録する', '延期する'],
+    answer: '活用する',
+    explanation:
+      'draw on は「活用する」という意味です。経験・強みを引き出す文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-824',
+    type: 'vocabulary',
+    content: 'eliminate bottlenecks in the production process',
+    choices: ['排除する', '追加する', '改善する', '維持する'],
+    answer: '排除する',
+    explanation:
+      'eliminate は「排除する」という意味です。ボトルネック・無駄・障壁の排除文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-825',
+    type: 'vocabulary',
+    content: 'endorse the new corporate strategy',
+    choices: ['支持する', '廃止する', '評価する', '修正する'],
+    answer: '支持する',
+    explanation:
+      'endorse は「支持する、推薦する」という意味です。戦略・製品・候補者への支持文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-826',
+    type: 'vocabulary',
+    content: 'ensure compliance with international standards',
+    choices: ['確保する', '無視する', '延期する', '記録する'],
+    answer: '確保する',
+    explanation:
+      'ensure は「確保する」という意味です。国際基準・安全・品質の保証文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-827',
+    type: 'vocabulary',
+    content: 'examine the terms before accepting the offer',
+    choices: ['確認する', '無視する', '記録する', '延期する'],
+    answer: '確認する',
+    explanation:
+      'examine は「確認する、検討する」という意味です。条件・提案の精査文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-828',
+    type: 'vocabulary',
+    content: 'expand operations to the Asian market',
+    choices: ['拡大する', '縮小する', '廃止する', '維持する'],
+    answer: '拡大する',
+    explanation:
+      'expand は「拡大する」という意味です。海外・新市場への事業拡大文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-829',
+    type: 'vocabulary',
+    content: 'fill the vacancy as soon as possible',
+    choices: ['補充する', '削減する', '延期する', '記録する'],
+    answer: '補充する',
+    explanation:
+      'fill the vacancy は「欠員を補充する」という意味です。人材採用・欠員補充の文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-830',
+    type: 'vocabulary',
+    content: 'follow up on all outstanding action items',
+    choices: ['フォローアップする', '無視する', '記録する', '延期する'],
+    answer: 'フォローアップする',
+    explanation:
+      'follow up は「フォローアップする」という意味です。未完了タスク・顧客対応の追跡文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-831',
+    type: 'vocabulary',
+    content: 'foster innovation within the organization',
+    choices: ['育てる', '阻害する', '廃止する', '評価する'],
+    answer: '育てる',
+    explanation:
+      'foster は「育てる」という意味です。イノベーション・文化・能力の育成文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-832',
+    type: 'vocabulary',
+    content: 'gauge the impact of the new pricing strategy',
+    choices: ['測定する', '向上させる', '承認する', '無視する'],
+    answer: '測定する',
+    explanation:
+      'gauge は「測定する」という意味です。影響・反応・効果の測定文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-833',
+    type: 'vocabulary',
+    content: 'give clear instructions to the project team',
+    choices: ['伝える', '記録する', '承認する', '延期する'],
+    answer: '伝える',
+    explanation:
+      'give instructions は「指示を伝える」という意味です。業務指示・方向性の伝達文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-834',
+    type: 'vocabulary',
+    content: 'grow the business through strategic acquisitions',
+    choices: ['成長させる', '縮小する', '廃止する', '維持する'],
+    answer: '成長させる',
+    explanation:
+      'grow は「成長させる」という意味です。事業・収益・人材の成長文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-835',
+    type: 'vocabulary',
+    content: 'handle the transition between project phases',
+    choices: ['管理する', '回避する', '延期する', '記録する'],
+    answer: '管理する',
+    explanation:
+      'handle は「管理する、対処する」という意味です。プロジェクト段階間の移行管理文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-836',
+    type: 'vocabulary',
+    content: 'help resolve the billing dispute quickly',
+    choices: ['解決する', '無視する', '記録する', '延期する'],
+    answer: '解決する',
+    explanation:
+      'resolve は「解決する」という意味です。請求・紛争・問題の解決文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-837',
+    type: 'vocabulary',
+    content: 'identify opportunities for cost reduction',
+    choices: ['特定する', '無視する', '記録する', '承認する'],
+    answer: '特定する',
+    explanation:
+      'identify は「特定する」という意味です。機会・問題・リスクの特定文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-838',
+    type: 'vocabulary',
+    content: 'improve the onboarding experience for new hires',
+    choices: ['改善する', '廃止する', '維持する', '延期する'],
+    answer: '改善する',
+    explanation:
+      'improve は「改善する」という意味です。体験・プロセス・品質の改善文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-839',
+    type: 'vocabulary',
+    content: 'include all relevant parties in the discussion',
+    choices: ['含める', '排除する', '記録する', '延期する'],
+    answer: '含める',
+    explanation:
+      'include は「含める」という意味です。関係者・条件・情報の包含文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-840',
+    type: 'vocabulary',
+    content: 'inform all relevant departments of the change',
+    choices: ['通知する', '無視する', '延期する', '記録する'],
+    answer: '通知する',
+    explanation:
+      'inform は「通知する」という意味です。変更・決定事項の関係部署への周知文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-841',
+    type: 'vocabulary',
+    content: 'integrate customer feedback into product design',
+    choices: ['統合する', '無視する', '廃棄する', '延期する'],
+    answer: '統合する',
+    explanation:
+      'integrate は「統合する、組み込む」という意味です。フィードバック・機能の組み込み文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-842',
+    type: 'vocabulary',
+    content: 'introduce a flexible work schedule',
+    choices: ['導入する', '廃止する', '修正する', '承認する'],
+    answer: '導入する',
+    explanation:
+      'introduce は「導入する」という意味です。制度・仕組み・製品の導入文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-843',
+    type: 'vocabulary',
+    content: 'justify the need for additional resources',
+    choices: ['正当化する', '削減する', '承認する', '記録する'],
+    answer: '正当化する',
+    explanation:
+      'justify は「正当化する」という意味です。追加投資・増員の根拠説明文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-844',
+    type: 'vocabulary',
+    content: 'keep stakeholders updated on project status',
+    choices: ['最新情報を提供する', '無視する', '記録する', '延期する'],
+    answer: '最新情報を提供する',
+    explanation:
+      'keep updated は「最新情報を提供する」という意味です。プロジェクト進捗報告の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-845',
+    type: 'vocabulary',
+    content: 'lead the discussion on budget allocation',
+    choices: ['主導する', '参加する', '記録する', '延期する'],
+    answer: '主導する',
+    explanation:
+      'lead は「主導する」という意味です。会議・議論・プロジェクトを主導する文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-846',
+    type: 'vocabulary',
+    content: 'liaise with government agencies on compliance',
+    choices: ['連携する', '無視する', '廃棄する', '記録する'],
+    answer: '連携する',
+    explanation:
+      'liaise は「連携する」という意味です。行政機関・外部組織との連絡・協力文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-847',
+    type: 'vocabulary',
+    content: 'lower operational costs without sacrificing quality',
+    choices: ['下げる', '上げる', '維持する', '測定する'],
+    answer: '下げる',
+    explanation:
+      'lower は「下げる」という意味です。コスト・リスク・価格の低下文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-848',
+    type: 'vocabulary',
+    content: 'manage the expectations of external clients',
+    choices: ['管理する', '無視する', '記録する', '廃棄する'],
+    answer: '管理する',
+    explanation:
+      'manage は「管理する」という意味です。顧客期待値・プロジェクトの管理文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-849',
+    type: 'vocabulary',
+    content: 'maximize the return on marketing investments',
+    choices: ['最大化する', '最小化する', '維持する', '計算する'],
+    answer: '最大化する',
+    explanation:
+      'maximize は「最大化する」という意味です。ROI・利益・価値向上の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-850',
+    type: 'vocabulary',
+    content: 'meet the growing demand for digital services',
+    choices: ['対応する', '無視する', '廃棄する', '記録する'],
+    answer: '対応する',
+    explanation:
+      'meet は「対応する、満たす」という意味です。需要・要件・期待に応える文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-851',
+    type: 'vocabulary',
+    content: 'mitigate the risks associated with the merger',
+    choices: ['軽減する', '無視する', '廃棄する', '増やす'],
+    answer: '軽減する',
+    explanation:
+      'mitigate は「軽減する」という意味です。リスク管理・被害軽減の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-852',
+    type: 'vocabulary',
+    content: 'notify customers of the upcoming service change',
+    choices: ['通知する', '無視する', '記録する', '延期する'],
+    answer: '通知する',
+    explanation:
+      'notify は「通知する」という意味です。顧客・関係者への重要事項通知文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-853',
+    type: 'vocabulary',
+    content: 'obtain regulatory clearance for the new drug',
+    choices: ['取得する', '申請する', '更新する', '廃棄する'],
+    answer: '取得する',
+    explanation:
+      'obtain は「取得する」という意味です。許可・認可・資格取得の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-854',
+    type: 'vocabulary',
+    content: 'optimize the allocation of human resources',
+    choices: ['最適化する', '廃止する', '削減する', '維持する'],
+    answer: '最適化する',
+    explanation:
+      'optimize は「最適化する」という意味です。リソース・プロセス・パフォーマンスの最適化文脈で頻出します。',
+  },
+  {
+    id: 'vocab-855',
+    type: 'vocabulary',
+    content: 'organize a cross-functional problem-solving session',
+    choices: ['企画する', '参加する', '記録する', '延期する'],
+    answer: '企画する',
+    explanation:
+      'organize は「企画する」という意味です。イベント・会議・チームの整理文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-856',
+    type: 'vocabulary',
+    content: 'outline a clear plan for the product launch',
+    choices: ['概説する', '承認する', '廃棄する', '修正する'],
+    answer: '概説する',
+    explanation:
+      'outline は「概説する」という意味です。計画・提案の概要説明文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-857',
+    type: 'vocabulary',
+    content: 'overcome the language barrier in negotiations',
+    choices: ['克服する', '無視する', '記録する', '廃棄する'],
+    answer: '克服する',
+    explanation:
+      'overcome は「克服する」という意味です。障壁・困難の克服文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-858',
+    type: 'vocabulary',
+    content: 'participate actively in the strategy meeting',
+    choices: ['参加する', '欠席する', '主催する', '記録する'],
+    answer: '参加する',
+    explanation:
+      'participate は「参加する」という意味です。会議・プロジェクト・イベント参加の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-859',
+    type: 'vocabulary',
+    content: 'perform a thorough quality assessment',
+    choices: ['実施する', '延期する', '廃止する', '承認する'],
+    answer: '実施する',
+    explanation:
+      'perform は「実施する」という意味です。評価・分析・業務遂行の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-860',
+    type: 'vocabulary',
+    content: 'plan the transition to a new accounting system',
+    choices: ['計画する', '廃止する', '延期する', '承認する'],
+    answer: '計画する',
+    explanation:
+      'plan は「計画する」という意味です。移行・変更・プロジェクトの計画文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-861',
+    type: 'vocabulary',
+    content: 'prepare a thorough risk assessment report',
+    choices: ['作成する', '承認する', '修正する', '提出する'],
+    answer: '作成する',
+    explanation:
+      'prepare は「作成する、準備する」という意味です。報告書・資料作成の文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-862',
+    type: 'vocabulary',
+    content: 'present a convincing business case',
+    choices: ['発表する', '修正する', '延期する', '廃棄する'],
+    answer: '発表する',
+    explanation:
+      'present は「発表する」という意味です。ビジネスケース・提案の発表文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-863',
+    type: 'vocabulary',
+    content: 'prevent unnecessary delays in the process',
+    choices: ['防ぐ', '記録する', '無視する', '修正する'],
+    answer: '防ぐ',
+    explanation:
+      'prevent は「防ぐ」という意味です。遅延・事故・問題の防止文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-864',
+    type: 'vocabulary',
+    content: 'propose a revised timeline for the project',
+    choices: ['提案する', '承認する', '却下する', '延期する'],
+    answer: '提案する',
+    explanation:
+      'propose は「提案する」という意味です。計画・解決策・変更の提案文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-865',
+    type: 'vocabulary',
+    content: 'provide ongoing support to the client',
+    choices: ['提供する', '要求する', '承認する', '修正する'],
+    answer: '提供する',
+    explanation:
+      'provide は「提供する」という意味です。サポート・情報・サービス提供の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-866',
+    type: 'vocabulary',
+    content: 'raise the standard of service delivery',
+    choices: ['引き上げる', '下げる', '維持する', '廃止する'],
+    answer: '引き上げる',
+    explanation:
+      'raise は「引き上げる」という意味です。基準・レベル・品質向上の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-867',
+    type: 'vocabulary',
+    content: 'realign the business strategy with market trends',
+    choices: ['再整合させる', '廃棄する', '延期する', '維持する'],
+    answer: '再整合させる',
+    explanation:
+      'realign は「再整合させる」という意味です。戦略・目標の見直し・方向転換文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-868',
+    type: 'vocabulary',
+    content: 'receive confirmation of the booking',
+    choices: ['受け取る', '送る', '修正する', 'キャンセルする'],
+    answer: '受け取る',
+    explanation:
+      'receive は「受け取る」という意味です。確認書・書類・連絡の受領文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-869',
+    type: 'vocabulary',
+    content: 'recognize employees for exceptional performance',
+    choices: ['表彰する', '無視する', '評価する', '記録する'],
+    answer: '表彰する',
+    explanation:
+      'recognize は「表彰する、認める」という意味です。優秀な成果への評価・表彰文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-870',
+    type: 'vocabulary',
+    content: 'recruit candidates with international experience',
+    choices: ['採用する', '解雇する', '昇進させる', '評価する'],
+    answer: '採用する',
+    explanation:
+      'recruit は「採用する」という意味です。グローバル人材・経験者の採用文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-871',
+    type: 'vocabulary',
+    content: 'refer to the contract for clarification',
+    choices: ['参照する', '修正する', '廃棄する', '承認する'],
+    answer: '参照する',
+    explanation:
+      'refer to は「参照する」という意味です。契約書・ガイドライン・マニュアルの参照文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-872',
+    type: 'vocabulary',
+    content: 'release the updated product catalog',
+    choices: ['公開する', '修正する', '延期する', '廃棄する'],
+    answer: '公開する',
+    explanation:
+      'release は「公開する、リリースする」という意味です。カタログ・製品情報の公開文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-873',
+    type: 'vocabulary',
+    content: 'renew the maintenance contract annually',
+    choices: ['更新する', '廃棄する', '修正する', '署名する'],
+    answer: '更新する',
+    explanation:
+      'renew は「更新する」という意味です。保守・サービス・パートナーシップ契約の更新文脈で頻出します。',
+  },
+  {
+    id: 'vocab-874',
+    type: 'vocabulary',
+    content: 'replace outdated equipment with newer models',
+    choices: ['交換する', '修理する', '廃棄する', '検査する'],
+    answer: '交換する',
+    explanation:
+      'replace は「交換する」という意味です。設備・システム・人材の交換・代替文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-875',
+    type: 'vocabulary',
+    content: 'report the incident to the compliance team',
+    choices: ['報告する', '記録する', '無視する', '延期する'],
+    answer: '報告する',
+    explanation:
+      'report は「報告する」という意味です。インシデント・業績・状況の報告文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-876',
+    type: 'vocabulary',
+    content: 'request a proposal from three vendors',
+    choices: ['要請する', '承認する', '拒否する', '記録する'],
+    answer: '要請する',
+    explanation:
+      'request は「要請する」という意味です。提案書・情報・許可の要請文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-877',
+    type: 'vocabulary',
+    content: 'research the best practices in the industry',
+    choices: ['調査する', '無視する', '廃棄する', '記録する'],
+    answer: '調査する',
+    explanation:
+      'research は「調査する」という意味です。業界動向・競合・市場の調査文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-878',
+    type: 'vocabulary',
+    content: 'resolve the technical issues before the deadline',
+    choices: ['解決する', '無視する', '記録する', '延期する'],
+    answer: '解決する',
+    explanation:
+      'resolve は「解決する」という意味です。技術的問題・紛争・課題の解決文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-879',
+    type: 'vocabulary',
+    content: 'retain skilled professionals in the company',
+    choices: ['引き留める', '採用する', '昇進させる', '評価する'],
+    answer: '引き留める',
+    explanation:
+      'retain は「引き留める」という意味です。優秀な人材・顧客の維持・定着文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-880',
+    type: 'vocabulary',
+    content: 'review the quarterly sales performance',
+    choices: ['見直す', '承認する', '廃棄する', '修正する'],
+    answer: '見直す',
+    explanation:
+      'review は「見直す」という意味です。業績・計画・契約の定期的見直し文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-881',
+    type: 'vocabulary',
+    content: 'revise the forecast based on new data',
+    choices: ['改訂する', '承認する', '廃棄する', '提出する'],
+    answer: '改訂する',
+    explanation:
+      'revise は「改訂する」という意味です。予測・計画・文書の改訂文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-882',
+    type: 'vocabulary',
+    content: 'reward loyal customers with exclusive benefits',
+    choices: ['報いる', '無視する', '記録する', '分析する'],
+    answer: '報いる',
+    explanation:
+      'reward は「報いる、報酬を与える」という意味です。顧客優遇・従業員表彰の文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-883',
+    type: 'vocabulary',
+    content: 'run the daily operations smoothly',
+    choices: ['運営する', '廃止する', '拡大する', '縮小する'],
+    answer: '運営する',
+    explanation:
+      'run は「運営する」という意味です。日常業務・事業の円滑な運営文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-884',
+    type: 'vocabulary',
+    content: 'satisfy all the conditions of the tender',
+    choices: ['満たす', '違反する', '修正する', '廃棄する'],
+    answer: '満たす',
+    explanation:
+      'satisfy は「満たす」という意味です。入札条件・顧客要求の充足文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-885',
+    type: 'vocabulary',
+    content: 'schedule a meeting with all department heads',
+    choices: ['設定する', 'キャンセルする', '延期する', '確認する'],
+    answer: '設定する',
+    explanation:
+      'schedule は「設定する、スケジュールする」という意味です。会議・面接・作業の日程設定文脈で頻出します。',
+  },
+  {
+    id: 'vocab-886',
+    type: 'vocabulary',
+    content: 'select the most suitable candidate for the role',
+    choices: ['選定する', '解雇する', '評価する', '記録する'],
+    answer: '選定する',
+    explanation:
+      'select は「選定する」という意味です。候補者・サプライヤー・方法の選択文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-887',
+    type: 'vocabulary',
+    content: 'send a reminder about the upcoming deadline',
+    choices: ['送る', '受け取る', '記録する', '廃棄する'],
+    answer: '送る',
+    explanation:
+      'send は「送る」という意味です。リマインダー・通知・書類の送付文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-888',
+    type: 'vocabulary',
+    content: 'share the results of the customer survey',
+    choices: ['共有する', '作成する', '発表する', '廃棄する'],
+    answer: '共有する',
+    explanation:
+      'share は「共有する」という意味です。調査結果・情報・資料の共有文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-889',
+    type: 'vocabulary',
+    content: 'sign the non-disclosure agreement',
+    choices: ['署名する', '取り消す', '延期する', '修正する'],
+    answer: '署名する',
+    explanation:
+      'sign は「署名する」という意味です。契約書・NDA・発注書への署名文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-890',
+    type: 'vocabulary',
+    content: 'source materials from sustainable suppliers',
+    choices: ['調達する', '製造する', '輸送する', '保管する'],
+    answer: '調達する',
+    explanation:
+      'source は「調達する」という意味です。原材料・サービスの調達先確保文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-891',
+    type: 'vocabulary',
+    content: 'spend time reviewing the draft contract',
+    choices: ['費やす', '削減する', '廃棄する', '承認する'],
+    answer: '費やす',
+    explanation:
+      'spend time は「時間を費やす」という意味です。業務・確認作業への時間投資文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-892',
+    type: 'vocabulary',
+    content: 'streamline the customer onboarding process',
+    choices: ['効率化する', '複雑にする', '廃止する', '延期する'],
+    answer: '効率化する',
+    explanation:
+      'streamline は「効率化する」という意味です。顧客受け入れ・業務プロセスの合理化文脈で頻出します。',
+  },
+  {
+    id: 'vocab-893',
+    type: 'vocabulary',
+    content: 'submit the quarterly business report on time',
+    choices: ['提出する', '撤回する', '修正する', '承認する'],
+    answer: '提出する',
+    explanation:
+      'submit は「提出する」という意味です。定期報告書・資料の提出文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-894',
+    type: 'vocabulary',
+    content: 'support the implementation of automation tools',
+    choices: ['支援する', '妨げる', '廃止する', '記録する'],
+    answer: '支援する',
+    explanation:
+      'support は「支援する」という意味です。ツール導入・変革推進への支持文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-895',
+    type: 'vocabulary',
+    content: "tailor the training program to the team's needs",
+    choices: ['カスタマイズする', '標準化する', '廃止する', '維持する'],
+    answer: 'カスタマイズする',
+    explanation:
+      'tailor は「カスタマイズする」という意味です。研修・サービスの個別調整文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-896',
+    type: 'vocabulary',
+    content: 'take ownership of the assigned deliverables',
+    choices: ['責任を持つ', '回避する', '委任する', '記録する'],
+    answer: '責任を持つ',
+    explanation:
+      'take ownership は「責任を持つ」という意味です。成果物・業務への当事者意識の文脈で使われます。',
+  },
+  {
+    id: 'vocab-897',
+    type: 'vocabulary',
+    content: 'train the staff on the new system features',
+    choices: ['研修する', '採用する', '評価する', '解雇する'],
+    answer: '研修する',
+    explanation:
+      'train は「研修する」という意味です。新システム・スキルの研修・指導文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-898',
+    type: 'vocabulary',
+    content: 'update the risk register after each milestone',
+    choices: ['更新する', '廃棄する', '承認する', '修正する'],
+    answer: '更新する',
+    explanation:
+      'update は「更新する」という意味です。リスク台帳・情報・システムの更新文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-899',
+    type: 'vocabulary',
+    content: 'utilize the full potential of the team',
+    choices: ['活用する', '廃棄する', '削減する', '評価する'],
+    answer: '活用する',
+    explanation:
+      'utilize は「活用する」という意味です。チーム・ツール・リソースの最大活用文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-900',
+    type: 'vocabulary',
+    content: 'welcome feedback from all team members',
+    choices: ['歓迎する', '無視する', '記録する', '延期する'],
+    answer: '歓迎する',
+    explanation:
+      'welcome は「歓迎する」という意味です。フィードバック・意見・新入社員の歓迎文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-901',
+    type: 'vocabulary',
+    content: 'withdraw the proposal after further review',
+    choices: ['撤回する', '承認する', '延期する', '公表する'],
+    answer: '撤回する',
+    explanation:
+      'withdraw は「撤回する」という意味です。提案・申請の撤回文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-902',
+    type: 'vocabulary',
+    content: 'work together to achieve a common goal',
+    choices: ['協力する', '競争する', '廃棄する', '記録する'],
+    answer: '協力する',
+    explanation:
+      'work together は「協力する」という意味です。共通目標に向けた連携・協働の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-903',
+    type: 'vocabulary',
+    content: 'write a detailed project status report',
+    choices: ['作成する', '承認する', '廃棄する', '修正する'],
+    answer: '作成する',
+    explanation:
+      'write は「作成する」という意味です。報告書・提案書の作成文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-904',
+    type: 'vocabulary',
+    content: 'yield a significant return on the investment',
+    choices: ['生み出す', '削減する', '維持する', '計算する'],
+    answer: '生み出す',
+    explanation:
+      'yield は「生み出す」という意味です。利益・成果を生む文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-905',
+    type: 'vocabulary',
+    content: 'achieve significant cost reductions through automation',
+    choices: ['達成する', '超える', '下回る', '修正する'],
+    answer: '達成する',
+    explanation:
+      'achieve は「達成する」という意味です。コスト削減・目標達成の文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-906',
+    type: 'vocabulary',
+    content: 'acquire new skills through professional development',
+    choices: ['習得する', '廃棄する', '評価する', '無視する'],
+    answer: '習得する',
+    explanation:
+      'acquire は「習得する、取得する」という意味です。スキル・知識・資格の取得文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-907',
+    type: 'vocabulary',
+    content: 'adjust the project scope to fit the budget',
+    choices: ['調整する', '廃止する', '維持する', '承認する'],
+    answer: '調整する',
+    explanation:
+      'adjust は「調整する」という意味です。プロジェクト範囲・予算・戦略の調整文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-908',
+    type: 'vocabulary',
+    content: 'advocate for sustainable business practices',
+    choices: ['主張する', '反対する', '無視する', '記録する'],
+    answer: '主張する',
+    explanation:
+      'advocate for は「主張する、支持する」という意味です。持続可能性・方針推進の文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-909',
+    type: 'vocabulary',
+    content: 'allocate resources effectively across projects',
+    choices: ['配分する', '削減する', '廃棄する', '延期する'],
+    answer: '配分する',
+    explanation:
+      'allocate は「配分する」という意味です。予算・人材・時間の効率的配分文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-910',
+    type: 'vocabulary',
+    content: 'analyze the competitive landscape thoroughly',
+    choices: ['分析する', '無視する', '廃棄する', '記録する'],
+    answer: '分析する',
+    explanation:
+      'analyze は「分析する」という意味です。競合環境・データ・市場の分析文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-911',
+    type: 'vocabulary',
+    content: 'apply for the position of regional manager',
+    choices: ['応募する', '採用する', '辞退する', '確認する'],
+    answer: '応募する',
+    explanation:
+      'apply for は「応募する」という意味です。求人・職位への応募文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-912',
+    type: 'vocabulary',
+    content: 'approve the capital expenditure request',
+    choices: ['承認する', '却下する', '延期する', '修正する'],
+    answer: '承認する',
+    explanation:
+      'approve は「承認する」という意味です。設備投資・予算申請への承認文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-913',
+    type: 'vocabulary',
+    content: 'assign dedicated resources to the initiative',
+    choices: ['割り当てる', '削減する', '廃棄する', '延期する'],
+    answer: '割り当てる',
+    explanation:
+      'assign は「割り当てる」という意味です。専任リソース・タスクの割り当て文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-914',
+    type: 'vocabulary',
+    content: 'attract top talent with competitive packages',
+    choices: ['引き付ける', '解雇する', '評価する', '記録する'],
+    answer: '引き付ける',
+    explanation:
+      'attract は「引き付ける」という意味です。優秀な人材・投資家・顧客の獲得文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-915',
+    type: 'vocabulary',
+    content: 'balance innovation and operational stability',
+    choices: ['バランスをとる', '無視する', '廃棄する', '記録する'],
+    answer: 'バランスをとる',
+    explanation:
+      'balance は「バランスをとる」という意味です。革新と安定・短期と長期の均衡文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-916',
+    type: 'vocabulary',
+    content: 'begin the recruitment process immediately',
+    choices: ['開始する', '延期する', '廃棄する', '承認する'],
+    answer: '開始する',
+    explanation:
+      'begin は「開始する」という意味です。採用・移行・プロセスの開始文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-917',
+    type: 'vocabulary',
+    content: 'brief the executive team on the project update',
+    choices: ['報告する', '記録する', '延期する', '承認する'],
+    answer: '報告する',
+    explanation:
+      'brief は「報告する、概要を伝える」という意味です。経営陣・チームへの概況報告文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-918',
+    type: 'vocabulary',
+    content: 'build consensus among the leadership team',
+    choices: ['形成する', '破壊する', '維持する', '廃棄する'],
+    answer: '形成する',
+    explanation:
+      'build consensus は「合意を形成する」という意味です。経営・意思決定のコンセンサス形成文脈で使われます。',
+  },
+  {
+    id: 'vocab-919',
+    type: 'vocabulary',
+    content: 'calculate the projected return on investment',
+    choices: ['計算する', '予測する', '承認する', '修正する'],
+    answer: '計算する',
+    explanation:
+      'calculate は「計算する」という意味です。ROI・コスト・数値の計算文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-920',
+    type: 'vocabulary',
+    content: 'chair the annual general meeting',
+    choices: ['議長を務める', '参加する', '欠席する', '記録する'],
+    answer: '議長を務める',
+    explanation:
+      'chair は「議長を務める」という意味です。年次総会・委員会の進行役文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-921',
+    type: 'vocabulary',
+    content: 'clarify the roles within the project team',
+    choices: ['明確にする', '変更する', '承認する', '記録する'],
+    answer: '明確にする',
+    explanation:
+      'clarify は「明確にする」という意味です。役割・要件・方針の明確化文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-922',
+    type: 'vocabulary',
+    content: 'close out the project after final delivery',
+    choices: ['完了する', '延期する', '承認する', '廃棄する'],
+    answer: '完了する',
+    explanation:
+      'close out は「完了する、締め切る」という意味です。プロジェクト・会計年度の締め文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-923',
+    type: 'vocabulary',
+    content: 'communicate the change to all employees promptly',
+    choices: ['伝える', '隠す', '記録する', '廃棄する'],
+    answer: '伝える',
+    explanation:
+      'communicate は「伝える」という意味です。重要変更・情報の全従業員への周知文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-924',
+    type: 'vocabulary',
+    content: 'conduct a customer satisfaction survey',
+    choices: ['実施する', '廃止する', '延期する', '記録する'],
+    answer: '実施する',
+    explanation:
+      'conduct は「実施する」という意味です。調査・テスト・会議の実施文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-925',
+    type: 'vocabulary',
+    content: 'confirm the delivery date with the logistics team',
+    choices: ['確認する', '変更する', 'キャンセルする', '延期する'],
+    answer: '確認する',
+    explanation:
+      'confirm は「確認する」という意味です。納期・予約・情報の確認文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-926',
+    type: 'vocabulary',
+    content: 'consolidate feedback from multiple sources',
+    choices: ['統合する', '分割する', '廃棄する', '削除する'],
+    answer: '統合する',
+    explanation:
+      'consolidate は「統合する」という意味です。データ・フィードバック・機能の集約文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-927',
+    type: 'vocabulary',
+    content: 'contact the relevant authority for guidance',
+    choices: ['連絡する', '無視する', '訪問する', '記録する'],
+    answer: '連絡する',
+    explanation:
+      'contact は「連絡する」という意味です。担当機関・担当者への問い合わせ文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-928',
+    type: 'vocabulary',
+    content: 'control the quality of all outgoing shipments',
+    choices: ['管理する', '測定する', '廃棄する', '改善する'],
+    answer: '管理する',
+    explanation:
+      'control は「管理する」という意味です。品質・コスト・在庫の管理文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-929',
+    type: 'vocabulary',
+    content: 'coordinate the annual corporate retreat',
+    choices: ['調整する', '参加する', '記録する', '延期する'],
+    answer: '調整する',
+    explanation:
+      'coordinate は「調整する」という意味です。イベント・業務・部門間の調整文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-930',
+    type: 'vocabulary',
+    content: 'cover the agenda items within the allocated time',
+    choices: ['カバーする', '廃棄する', '修正する', '承認する'],
+    answer: 'カバーする',
+    explanation:
+      'cover は「カバーする、取り上げる」という意味です。会議の議題・費用負担の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-931',
+    type: 'vocabulary',
+    content: 'create value for all stakeholders involved',
+    choices: ['創出する', '廃棄する', '維持する', '評価する'],
+    answer: '創出する',
+    explanation:
+      'create value は「価値を創出する」という意味です。株主・顧客・社会への価値提供文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-932',
+    type: 'vocabulary',
+    content: 'cut down on paper usage in the office',
+    choices: ['削減する', '増やす', '承認する', '記録する'],
+    answer: '削減する',
+    explanation:
+      'cut down on は「削減する」という意味です。経費・紙・エネルギーの削減文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-933',
+    type: 'vocabulary',
+    content: 'deal with the backlog of customer requests',
+    choices: ['対処する', '無視する', '記録する', '延期する'],
+    answer: '対処する',
+    explanation:
+      'deal with は「対処する」という意味です。積み残し・問題・困難への対応文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-934',
+    type: 'vocabulary',
+    content: 'decide to expand into emerging markets',
+    choices: ['決定する', '延期する', '記録する', '承認する'],
+    answer: '決定する',
+    explanation:
+      'decide は「決定する」という意味です。方針・戦略・行動の決定文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-935',
+    type: 'vocabulary',
+    content: 'define success metrics for the project',
+    choices: ['定義する', '廃止する', '変更する', '記録する'],
+    answer: '定義する',
+    explanation:
+      'define は「定義する」という意味です。成功指標・目標・役割の明確化文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-936',
+    type: 'vocabulary',
+    content: 'delegate authority to regional managers',
+    choices: ['委任する', '集中する', '廃止する', '記録する'],
+    answer: '委任する',
+    explanation:
+      'delegate は「委任する」という意味です。権限・業務の委任文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-937',
+    type: 'vocabulary',
+    content: 'deliver the project on time and on budget',
+    choices: ['遂行する', '延期する', 'キャンセルする', '修正する'],
+    answer: '遂行する',
+    explanation:
+      'deliver は「遂行する、提供する」という意味です。プロジェクト成果物の期限内・予算内での提供文脈で頻出します。',
+  },
+  {
+    id: 'vocab-938',
+    type: 'vocabulary',
+    content: 'design a scalable organizational structure',
+    choices: ['設計する', '廃棄する', '延期する', '承認する'],
+    answer: '設計する',
+    explanation:
+      'design は「設計する」という意味です。組織・システム・プロセスの設計文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-939',
+    type: 'vocabulary',
+    content: 'develop an effective crisis management plan',
+    choices: ['策定する', '廃棄する', '延期する', '承認する'],
+    answer: '策定する',
+    explanation:
+      'develop は「策定する、開発する」という意味です。危機管理・事業継続計画の策定文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-940',
+    type: 'vocabulary',
+    content: 'discuss the findings of the audit report',
+    choices: ['協議する', '記録する', '延期する', '承認する'],
+    answer: '協議する',
+    explanation:
+      'discuss は「協議する」という意味です。監査結果・重要事項の協議文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-941',
+    type: 'vocabulary',
+    content: 'draft a memorandum of understanding',
+    choices: ['起草する', '署名する', '廃棄する', '更新する'],
+    answer: '起草する',
+    explanation:
+      'draft は「起草する」という意味です。覚書・契約書・方針文書の作成文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-942',
+    type: 'vocabulary',
+    content: 'enable faster decision-making processes',
+    choices: ['可能にする', '禁止する', '廃止する', '延期する'],
+    answer: '可能にする',
+    explanation:
+      'enable は「可能にする」という意味です。迅速化・効率化を実現する文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-943',
+    type: 'vocabulary',
+    content: 'encourage open dialogue within the team',
+    choices: ['奨励する', '阻害する', '廃止する', '記録する'],
+    answer: '奨励する',
+    explanation:
+      'encourage は「奨励する」という意味です。対話・参加・行動の奨励文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-944',
+    type: 'vocabulary',
+    content: 'ensure all deliverables meet the specifications',
+    choices: ['確保する', '無視する', '延期する', '記録する'],
+    answer: '確保する',
+    explanation:
+      'ensure は「確保する」という意味です。成果物・品質・条件の保証文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-945',
+    type: 'vocabulary',
+    content: 'establish performance benchmarks for the team',
+    choices: ['設定する', '廃止する', '修正する', '延期する'],
+    answer: '設定する',
+    explanation:
+      'establish は「設定する、確立する」という意味です。目標・指標・基準の設定文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-946',
+    type: 'vocabulary',
+    content: 'expand the customer support team',
+    choices: ['拡大する', '縮小する', '廃止する', '維持する'],
+    answer: '拡大する',
+    explanation:
+      'expand は「拡大する」という意味です。チーム・事業・市場の拡大文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-947',
+    type: 'vocabulary',
+    content: 'extend the pilot program by another month',
+    choices: ['延長する', '短縮する', 'キャンセルする', '修正する'],
+    answer: '延長する',
+    explanation:
+      'extend は「延長する」という意味です。期間・試験プログラムの延長文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-948',
+    type: 'vocabulary',
+    content: 'finalize the agenda for the board meeting',
+    choices: ['確定する', '修正する', '延期する', '廃棄する'],
+    answer: '確定する',
+    explanation:
+      'finalize は「確定する」という意味です。議題・計画・契約の最終確定文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-949',
+    type: 'vocabulary',
+    content: 'focus resources on the highest-impact activities',
+    choices: ['集中させる', '分散する', '廃棄する', '記録する'],
+    answer: '集中させる',
+    explanation:
+      'focus は「集中させる」という意味です。重点領域へのリソース投入文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-950',
+    type: 'vocabulary',
+    content: 'follow through on all commitments made',
+    choices: ['やり遂げる', '無視する', '延期する', '記録する'],
+    answer: 'やり遂げる',
+    explanation:
+      'follow through は「やり遂げる」という意味です。約束・コミットメントの完遂文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-951',
+    type: 'vocabulary',
+    content: 'formulate a clear vision for the department',
+    choices: ['策定する', '廃棄する', '修正する', '承認する'],
+    answer: '策定する',
+    explanation:
+      'formulate は「策定する」という意味です。ビジョン・戦略・計画の立案文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-952',
+    type: 'vocabulary',
+    content: 'gain a competitive advantage in the market',
+    choices: ['獲得する', '失う', '維持する', '計算する'],
+    answer: '獲得する',
+    explanation:
+      'gain は「獲得する」という意味です。競争優位性・信頼・承認を得る文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-953',
+    type: 'vocabulary',
+    content: 'generate a detailed financial projection',
+    choices: ['作成する', '廃棄する', '承認する', '修正する'],
+    answer: '作成する',
+    explanation:
+      'generate は「作成する、生み出す」という意味です。財務予測・レポートの作成文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-954',
+    type: 'vocabulary',
+    content: 'handle objections during the sales presentation',
+    choices: ['対処する', '無視する', '記録する', '延期する'],
+    answer: '対処する',
+    explanation:
+      'handle は「対処する」という意味です。反論・懸念・問題への対応文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-955',
+    type: 'vocabulary',
+    content: 'highlight the benefits of the new approach',
+    choices: ['強調する', '省略する', '修正する', '確認する'],
+    answer: '強調する',
+    explanation:
+      'highlight は「強調する」という意味です。メリット・重要ポイントの強調文脈でTOEICに出題されます。',
+  },
+  {
+    id: 'vocab-956',
+    type: 'vocabulary',
+    content: 'identify and address gaps in the process',
+    choices: ['特定する', '無視する', '記録する', '延期する'],
+    answer: '特定する',
+    explanation:
+      'identify は「特定する」という意味です。プロセスのギャップ・課題発見の文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-957',
+    type: 'vocabulary',
+    content: 'implement best practices from leading companies',
+    choices: ['導入する', '廃止する', '評価する', '記録する'],
+    answer: '導入する',
+    explanation:
+      'implement は「導入する」という意味です。業界最善手法の導入・実施文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-958',
+    type: 'vocabulary',
+    content: 'improve the accuracy of financial forecasts',
+    choices: ['向上させる', '廃止する', '維持する', '延期する'],
+    answer: '向上させる',
+    explanation:
+      'improve は「向上させる」という意味です。精度・品質・効率の改善文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-959',
+    type: 'vocabulary',
+    content: 'increase the visibility of the brand online',
+    choices: ['高める', '低下させる', '維持する', '測定する'],
+    answer: '高める',
+    explanation:
+      'increase は「高める」という意味です。ブランド認知・収益・効率の向上文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-960',
+    type: 'vocabulary',
+    content: 'initiate a comprehensive review of operations',
+    choices: ['開始する', '延期する', '廃止する', '承認する'],
+    answer: '開始する',
+    explanation:
+      'initiate は「開始する」という意味です。レビュー・手続き・プロジェクトの着手文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-961',
+    type: 'vocabulary',
+    content: 'insist on maintaining the highest standards',
+    choices: ['主張する', '受け入れる', '延期する', '記録する'],
+    answer: '主張する',
+    explanation:
+      'insist on は「主張する」という意味です。品質・基準の維持を要求する文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-962',
+    type: 'vocabulary',
+    content: 'invest in employee training and development',
+    choices: ['投資する', '削減する', '廃棄する', '評価する'],
+    answer: '投資する',
+    explanation:
+      'invest は「投資する」という意味です。人材・技術・インフラへの投資文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-963',
+    type: 'vocabulary',
+    content: 'involve all stakeholders in the planning process',
+    choices: ['参加させる', '排除する', '無視する', '記録する'],
+    answer: '参加させる',
+    explanation:
+      'involve は「参加させる、関与させる」という意味です。ステークホルダー・関係者の巻き込み文脈で頻出します。',
+  },
+  {
+    id: 'vocab-964',
+    type: 'vocabulary',
+    content: 'keep detailed records of all transactions',
+    choices: ['保持する', '削除する', '修正する', '提出する'],
+    answer: '保持する',
+    explanation:
+      'keep records は「記録を保持する」という意味です。取引・業務の詳細な記録管理文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-965',
+    type: 'vocabulary',
+    content: 'launch a company-wide efficiency drive',
+    choices: ['開始する', '廃止する', '延期する', '承認する'],
+    answer: '開始する',
+    explanation:
+      'launch は「開始する」という意味です。全社的な取り組み・キャンペーンの立ち上げ文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-966',
+    type: 'vocabulary',
+    content: 'lead the digital transformation initiative',
+    choices: ['主導する', '参加する', '記録する', '延期する'],
+    answer: '主導する',
+    explanation:
+      'lead は「主導する」という意味です。デジタル変革・プロジェクトのリーダーシップ文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-967',
+    type: 'vocabulary',
+    content: 'manage the day-to-day operations of the store',
+    choices: ['管理する', '廃止する', '拡大する', '縮小する'],
+    answer: '管理する',
+    explanation:
+      'manage は「管理する」という意味です。店舗・部門・日常業務の管理文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-968',
+    type: 'vocabulary',
+    content: 'measure the effectiveness of training programs',
+    choices: ['測定する', '廃止する', '延期する', '承認する'],
+    answer: '測定する',
+    explanation:
+      'measure は「測定する」という意味です。研修・施策・戦略の効果測定文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-969',
+    type: 'vocabulary',
+    content: 'negotiate better terms with the bank',
+    choices: ['交渉する', '承認する', '署名する', '廃棄する'],
+    answer: '交渉する',
+    explanation:
+      'negotiate は「交渉する」という意味です。融資条件・取引条件の交渉文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-970',
+    type: 'vocabulary',
+    content: 'notify the vendor of the order cancellation',
+    choices: ['通知する', '無視する', '記録する', '延期する'],
+    answer: '通知する',
+    explanation:
+      'notify は「通知する」という意味です。注文キャンセル・変更の通知文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-971',
+    type: 'vocabulary',
+    content: 'obtain the necessary certifications',
+    choices: ['取得する', '申請する', '更新する', '廃棄する'],
+    answer: '取得する',
+    explanation:
+      'obtain は「取得する」という意味です。資格・許可・認証の取得文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-972',
+    type: 'vocabulary',
+    content: 'optimize the workflow for maximum efficiency',
+    choices: ['最適化する', '廃止する', '削減する', '維持する'],
+    answer: '最適化する',
+    explanation:
+      'optimize は「最適化する」という意味です。業務フロー・リソース・パフォーマンスの最適化文脈で頻出します。',
+  },
+  {
+    id: 'vocab-973',
+    type: 'vocabulary',
+    content: 'present the year-end financial summary',
+    choices: ['発表する', '延期する', '廃棄する', '修正する'],
+    answer: '発表する',
+    explanation:
+      'present は「発表する」という意味です。年次財務報告・成果発表の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-974',
+    type: 'vocabulary',
+    content: 'prioritize the most critical tasks first',
+    choices: ['優先する', '無視する', '廃棄する', '記録する'],
+    answer: '優先する',
+    explanation:
+      'prioritize は「優先する」という意味です。重要タスク・案件の優先付け文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-975',
+    type: 'vocabulary',
+    content: 'process refund requests within two business days',
+    choices: ['処理する', 'キャンセルする', '変更する', '確認する'],
+    answer: '処理する',
+    explanation:
+      'process は「処理する」という意味です。返金・申請・注文処理の文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-976',
+    type: 'vocabulary',
+    content: 'propose a joint venture with the overseas firm',
+    choices: ['提案する', '承認する', '却下する', '廃棄する'],
+    answer: '提案する',
+    explanation:
+      'propose は「提案する」という意味です。合弁・協業・解決策の提案文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-977',
+    type: 'vocabulary',
+    content: 'pursue a long-term growth strategy',
+    choices: ['追求する', '無視する', '廃棄する', '延期する'],
+    answer: '追求する',
+    explanation:
+      'pursue は「追求する」という意味です。成長戦略・目標・機会の追求文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-978',
+    type: 'vocabulary',
+    content: 'reduce the environmental impact of production',
+    choices: ['削減する', '増やす', '測定する', '記録する'],
+    answer: '削減する',
+    explanation:
+      'reduce は「削減する」という意味です。環境負荷・コスト・リスクの削減文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-979',
+    type: 'vocabulary',
+    content: 'reinforce the training on data privacy',
+    choices: ['強化する', '廃止する', '縮小する', '修正する'],
+    answer: '強化する',
+    explanation:
+      'reinforce は「強化する」という意味です。研修・方針・基盤の強化文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-980',
+    type: 'vocabulary',
+    content: 'report the quarterly earnings to investors',
+    choices: ['報告する', '隠す', '延期する', '記録する'],
+    answer: '報告する',
+    explanation:
+      'report は「報告する」という意味です。業績・調査結果の報告文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-981',
+    type: 'vocabulary',
+    content: 'request clarification on the contract terms',
+    choices: ['要請する', '承認する', '拒否する', '記録する'],
+    answer: '要請する',
+    explanation:
+      'request は「要請する」という意味です。説明・情報・許可の要請文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-982',
+    type: 'vocabulary',
+    content: 'resolve disputes through open communication',
+    choices: ['解決する', '無視する', '延期する', '記録する'],
+    answer: '解決する',
+    explanation:
+      'resolve は「解決する」という意味です。紛争・問題・課題の解決文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-983',
+    type: 'vocabulary',
+    content: 'review all contracts before they expire',
+    choices: ['見直す', '承認する', '廃棄する', '修正する'],
+    answer: '見直す',
+    explanation:
+      'review は「見直す」という意味です。契約・計画・方針の期限前見直し文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-984',
+    type: 'vocabulary',
+    content: 'run a cost-benefit analysis before investing',
+    choices: ['実施する', '廃止する', '延期する', '承認する'],
+    answer: '実施する',
+    explanation:
+      'run an analysis は「分析を実施する」という意味です。費用対効果・データ分析の実施文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-985',
+    type: 'vocabulary',
+    content: 'satisfy the requirements of the certification body',
+    choices: ['満たす', '違反する', '修正する', '廃棄する'],
+    answer: '満たす',
+    explanation:
+      'satisfy は「満たす」という意味です。認証機関の基準・顧客要求の充足文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-986',
+    type: 'vocabulary',
+    content: 'secure the data with multi-factor authentication',
+    choices: ['保護する', '削除する', '開示する', '共有する'],
+    answer: '保護する',
+    explanation:
+      'secure は「保護する」という意味です。データ・資産・システムの保護文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-987',
+    type: 'vocabulary',
+    content: 'seek input from subject matter experts',
+    choices: ['求める', '無視する', '延期する', '記録する'],
+    answer: '求める',
+    explanation:
+      'seek input は「意見を求める」という意味です。専門家・関係者への意見照会文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-988',
+    type: 'vocabulary',
+    content: 'set up a dedicated project management office',
+    choices: ['設立する', '廃止する', '延期する', '承認する'],
+    answer: '設立する',
+    explanation:
+      'set up は「設立する、設置する」という意味です。部署・体制・システムの設置文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-989',
+    type: 'vocabulary',
+    content: 'share the updated guidelines with all staff',
+    choices: ['共有する', '作成する', '承認する', '廃棄する'],
+    answer: '共有する',
+    explanation:
+      'share は「共有する」という意味です。資料・情報・ガイドラインの配布文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-990',
+    type: 'vocabulary',
+    content: 'sign off on the final version of the report',
+    choices: ['承認する', '修正する', '廃棄する', '延期する'],
+    answer: '承認する',
+    explanation:
+      'sign off on は「承認する」という意味です。最終版・成果物への正式承認文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-991',
+    type: 'vocabulary',
+    content: 'simplify the process for submitting expense claims',
+    choices: ['簡素化する', '複雑にする', '廃止する', '延期する'],
+    answer: '簡素化する',
+    explanation:
+      'simplify は「簡素化する」という意味です。経費申請・手続きの簡略化文脈でTOEICに出ます。',
+  },
+  {
+    id: 'vocab-992',
+    type: 'vocabulary',
+    content: 'streamline the hiring process to save time',
+    choices: ['効率化する', '廃止する', '複雑にする', '延期する'],
+    answer: '効率化する',
+    explanation:
+      'streamline は「効率化する」という意味です。採用・業務プロセスの合理化文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-993',
+    type: 'vocabulary',
+    content: 'submit a competitive bid for the contract',
+    choices: ['提出する', '撤回する', '修正する', '承認する'],
+    answer: '提出する',
+    explanation:
+      'submit は「提出する」という意味です。入札・提案書の提出文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-994',
+    type: 'vocabulary',
+    content: 'support the career growth of team members',
+    choices: ['支援する', '妨げる', '廃止する', '記録する'],
+    answer: '支援する',
+    explanation:
+      'support は「支援する」という意味です。キャリア・成長・変革への支持文脈でTOEICに非常に頻出します。',
+  },
+  {
+    id: 'vocab-995',
+    type: 'vocabulary',
+    content: 'take advantage of the market opportunity',
+    choices: ['活用する', '無視する', '廃棄する', '延期する'],
+    answer: '活用する',
+    explanation:
+      'take advantage of は「活用する」という意味です。市場機会・競争優位の活用文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-996',
+    type: 'vocabulary',
+    content: 'track key performance indicators weekly',
+    choices: ['追跡する', '廃止する', '延期する', '記録する'],
+    answer: '追跡する',
+    explanation:
+      'track は「追跡する」という意味です。KPI・指標・進捗の定期モニタリング文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-997',
+    type: 'vocabulary',
+    content: 'update all stakeholders on the project progress',
+    choices: ['報告する', '無視する', '延期する', '記録する'],
+    answer: '報告する',
+    explanation:
+      'update は「報告する、更新する」という意味です。ステークホルダーへの進捗報告文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-998',
+    type: 'vocabulary',
+    content: 'verify that all safety checks have been completed',
+    choices: ['確認する', '修正する', '承認する', '送付する'],
+    answer: '確認する',
+    explanation:
+      'verify は「確認する」という意味です。安全確認・チェックリスト検証の文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-999',
+    type: 'vocabulary',
+    content: 'work closely with customers to understand needs',
+    choices: ['連携する', '競争する', '無視する', '記録する'],
+    answer: '連携する',
+    explanation:
+      'work closely with は「緊密に連携する」という意味です。顧客との協働・ニーズ把握文脈でTOEICに頻出します。',
+  },
+  {
+    id: 'vocab-1000',
+    type: 'vocabulary',
+    content: 'yield consistent results through disciplined execution',
+    choices: ['生み出す', '削減する', '維持する', '計算する'],
+    answer: '生み出す',
+    explanation:
+      'yield は「生み出す」という意味です。一貫した成果・利益を生む規律ある実行の文脈でTOEICに出題されます。',
+  },
 ];

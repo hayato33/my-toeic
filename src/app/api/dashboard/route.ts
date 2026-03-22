@@ -39,7 +39,7 @@ export async function GET() {
   // 新規問題のノルマ（固定10問/日）
   const newQuotaRemaining = Math.max(
     0,
-    DAILY_QUOTA.NEW_QUESTIONS - answeredTodayCount,
+    DAILY_QUOTA.STUDY_QUESTIONS - answeredTodayCount,
   );
 
   return NextResponse.json({

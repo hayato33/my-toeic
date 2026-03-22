@@ -30,7 +30,7 @@ export default async function Home() {
 
   const newQuotaRemaining = Math.max(
     0,
-    DAILY_QUOTA.NEW_QUESTIONS - answeredTodayCount,
+    DAILY_QUOTA.STUDY_QUESTIONS - answeredTodayCount,
   );
 
   return (

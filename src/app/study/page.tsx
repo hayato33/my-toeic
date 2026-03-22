@@ -58,13 +58,18 @@ export default async function StudyPage() {
 
   const selected = [...newQuestions, ...reviewedQuestions].slice(
     0,
-    DAILY_QUOTA.NEW_QUESTIONS,
+    DAILY_QUOTA.STUDY_QUESTIONS,
   );
 
-  const questions = selected.map((q) => ({
-    ...q,
-    choices: JSON.parse(q.choices) as string[],
-  }));
+  const questions = selected.map((q) => {
+    let choices: string[] = [];
+    try {
+      choices = JSON.parse(q.choices) as string[];
+    } catch {
+      console.error(`Failed to parse choices for question ${q.id}`);
+    }
+    return { ...q, choices };
+  });
 
   return (
     <QuizSession

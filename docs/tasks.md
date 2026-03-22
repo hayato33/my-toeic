@@ -151,4 +151,4 @@
 - [x] Neon Vercel Integration の有効化
 - [x] `.env.example` の更新
 - [x] **E2E テスト用 DB 分離**（Neon ブランチ + `.env.test.local`）
-- [x] デプロイ動作確認
+- [ ] デプロイ動作確認

@@ -8,7 +8,7 @@
 
 - **単語・文法の4択問題** — シードデータから出題
 - **SM-2 間隔反復** — 正答率に応じて次回出題日を自動調整（正解 → 間隔延長、不正解 → リセット）
-- **AI フィードバック** — Claude API（claude-haiku-4-5）が「なぜ間違えたか」「覚え方のヒント」を生成
+- **AI フィードバック** — Claude API（claude-haiku-4-5-20251001）が「なぜ間違えたか」「覚え方のヒント」を生成
 - **今日のダッシュボード** — 学習ノルマ・継続日数（ストリーク）を表示
 - **Google 認証** — Neon Auth（Better Auth）による Google OAuth ログイン
 
@@ -19,7 +19,7 @@
 | フロントエンド | Next.js 16 + React 19 + Tailwind CSS v4 |
 | DB             | Neon PostgreSQL + Prisma 7              |
 | 認証           | Neon Auth (Better Auth) + Google OAuth  |
-| AI             | Claude API (claude-haiku-4-5)           |
+| AI             | Claude API (claude-haiku-4-5-20251001)  |
 | デプロイ       | Vercel                                  |
 | ユニットテスト | Vitest                                  |
 | E2E テスト     | Playwright                              |

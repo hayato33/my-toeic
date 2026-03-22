@@ -5,17 +5,63 @@ import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
 import { auth } from '@/lib/auth';
 import { QuizSession } from '@/components/QuizSession';
+import { getStartOfDay, getEndOfDay } from '@/lib/date-utils';
+import { DAILY_QUOTA } from '@/lib/constants';
+
+function shuffle<T>(array: T[]): T[] {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
 
 export default async function StudyPage() {
   const session = await auth.api.getSession({ headers: await headers() });
   if (!session) redirect('/login');
 
-  const raw = await prisma.question.findMany({
-    take: 10,
-    orderBy: { createdAt: 'asc' },
+  const userId = session.user.id;
+  const todayStart = getStartOfDay();
+  const todayEnd = getEndOfDay();
+
+  // 今日すでに解いた問題IDを取得
+  const answeredToday = await prisma.userAnswer.findMany({
+    where: {
+      userId,
+      answeredAt: { gte: todayStart, lt: todayEnd },
+    },
+    select: { questionId: true },
+  });
+  const answeredTodayIds = answeredToday.map((a) => a.questionId);
+
+  // 今日未回答の問題を全件取得（ReviewSchedule の有無も含めて）
+  const candidates = await prisma.question.findMany({
+    where:
+      answeredTodayIds.length > 0
+        ? { id: { notIn: answeredTodayIds } }
+        : undefined,
+    include: {
+      reviewSchedules: {
+        where: { userId },
+      },
+    },
   });
 
-  const questions = raw.map((q) => ({
+  // 未学習（ReviewSchedule なし）を優先し、それぞれシャッフル
+  const newQuestions = shuffle(
+    candidates.filter((q) => q.reviewSchedules.length === 0),
+  );
+  const reviewedQuestions = shuffle(
+    candidates.filter((q) => q.reviewSchedules.length > 0),
+  );
+
+  const selected = [...newQuestions, ...reviewedQuestions].slice(
+    0,
+    DAILY_QUOTA.NEW_QUESTIONS,
+  );
+
+  const questions = selected.map((q) => ({
     ...q,
     choices: JSON.parse(q.choices) as string[],
   }));

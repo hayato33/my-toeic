@@ -99,7 +99,7 @@ pnpm db:seed       # シードデータ投入
 
 ## データモデル
 
-```
+```text
 Question        問題（単語 / 文法）
 UserAnswer      回答履歴
 ReviewSchedule  SM-2 復習スケジュール（ユーザーごと）
@@ -121,7 +121,7 @@ pnpm test:e2e
 
 ## アーキテクチャ概要
 
-```
+```text
 src/
 ├── app/
 │   ├── api/          # API Routes（answers / dashboard / feedback / questions / review）

@@ -28,7 +28,7 @@ export function UserMenu({ name, email }: UserMenuProps) {
   }
 
   const displayName = name || email;
-  const initial = displayName.charAt(0).toUpperCase();
+  const initial = displayName.charAt(0).toUpperCase() || '?';
 
   return (
     <DropdownMenu>

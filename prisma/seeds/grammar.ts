@@ -6614,4 +6614,2806 @@ export const grammarQuestions: SeedQuestion[] = [
     explanation:
       'take steps to do は「〜するための措置を講じる」という定型表現です。has taken（現在完了）が正解です。',
   },
+  {
+    id: 'gram-701',
+    type: 'grammar',
+    content:
+      'The manager confirmed that the report _____ by the end of the day.',
+    choices: ['would be ready', 'will be ready', 'is ready', 'was ready'],
+    answer: 'would be ready',
+    explanation:
+      '過去形 confirmed に続く間接話法では will → would に変わります。',
+  },
+  {
+    id: 'gram-702',
+    type: 'grammar',
+    content: 'The policy covers all employees, _____ full-time or part-time.',
+    choices: ['whether', 'either', 'both', 'neither'],
+    answer: 'whether',
+    explanation: 'whether〜or〜 は「〜であれ〜であれ」という相関接続詞です。',
+  },
+  {
+    id: 'gram-703',
+    type: 'grammar',
+    content: 'The new regulation is _____ to affect businesses of all sizes.',
+    choices: ['likely', 'probably', 'possible', 'possibly'],
+    answer: 'likely',
+    explanation: 'be likely to do は「〜しそうである」という定型表現です。',
+  },
+  {
+    id: 'gram-704',
+    type: 'grammar',
+    content:
+      'All customer feedback is taken _____ when designing new products.',
+    choices: ['into account', 'in account', 'to account', 'on account'],
+    answer: 'into account',
+    explanation: 'take into account は「〜を考慮に入れる」という定型表現です。',
+  },
+  {
+    id: 'gram-705',
+    type: 'grammar',
+    content: 'The company is _____ a series of cost-cutting measures.',
+    choices: ['implementing', 'implemented', 'implement', 'implementation'],
+    answer: 'implementing',
+    explanation: '現在進行形 is implementing（実施中である）が正解です。',
+  },
+  {
+    id: 'gram-706',
+    type: 'grammar',
+    content: 'The draft contract is being reviewed _____ the legal team.',
+    choices: ['by', 'from', 'with', 'through'],
+    answer: 'by',
+    explanation: '受動態の動作主は by で表します。',
+  },
+  {
+    id: 'gram-707',
+    type: 'grammar',
+    content:
+      'Sales targets must be _____ each quarter for the bonus to be paid.',
+    choices: ['met', 'meeting', 'meet', 'meets'],
+    answer: 'met',
+    explanation:
+      'must be met（達成されなければならない）という受動態が正解です。',
+  },
+  {
+    id: 'gram-708',
+    type: 'grammar',
+    content: 'The factory has _____ its production capacity by 25% this year.',
+    choices: ['increased', 'increasing', 'increases', 'increase'],
+    answer: 'increased',
+    explanation: '現在完了形 has increased（増加させた）が正解です。',
+  },
+  {
+    id: 'gram-709',
+    type: 'grammar',
+    content:
+      'The board _____ to postpone the vote until more information was available.',
+    choices: ['decided', 'deciding', 'decides', 'decision'],
+    answer: 'decided',
+    explanation:
+      '過去形 decided（決定した）が正解です。decide to do（〜することを決める）。',
+  },
+  {
+    id: 'gram-710',
+    type: 'grammar',
+    content: 'The director was _____ about the outcome of the negotiation.',
+    choices: ['optimistic', 'optimism', 'optimistically', 'optimize'],
+    answer: 'optimistic',
+    explanation:
+      'be optimistic about は「〜について楽観的である」という表現です。',
+  },
+  {
+    id: 'gram-711',
+    type: 'grammar',
+    content: 'The team leader _____ the members about the upcoming changes.',
+    choices: ['briefed', 'briefing', 'briefs', 'brief'],
+    answer: 'briefed',
+    explanation:
+      '過去形 briefed（説明した）が正解です。brief someone about〜。',
+  },
+  {
+    id: 'gram-712',
+    type: 'grammar',
+    content: 'The filing deadline _____ extended to the end of next week.',
+    choices: ['has been', 'have been', 'is being', 'was being'],
+    answer: 'has been',
+    explanation: '現在完了の受動態 has been extended（延長された）が正解です。',
+  },
+  {
+    id: 'gram-713',
+    type: 'grammar',
+    content: 'All teams are expected _____ their quarterly reports by Friday.',
+    choices: ['to submit', 'submitting', 'submit', 'submitted'],
+    answer: 'to submit',
+    explanation:
+      'be expected to do は「〜することが期待されている」という定型表現です。',
+  },
+  {
+    id: 'gram-714',
+    type: 'grammar',
+    content:
+      "The acquisition is projected _____ the company's market share significantly.",
+    choices: ['to increase', 'increasing', 'increase', 'increased'],
+    answer: 'to increase',
+    explanation:
+      'be projected to do は「〜すると予測されている」という表現です。',
+  },
+  {
+    id: 'gram-715',
+    type: 'grammar',
+    content:
+      "The new hire quickly _____ herself familiar with the company's processes.",
+    choices: ['made', 'got', 'found', 'kept'],
+    answer: 'made',
+    explanation:
+      'make oneself familiar with は「〜に精通する」という定型表現です。',
+  },
+  {
+    id: 'gram-716',
+    type: 'grammar',
+    content: 'The increase in costs was _____ to rising energy prices.',
+    choices: ['attributed', 'attributing', 'attribute', 'attribution'],
+    answer: 'attributed',
+    explanation: 'be attributed to は「〜に起因する」という定型表現です。',
+  },
+  {
+    id: 'gram-717',
+    type: 'grammar',
+    content:
+      'The marketing budget was _____ by 20% to reflect the new priorities.',
+    choices: ['reduced', 'reducing', 'reduction', 'reduces'],
+    answer: 'reduced',
+    explanation: '受動態の過去形 was reduced（削減された）が正解です。',
+  },
+  {
+    id: 'gram-718',
+    type: 'grammar',
+    content:
+      'The company _____ its brand identity through consistent messaging.',
+    choices: ['reinforces', 'reinforcing', 'reinforce', 'reinforcement'],
+    answer: 'reinforces',
+    explanation:
+      '主語 The company（単数）に対して現在形 reinforces が正解です。',
+  },
+  {
+    id: 'gram-719',
+    type: 'grammar',
+    content: 'The report was _____ and sent to all relevant departments.',
+    choices: ['finalized', 'finalizing', 'finalize', 'finalization'],
+    answer: 'finalized',
+    explanation: '受動態の過去形 was finalized（完成された）が正解です。',
+  },
+  {
+    id: 'gram-720',
+    type: 'grammar',
+    content:
+      'The supplier assured us _____ the order would arrive by the agreed date.',
+    choices: ['that', 'which', 'if', 'whether'],
+    answer: 'that',
+    explanation: 'assure someone that〜 は「〜に〜を保証する」という表現です。',
+  },
+  {
+    id: 'gram-721',
+    type: 'grammar',
+    content: 'The draft budget is _____ review and subject to revision.',
+    choices: ['under', 'in', 'at', 'for'],
+    answer: 'under',
+    explanation: 'under review は「審査中」という定型表現です。',
+  },
+  {
+    id: 'gram-722',
+    type: 'grammar',
+    content:
+      'The new regulations will require companies _____ their emissions annually.',
+    choices: ['to report', 'reporting', 'report', 'reported'],
+    answer: 'to report',
+    explanation: 'require + 目的語 + to不定詞 の形をとります。',
+  },
+  {
+    id: 'gram-723',
+    type: 'grammar',
+    content:
+      'The contract specifies that all work _____ completed within 90 days.',
+    choices: ['must be', 'must', 'should', 'will'],
+    answer: 'must be',
+    explanation: '強い義務を表す must の受動態 must be completed が正解です。',
+  },
+  {
+    id: 'gram-724',
+    type: 'grammar',
+    content:
+      'The executive is well _____ for her strategic thinking and leadership.',
+    choices: ['regarded', 'known', 'respected', 'appreciated'],
+    answer: 'regarded',
+    explanation:
+      'be well regarded for は「〜で高く評価されている」という定型表現です。',
+  },
+  {
+    id: 'gram-725',
+    type: 'grammar',
+    content:
+      'The two companies entered _____ a strategic partnership last month.',
+    choices: ['into', 'in', 'to', 'for'],
+    answer: 'into',
+    explanation:
+      'enter into a partnership は「パートナーシップを結ぶ」という定型表現です。',
+  },
+  {
+    id: 'gram-726',
+    type: 'grammar',
+    content:
+      'Customer complaints _____ seriously and resolved within 48 hours.',
+    choices: ['are taken', 'are taking', 'take', 'takes'],
+    answer: 'are taken',
+    explanation:
+      '受動態 are taken seriously（真剣に受け止められる）が正解です。',
+  },
+  {
+    id: 'gram-727',
+    type: 'grammar',
+    content: 'The offer is valid _____ 14 days from the date of issue.',
+    choices: ['for', 'during', 'within', 'in'],
+    answer: 'for',
+    explanation: '期間を表す for が正解です。valid for 14 days（14日間有効）。',
+  },
+  {
+    id: 'gram-728',
+    type: 'grammar',
+    content:
+      'The team will _____ the project plan before the client presentation.',
+    choices: ['finalize', 'finalizing', 'finalized', 'finalization'],
+    answer: 'finalize',
+    explanation:
+      'will の後には動詞の原形が続きます。finalize（最終決定する）が正解です。',
+  },
+  {
+    id: 'gram-729',
+    type: 'grammar',
+    content:
+      'The updated manual _____ to all branch managers before the end of the month.',
+    choices: [
+      'will be distributed',
+      'will distribute',
+      'is distributing',
+      'distributes',
+    ],
+    answer: 'will be distributed',
+    explanation: '未来の受動態 will be distributed（配布される）が正解です。',
+  },
+  {
+    id: 'gram-730',
+    type: 'grammar',
+    content:
+      'The _____ of the new product line exceeded all internal forecasts.',
+    choices: ['performance', 'perform', 'performing', 'performed'],
+    answer: 'performance',
+    explanation:
+      '冠詞 The の後には名詞が来ます。performance（業績）が正解です。',
+  },
+  {
+    id: 'gram-731',
+    type: 'grammar',
+    content:
+      'The company is _____ known for its excellent after-sales service.',
+    choices: ['widely', 'wide', 'wideness', 'widen'],
+    answer: 'widely',
+    explanation: '形容詞 known を修飾するので副詞 widely（広く）が正解です。',
+  },
+  {
+    id: 'gram-732',
+    type: 'grammar',
+    content:
+      'The production team _____ its output by 15% since adopting the new process.',
+    choices: ['has improved', 'improved', 'is improving', 'improves'],
+    answer: 'has improved',
+    explanation:
+      'since〜 という継続期間があるので現在完了形 has improved が正解です。',
+  },
+  {
+    id: 'gram-733',
+    type: 'grammar',
+    content:
+      'The project _____ within budget despite the unexpected challenges.',
+    choices: ['was completed', 'completed', 'has completed', 'completing'],
+    answer: 'was completed',
+    explanation: '受動態の過去形 was completed（完了した）が正解です。',
+  },
+  {
+    id: 'gram-734',
+    type: 'grammar',
+    content:
+      'The staff meeting was _____ from Tuesday to Thursday due to a scheduling conflict.',
+    choices: ['moved', 'moving', 'moves', 'move'],
+    answer: 'moved',
+    explanation: '受動態の過去形 was moved（変更された）が正解です。',
+  },
+  {
+    id: 'gram-735',
+    type: 'grammar',
+    content:
+      'The company prides _____ on providing exceptional customer service.',
+    choices: ['itself', 'himself', 'themselves', 'oneself'],
+    answer: 'itself',
+    explanation:
+      'pride oneself on は「〜を誇りにする」という定型表現です。主語 The company に itself が正解です。',
+  },
+  {
+    id: 'gram-736',
+    type: 'grammar',
+    content:
+      'The issue was resolved _____ without needing to escalate to management.',
+    choices: ['internally', 'internal', 'interior', 'inside'],
+    answer: 'internally',
+    explanation:
+      '動詞 resolved を修飾するので副詞 internally（社内で）が正解です。',
+  },
+  {
+    id: 'gram-737',
+    type: 'grammar',
+    content:
+      'The assistant _____ all travel arrangements for the executive team.',
+    choices: ['coordinates', 'coordinating', 'coordinated', 'coordination'],
+    answer: 'coordinates',
+    explanation:
+      '主語 The assistant（単数）に対して現在形 coordinates（調整する）が正解です。',
+  },
+  {
+    id: 'gram-738',
+    type: 'grammar',
+    content:
+      'The marketing team _____ a campaign that resonated strongly with consumers.',
+    choices: ['developed', 'developing', 'development', 'develops'],
+    answer: 'developed',
+    explanation: '過去形 developed（開発した）が正解です。',
+  },
+  {
+    id: 'gram-739',
+    type: 'grammar',
+    content:
+      'The new software _____ the productivity of the accounting department.',
+    choices: ['enhanced', 'enhancing', 'enhancement', 'enhance'],
+    answer: 'enhanced',
+    explanation: '過去形 enhanced（向上させた）が正解です。',
+  },
+  {
+    id: 'gram-740',
+    type: 'grammar',
+    content:
+      "The meeting will be chaired _____ the CFO in the director's absence.",
+    choices: ['by', 'from', 'with', 'through'],
+    answer: 'by',
+    explanation: '受動態の動作主は by で表します。chaired by the CFO。',
+  },
+  {
+    id: 'gram-741',
+    type: 'grammar',
+    content:
+      'The analyst _____ that the new product would capture a 15% market share.',
+    choices: ['estimated', 'estimating', 'estimates', 'estimation'],
+    answer: 'estimated',
+    explanation: '過去形 estimated（見積もった）が正解です。',
+  },
+  {
+    id: 'gram-742',
+    type: 'grammar',
+    content: 'The conference call was _____ due to a technical failure.',
+    choices: ['rescheduled', 'rescheduling', 'reschedule', 'reschedules'],
+    answer: 'rescheduled',
+    explanation: '受動態の過去形 was rescheduled（再設定された）が正解です。',
+  },
+  {
+    id: 'gram-743',
+    type: 'grammar',
+    content:
+      'The legal team will look _____ the matter and provide an opinion by Friday.',
+    choices: ['into', 'after', 'over', 'at'],
+    answer: 'into',
+    explanation: 'look into は「〜を調査する」という句動詞です。',
+  },
+  {
+    id: 'gram-744',
+    type: 'grammar',
+    content:
+      'The training program is _____ at helping employees develop leadership skills.',
+    choices: ['aimed', 'aiming', 'aim', 'aims'],
+    answer: 'aimed',
+    explanation:
+      'be aimed at doing は「〜することを目的としている」という定型表現です。',
+  },
+  {
+    id: 'gram-745',
+    type: 'grammar',
+    content: 'The firm has _____ its operations to reduce overhead costs.',
+    choices: ['streamlined', 'streamlining', 'streamline', 'streamlines'],
+    answer: 'streamlined',
+    explanation: '現在完了形 has streamlined（合理化した）が正解です。',
+  },
+  {
+    id: 'gram-746',
+    type: 'grammar',
+    content:
+      'The board of directors _____ the acquisition proposal for further review.',
+    choices: ['tabled', 'tabling', 'tables', 'table'],
+    answer: 'tabled',
+    explanation: '過去形 tabled（棚上げにした）が正解です。',
+  },
+  {
+    id: 'gram-747',
+    type: 'grammar',
+    content:
+      'The employees _____ to participate in a cross-departmental training program.',
+    choices: ['were invited', 'invited', 'inviting', 'invite'],
+    answer: 'were invited',
+    explanation: '受動態の過去形 were invited（招待された）が正解です。',
+  },
+  {
+    id: 'gram-748',
+    type: 'grammar',
+    content:
+      'The executive team _____ the company through a period of significant growth.',
+    choices: ['guided', 'guiding', 'guidance', 'guides'],
+    answer: 'guided',
+    explanation: '過去形 guided（導いた）が正解です。',
+  },
+  {
+    id: 'gram-749',
+    type: 'grammar',
+    content:
+      'The company has been _____ as a model for sustainable business practices.',
+    choices: ['cited', 'citing', 'cite', 'citation'],
+    answer: 'cited',
+    explanation:
+      '現在完了の受動態 has been cited（挙げられてきた）が正解です。',
+  },
+  {
+    id: 'gram-750',
+    type: 'grammar',
+    content:
+      'The supply chain manager is responsible _____ coordinating with multiple vendors.',
+    choices: ['for', 'of', 'in', 'to'],
+    answer: 'for',
+    explanation:
+      'be responsible for doing は「〜することに責任がある」という定型表現です。',
+  },
+  {
+    id: 'gram-751',
+    type: 'grammar',
+    content:
+      'The company _____ its annual charity gala for the 10th consecutive year.',
+    choices: ['hosted', 'hosting', 'hosts', 'host'],
+    answer: 'hosted',
+    explanation: '過去形 hosted（主催した）が正解です。',
+  },
+  {
+    id: 'gram-752',
+    type: 'grammar',
+    content:
+      "The proposal is _____ for approval at this month's board meeting.",
+    choices: ['scheduled', 'scheduling', 'schedule', 'schedules'],
+    answer: 'scheduled',
+    explanation:
+      'be scheduled for は「〜のために予定されている」という定型表現です。',
+  },
+  {
+    id: 'gram-753',
+    type: 'grammar',
+    content:
+      'Employees are required _____ a confidentiality agreement upon joining.',
+    choices: ['to sign', 'signing', 'sign', 'signed'],
+    answer: 'to sign',
+    explanation:
+      'be required to do は「〜することが義務付けられている」という定型表現です。',
+  },
+  {
+    id: 'gram-754',
+    type: 'grammar',
+    content:
+      'The company is in the _____ of completing a major system upgrade.',
+    choices: ['process', 'middle', 'course', 'stage'],
+    answer: 'process',
+    explanation:
+      'be in the process of doing は「〜の過程にある」という定型表現です。',
+  },
+  {
+    id: 'gram-755',
+    type: 'grammar',
+    content:
+      "The new employees quickly adapted _____ the company's working culture.",
+    choices: ['to', 'at', 'in', 'for'],
+    answer: 'to',
+    explanation: 'adapt to は「〜に適応する」という定型表現です。',
+  },
+  {
+    id: 'gram-756',
+    type: 'grammar',
+    content:
+      "The company's _____ results were announced at the shareholder meeting.",
+    choices: ['annual', 'annually', 'annualize', 'anniversary'],
+    answer: 'annual',
+    explanation:
+      '名詞 results を修飾するので形容詞 annual（年次の）が正解です。',
+  },
+  {
+    id: 'gram-757',
+    type: 'grammar',
+    content: 'The project was completed _____ the original estimated date.',
+    choices: ['ahead of', 'before', 'earlier to', 'prior than'],
+    answer: 'ahead of',
+    explanation:
+      'ahead of schedule（予定より早く）の変形で、ahead of the original date（当初の日程より早く）。',
+  },
+  {
+    id: 'gram-758',
+    type: 'grammar',
+    content:
+      'The company has _____ a policy against accepting gifts from vendors.',
+    choices: ['established', 'establishing', 'establishment', 'establishes'],
+    answer: 'established',
+    explanation: '現在完了形 has established（制定した）が正解です。',
+  },
+  {
+    id: 'gram-759',
+    type: 'grammar',
+    content:
+      'The CEO has _____ that the company will achieve its five-year targets.',
+    choices: ['confirmed', 'confirming', 'confirmation', 'confirms'],
+    answer: 'confirmed',
+    explanation: '現在完了形 has confirmed（確認した）が正解です。',
+  },
+  {
+    id: 'gram-760',
+    type: 'grammar',
+    content:
+      'The company is planning to _____ a new incentive program for top performers.',
+    choices: ['roll out', 'roll up', 'roll over', 'roll in'],
+    answer: 'roll out',
+    explanation: 'roll out は「展開する・導入する」という句動詞です。',
+  },
+  {
+    id: 'gram-761',
+    type: 'grammar',
+    content:
+      'The hiring decision was _____ based on qualifications and experience.',
+    choices: ['solely', 'sole', 'alone', 'only'],
+    answer: 'solely',
+    explanation:
+      '過去分詞 based を修飾するので副詞 solely（もっぱら）が正解です。',
+  },
+  {
+    id: 'gram-762',
+    type: 'grammar',
+    content:
+      'The company _____ its suppliers to maintain high quality standards.',
+    choices: ['requires', 'requiring', 'required', 'requirement'],
+    answer: 'requires',
+    explanation: '主語 The company（単数）に対して現在形 requires が正解です。',
+  },
+  {
+    id: 'gram-763',
+    type: 'grammar',
+    content: 'All bids _____ must be received by 5 p.m. on the closing date.',
+    choices: ['submitted', 'submitting', 'submit', 'submits'],
+    answer: 'submitted',
+    explanation:
+      '過去分詞 submitted が bids を後置修飾します。bids submitted（提出された入札）。',
+  },
+  {
+    id: 'gram-764',
+    type: 'grammar',
+    content:
+      'The board approved the annual budget _____ any significant revisions.',
+    choices: ['without', 'with no', 'absent of', 'lacking'],
+    answer: 'without',
+    explanation:
+      'without は「〜なしに」という前置詞です。without any significant revisions（大きな改訂なしに）。',
+  },
+  {
+    id: 'gram-765',
+    type: 'grammar',
+    content: 'The company has been _____ over the past five years.',
+    choices: ['thriving', 'thrived', 'thrive', 'thrives'],
+    answer: 'thriving',
+    explanation:
+      '現在完了進行形 has been thriving（繁栄し続けている）が正解です。',
+  },
+  {
+    id: 'gram-766',
+    type: 'grammar',
+    content:
+      'The head office has _____ the branch office to handle the negotiation.',
+    choices: ['authorized', 'authorizing', 'authorization', 'authorize'],
+    answer: 'authorized',
+    explanation: '現在完了形 has authorized（承認した）が正解です。',
+  },
+  {
+    id: 'gram-767',
+    type: 'grammar',
+    content:
+      'The proposal was _____ to the relevant department for further consideration.',
+    choices: ['referred', 'referring', 'refer', 'referral'],
+    answer: 'referred',
+    explanation: '受動態の過去形 was referred（回付された）が正解です。',
+  },
+  {
+    id: 'gram-768',
+    type: 'grammar',
+    content:
+      'The new branch is expected to _____ within its first year of operation.',
+    choices: ['break even', 'break through', 'break down', 'break out'],
+    answer: 'break even',
+    explanation: 'break even は「損益分岐点に達する」という定型表現です。',
+  },
+  {
+    id: 'gram-769',
+    type: 'grammar',
+    content:
+      'The employees _____ excellent results through dedicated teamwork.',
+    choices: ['achieved', 'achieving', 'achieves', 'achievement'],
+    answer: 'achieved',
+    explanation: '過去形 achieved（達成した）が正解です。',
+  },
+  {
+    id: 'gram-770',
+    type: 'grammar',
+    content: 'The audit _____ several areas where cost savings could be made.',
+    choices: ['identified', 'identifying', 'identifies', 'identification'],
+    answer: 'identified',
+    explanation: '過去形 identified（特定した）が正解です。',
+  },
+  {
+    id: 'gram-771',
+    type: 'grammar',
+    content:
+      'The company agreed _____ the scope of the contract to include additional services.',
+    choices: ['to expand', 'expanding', 'expand', 'expanded'],
+    answer: 'to expand',
+    explanation: 'agree to do は「〜することに同意する」という表現です。',
+  },
+  {
+    id: 'gram-772',
+    type: 'grammar',
+    content:
+      'The supplier _____ us with all the materials we needed for the project.',
+    choices: ['provided', 'supplying', 'delivered', 'furnished'],
+    answer: 'provided',
+    explanation:
+      'provide + 人 + with + 物 は「〜に〜を提供する」という定型表現です。',
+  },
+  {
+    id: 'gram-773',
+    type: 'grammar',
+    content:
+      'The company has _____ significant investments in renewable energy.',
+    choices: ['made', 'done', 'taken', 'set'],
+    answer: 'made',
+    explanation: 'make investments は「投資をする」という定型表現です。',
+  },
+  {
+    id: 'gram-774',
+    type: 'grammar',
+    content:
+      'The consultant recommended _____ a new performance management system.',
+    choices: ['implementing', 'to implement', 'implement', 'implemented'],
+    answer: 'implementing',
+    explanation: 'recommend は動名詞を目的語にとります。',
+  },
+  {
+    id: 'gram-775',
+    type: 'grammar',
+    content: 'The application process consists _____ three stages.',
+    choices: ['of', 'in', 'from', 'with'],
+    answer: 'of',
+    explanation: 'consist of は「〜で構成されている」という定型表現です。',
+  },
+  {
+    id: 'gram-776',
+    type: 'grammar',
+    content:
+      'The company invested _____ in training programs for new employees.',
+    choices: ['heavily', 'heavy', 'heaviness', 'heavier'],
+    answer: 'heavily',
+    explanation:
+      '動詞 invested を修飾するので副詞 heavily（多大に）が正解です。',
+  },
+  {
+    id: 'gram-777',
+    type: 'grammar',
+    content:
+      'The new pricing model has _____ favorably received by our clients.',
+    choices: ['been', 'being', 'be', 'to be'],
+    answer: 'been',
+    explanation: '現在完了の受動態 has been received の been が正解です。',
+  },
+  {
+    id: 'gram-778',
+    type: 'grammar',
+    content: 'The board is _____ in its decision to expand overseas.',
+    choices: ['united', 'uniting', 'unite', 'unity'],
+    answer: 'united',
+    explanation: 'be united in〜 は「〜において一致している」という表現です。',
+  },
+  {
+    id: 'gram-779',
+    type: 'grammar',
+    content: 'The updated report has _____ distributed to all shareholders.',
+    choices: ['been', 'being', 'be', 'to be'],
+    answer: 'been',
+    explanation: '現在完了の受動態 has been distributed の been が正解です。',
+  },
+  {
+    id: 'gram-780',
+    type: 'grammar',
+    content:
+      "The CEO expressed confidence _____ the company's ability to meet its targets.",
+    choices: ['in', 'about', 'with', 'on'],
+    answer: 'in',
+    explanation:
+      'express confidence in は「〜に対して信頼を示す」という定型表現です。',
+  },
+  {
+    id: 'gram-781',
+    type: 'grammar',
+    content:
+      'The department is tasked _____ improving the customer onboarding experience.',
+    choices: ['with', 'to', 'for', 'at'],
+    answer: 'with',
+    explanation:
+      'be tasked with doing は「〜することを任される」という定型表現です。',
+  },
+  {
+    id: 'gram-782',
+    type: 'grammar',
+    content:
+      'All applicants _____ by email within two weeks of submitting their application.',
+    choices: ['will be notified', 'will notify', 'are notifying', 'notified'],
+    answer: 'will be notified',
+    explanation: '未来の受動態 will be notified（通知される）が正解です。',
+  },
+  {
+    id: 'gram-783',
+    type: 'grammar',
+    content:
+      'The team leader confirmed that the project was progressing _____ planned.',
+    choices: ['as', 'like', 'same as', 'similar to'],
+    answer: 'as',
+    explanation: 'as planned は「計画通りに」という定型表現です。',
+  },
+  {
+    id: 'gram-784',
+    type: 'grammar',
+    content:
+      'The company will offer _____ packages to attract and retain top talent.',
+    choices: ['competitive', 'competitively', 'competition', 'compete'],
+    answer: 'competitive',
+    explanation:
+      '名詞 packages を修飾するので形容詞 competitive（競争力のある）が正解です。',
+  },
+  {
+    id: 'gram-785',
+    type: 'grammar',
+    content:
+      'The CEO _____ her support for the new initiative at the town hall.',
+    choices: ['expressed', 'expressing', 'expression', 'expresses'],
+    answer: 'expressed',
+    explanation:
+      '過去形 expressed（表明した）が正解です。express support for〜。',
+  },
+  {
+    id: 'gram-786',
+    type: 'grammar',
+    content:
+      'The job description clearly _____ the responsibilities and qualifications required.',
+    choices: ['outlines', 'outlining', 'outlined', 'outlinement'],
+    answer: 'outlines',
+    explanation:
+      '主語 The job description（単数）に対して現在形 outlines が正解です。',
+  },
+  {
+    id: 'gram-787',
+    type: 'grammar',
+    content: 'By the time the CEO arrived, the team _____ the presentation.',
+    choices: [
+      'had already finished',
+      'already finished',
+      'has already finished',
+      'was finishing',
+    ],
+    answer: 'had already finished',
+    explanation:
+      '過去の基準点より前に完了した出来事を表す過去完了形 had finished が正解です。',
+  },
+  {
+    id: 'gram-788',
+    type: 'grammar',
+    content: 'The merger agreement was _____ after months of negotiation.',
+    choices: ['finalized', 'finalizing', 'finalize', 'finalization'],
+    answer: 'finalized',
+    explanation: '受動態の過去形 was finalized（最終決定された）が正解です。',
+  },
+  {
+    id: 'gram-789',
+    type: 'grammar',
+    content:
+      'The company has _____ its commitment to reducing carbon emissions by 2030.',
+    choices: ['reaffirmed', 'reaffirming', 'reaffirm', 'reaffirmation'],
+    answer: 'reaffirmed',
+    explanation: '現在完了形 has reaffirmed（再確認した）が正解です。',
+  },
+  {
+    id: 'gram-790',
+    type: 'grammar',
+    content:
+      'The team was _____ for its exceptional performance at the awards ceremony.',
+    choices: ['recognized', 'recognizing', 'recognize', 'recognition'],
+    answer: 'recognized',
+    explanation: '受動態の過去形 was recognized（表彰された）が正解です。',
+  },
+  {
+    id: 'gram-791',
+    type: 'grammar',
+    content:
+      'The management team is _____ to announce the results of the annual review.',
+    choices: ['pleased', 'pleasure', 'pleasing', 'please'],
+    answer: 'pleased',
+    explanation:
+      'be pleased to do は「〜することを嬉しく思う」という定型表現です。',
+  },
+  {
+    id: 'gram-792',
+    type: 'grammar',
+    content: 'The company _____ a new policy to address workplace harassment.',
+    choices: ['implemented', 'implementing', 'implements', 'implementation'],
+    answer: 'implemented',
+    explanation: '過去形 implemented（実施した）が正解です。',
+  },
+  {
+    id: 'gram-793',
+    type: 'grammar',
+    content:
+      'The manager requested that the team _____ the report by Thursday.',
+    choices: ['complete', 'completes', 'completed', 'completing'],
+    answer: 'complete',
+    explanation: 'requested that〜 の後は仮定法現在（動詞の原形）を使います。',
+  },
+  {
+    id: 'gram-794',
+    type: 'grammar',
+    content:
+      "The company's new app has been _____ by more than one million users.",
+    choices: ['downloaded', 'downloading', 'download', 'downloads'],
+    answer: 'downloaded',
+    explanation:
+      '現在完了の受動態 has been downloaded（ダウンロードされた）が正解です。',
+  },
+  {
+    id: 'gram-795',
+    type: 'grammar',
+    content:
+      'The success of the campaign _____ on effective coordination between departments.',
+    choices: ['depends', 'depending', 'depended', 'dependence'],
+    answer: 'depends',
+    explanation:
+      '主語 The success（単数）に対して現在形 depends が正解です。depend on は「〜次第だ」。',
+  },
+  {
+    id: 'gram-796',
+    type: 'grammar',
+    content: 'The marketing team will _____ the advertising campaign in Q3.',
+    choices: ['launch', 'launching', 'launched', 'launches'],
+    answer: 'launch',
+    explanation: 'will の後には動詞の原形が続きます。',
+  },
+  {
+    id: 'gram-797',
+    type: 'grammar',
+    content:
+      'The company is _____ to all feedback from customers and partners.',
+    choices: ['receptive', 'reception', 'receptively', 'receive'],
+    answer: 'receptive',
+    explanation:
+      'be receptive to は「〜を受け入れる姿勢がある」という表現です。',
+  },
+  {
+    id: 'gram-798',
+    type: 'grammar',
+    content: 'The board will _____ a thorough investigation into the matter.',
+    choices: ['conduct', 'conducting', 'conducted', 'conducts'],
+    answer: 'conduct',
+    explanation:
+      'will の後には動詞の原形が続きます。conduct an investigation（調査を行う）。',
+  },
+  {
+    id: 'gram-799',
+    type: 'grammar',
+    content:
+      'The project is running _____ schedule and should be completed on time.',
+    choices: ['ahead of', 'behind of', 'in front of', 'on top of'],
+    answer: 'ahead of',
+    explanation: 'ahead of schedule は「予定より早く」という定型表現です。',
+  },
+  {
+    id: 'gram-800',
+    type: 'grammar',
+    content: 'The branch office _____ 50 full-time and 20 part-time employees.',
+    choices: ['employs', 'employed', 'employing', 'employment'],
+    answer: 'employs',
+    explanation:
+      '主語 The branch office（単数）に対して現在形 employs（雇用している）が正解です。',
+  },
+  {
+    id: 'gram-801',
+    type: 'grammar',
+    content:
+      'The new employee was _____ warmly by her colleagues on her first day.',
+    choices: ['welcomed', 'welcoming', 'welcome', 'welcomely'],
+    answer: 'welcomed',
+    explanation: '受動態の過去形 was welcomed（歓迎された）が正解です。',
+  },
+  {
+    id: 'gram-802',
+    type: 'grammar',
+    content:
+      'The team will _____ a presentation to introduce the new strategy.',
+    choices: ['give', 'make', 'deliver', 'present'],
+    answer: 'deliver',
+    explanation:
+      'deliver a presentation は「プレゼンテーションを行う」という定型表現です。',
+  },
+  {
+    id: 'gram-803',
+    type: 'grammar',
+    content:
+      'The company is _____ of completing the project ahead of schedule.',
+    choices: ['capable', 'ability', 'able', 'capable to'],
+    answer: 'capable',
+    explanation:
+      'be capable of doing は「〜することができる」という定型表現です。',
+  },
+  {
+    id: 'gram-804',
+    type: 'grammar',
+    content: 'All items _____ for return must be in their original packaging.',
+    choices: ['eligible', 'approved', 'qualified', 'suited'],
+    answer: 'eligible',
+    explanation:
+      'be eligible for は「〜の資格がある」という定型表現です。items eligible for return（返品対象品）。',
+  },
+  {
+    id: 'gram-805',
+    type: 'grammar',
+    content: 'The financial data _____ by the accounting team every quarter.',
+    choices: ['is reviewed', 'reviews', 'reviewing', 'reviewed'],
+    answer: 'is reviewed',
+    explanation:
+      '定期的な動作を表す現在形の受動態 is reviewed（審査される）が正解です。',
+  },
+  {
+    id: 'gram-806',
+    type: 'grammar',
+    content:
+      'The company launched the product _____ extensive market research.',
+    choices: ['following', 'after conducting', 'after', 'subsequent to'],
+    answer: 'following',
+    explanation:
+      'following は「〜の後に」という前置詞的用法で、following extensive research（広範な調査の後に）。',
+  },
+  {
+    id: 'gram-807',
+    type: 'grammar',
+    content:
+      'The CEO assured shareholders _____ the company remains financially stable.',
+    choices: ['that', 'which', 'if', 'about'],
+    answer: 'that',
+    explanation:
+      'assure someone that〜 は「〜に〜を保証する」という定型表現です。',
+  },
+  {
+    id: 'gram-808',
+    type: 'grammar',
+    content:
+      'The factory _____ operate at full capacity during the holiday season.',
+    choices: ['will', 'shall', 'is', 'does'],
+    answer: 'will',
+    explanation:
+      '未来の予定を表す will が正解です。will operate（稼働する予定）。',
+  },
+  {
+    id: 'gram-809',
+    type: 'grammar',
+    content: 'The position _____ strong analytical and communication skills.',
+    choices: ['requires', 'requiring', 'required', 'requirement'],
+    answer: 'requires',
+    explanation:
+      '主語 The position（単数）に対して現在形 requires が正解です。',
+  },
+  {
+    id: 'gram-810',
+    type: 'grammar',
+    content: "The team's innovative approach _____ the client's expectations.",
+    choices: ['exceeded', 'surpassed', 'went beyond', 'passed'],
+    answer: 'exceeded',
+    explanation: 'exceed expectations は「期待を超える」という定型表現です。',
+  },
+  {
+    id: 'gram-811',
+    type: 'grammar',
+    content:
+      'The quarterly bonus is _____ upon meeting individual performance targets.',
+    choices: ['contingent', 'conditional', 'dependent', 'based'],
+    answer: 'contingent',
+    explanation:
+      'be contingent upon は「〜次第である・〜を条件とする」という定型表現です。',
+  },
+  {
+    id: 'gram-812',
+    type: 'grammar',
+    content:
+      'Employees are encouraged _____ feedback to improve company operations.',
+    choices: ['to provide', 'providing', 'provide', 'provided'],
+    answer: 'to provide',
+    explanation:
+      'be encouraged to do は「〜するよう促される」という定型表現です。',
+  },
+  {
+    id: 'gram-813',
+    type: 'grammar',
+    content:
+      'The company _____ the number of its retail stores by 30% over five years.',
+    choices: ['has grown', 'has increased', 'has expanded', 'has risen'],
+    answer: 'has expanded',
+    explanation: 'expand the number of〜 は「〜の数を増やす」という表現です。',
+  },
+  {
+    id: 'gram-814',
+    type: 'grammar',
+    content:
+      'The office renovation _____ disruption to normal business operations.',
+    choices: ['caused', 'causing', 'causes', 'cause'],
+    answer: 'caused',
+    explanation:
+      '過去形 caused（引き起こした）が正解です。cause disruption to（〜に支障をきたす）。',
+  },
+  {
+    id: 'gram-815',
+    type: 'grammar',
+    content:
+      'The candidate _____ fluent in three languages was selected for the role.',
+    choices: ['who was', 'whose', 'which was', 'whom was'],
+    answer: 'who was',
+    explanation:
+      '先行詞 The candidate（人）に対して関係代名詞 who が正解です。',
+  },
+  {
+    id: 'gram-816',
+    type: 'grammar',
+    content:
+      'The project is _____ to be completed within the original timeframe.',
+    choices: ['on track', 'on course', 'on schedule', 'on time'],
+    answer: 'on track',
+    explanation:
+      'on track to do は「〜する軌道に乗っている」という定型表現です。',
+  },
+  {
+    id: 'gram-817',
+    type: 'grammar',
+    content: 'The HR team is _____ a new approach to performance evaluation.',
+    choices: ['piloting', 'piloted', 'pilot', 'pilots'],
+    answer: 'piloting',
+    explanation:
+      '現在進行形 is piloting（試験的に実施中）が正解です。pilot（試験運用する）という動詞です。',
+  },
+  {
+    id: 'gram-818',
+    type: 'grammar',
+    content: 'The shipment was delayed _____ adverse weather conditions.',
+    choices: ['due to', 'because', 'owing', 'result of'],
+    answer: 'due to',
+    explanation:
+      'due to は前置詞句で「〜のために」という理由を表します。後に名詞句が続きます。',
+  },
+  {
+    id: 'gram-819',
+    type: 'grammar',
+    content: 'Customers _____ with our service may request a full refund.',
+    choices: ['dissatisfied', 'unsatisfied', 'satisfied', 'not satisfied'],
+    answer: 'dissatisfied',
+    explanation:
+      '後置修飾の過去分詞 dissatisfied（不満な）が正解です。Customers dissatisfied with〜（〜に不満な顧客）。',
+  },
+  {
+    id: 'gram-820',
+    type: 'grammar',
+    content: 'The committee will _____ its recommendations in a formal report.',
+    choices: ['outline', 'outlines', 'outlined', 'outlining'],
+    answer: 'outline',
+    explanation:
+      'will の後には動詞の原形が続きます。outline（概要を述べる）が正解です。',
+  },
+  {
+    id: 'gram-821',
+    type: 'grammar',
+    content:
+      'The monthly newsletter _____ to all registered members via email.',
+    choices: ['is sent', 'sends', 'sending', 'sent'],
+    answer: 'is sent',
+    explanation:
+      '定期的な動作を表す現在形の受動態 is sent（送られる）が正解です。',
+  },
+  {
+    id: 'gram-822',
+    type: 'grammar',
+    content:
+      'The firm is _____ expand its operations into three new countries.',
+    choices: ['looking to', 'looking for', 'looking at', 'looking into'],
+    answer: 'looking to',
+    explanation:
+      'be looking to do は「〜しようとしている・〜を目指している」という表現です。',
+  },
+  {
+    id: 'gram-823',
+    type: 'grammar',
+    content:
+      'The company is _____ to its mission of providing affordable healthcare.',
+    choices: ['committed', 'dedicating', 'faithful', 'loyal'],
+    answer: 'committed',
+    explanation: 'be committed to は「〜に取り組んでいる」という定型表現です。',
+  },
+  {
+    id: 'gram-824',
+    type: 'grammar',
+    content:
+      'The proposal _____ by the planning committee before being sent to the board.',
+    choices: ['must be reviewed', 'must review', 'reviews', 'reviewed'],
+    answer: 'must be reviewed',
+    explanation:
+      '義務を表す must の受動態 must be reviewed（審査されなければならない）が正解です。',
+  },
+  {
+    id: 'gram-825',
+    type: 'grammar',
+    content: 'The office _____ under renovation for the past two months.',
+    choices: ['has been', 'has', 'is', 'was'],
+    answer: 'has been',
+    explanation:
+      'for the past two months という継続期間があるので現在完了形 has been（〜である）が正解です。',
+  },
+  {
+    id: 'gram-826',
+    type: 'grammar',
+    content: 'The supplier was selected _____ a competitive bidding process.',
+    choices: ['through', 'by', 'via', 'with'],
+    answer: 'through',
+    explanation:
+      'through a bidding process（入札プロセスを通じて）という表現です。',
+  },
+  {
+    id: 'gram-827',
+    type: 'grammar',
+    content:
+      'The new product is expected to _____ strong sales in the first quarter.',
+    choices: ['generate', 'generating', 'generated', 'generates'],
+    answer: 'generate',
+    explanation:
+      'be expected to do の形で、to の後には動詞の原形が続きます。generate sales（売上を生み出す）。',
+  },
+  {
+    id: 'gram-828',
+    type: 'grammar',
+    content:
+      'The manager spoke _____ the importance of maintaining work-life balance.',
+    choices: ['about', 'on', 'regarding', 'of'],
+    answer: 'about',
+    explanation: 'speak about は「〜について話す」という定型表現です。',
+  },
+  {
+    id: 'gram-829',
+    type: 'grammar',
+    content:
+      'This role is _____ for individuals with a background in data analytics.',
+    choices: ['ideal', 'ideally', 'idealize', 'idealism'],
+    answer: 'ideal',
+    explanation:
+      'be ideal for は「〜に最適である」という表現です。形容詞 ideal が正解です。',
+  },
+  {
+    id: 'gram-830',
+    type: 'grammar',
+    content:
+      'The report _____ that the company needs to diversify its revenue streams.',
+    choices: ['concludes', 'concluding', 'conclusion', 'concluded'],
+    answer: 'concludes',
+    explanation:
+      '主語 The report（単数）に対して現在形 concludes（結論付けている）が正解です。',
+  },
+  {
+    id: 'gram-831',
+    type: 'grammar',
+    content:
+      "The company's profits rose _____ compared to the same period last year.",
+    choices: ['sharply', 'sharp', 'sharpness', 'sharper'],
+    answer: 'sharply',
+    explanation: '動詞 rose を修飾するので副詞 sharply（急激に）が正解です。',
+  },
+  {
+    id: 'gram-832',
+    type: 'grammar',
+    content: 'The legal team is _____ the terms of the contract carefully.',
+    choices: ['examining', 'examined', 'examines', 'examination'],
+    answer: 'examining',
+    explanation: '現在進行形 is examining（精査中である）が正解です。',
+  },
+  {
+    id: 'gram-833',
+    type: 'grammar',
+    content: 'The director was _____ to have such a dedicated team behind her.',
+    choices: ['fortunate', 'fortunately', 'fortune', 'fortuned'],
+    answer: 'fortunate',
+    explanation: 'be fortunate to do は「〜できて幸運だ」という表現です。',
+  },
+  {
+    id: 'gram-834',
+    type: 'grammar',
+    content:
+      'The marketing department is _____ a survey to gauge consumer preferences.',
+    choices: ['conducting', 'conducted', 'conduct', 'conduction'],
+    answer: 'conducting',
+    explanation: '現在進行形 is conducting（実施中である）が正解です。',
+  },
+  {
+    id: 'gram-835',
+    type: 'grammar',
+    content:
+      'Parking is _____ for visitors on the ground floor of the building.',
+    choices: ['available', 'availability', 'availably', 'availing'],
+    answer: 'available',
+    explanation:
+      'be available（利用できる）という表現で形容詞 available が正解です。',
+  },
+  {
+    id: 'gram-836',
+    type: 'grammar',
+    content:
+      'The company has been _____ market leadership for more than a decade.',
+    choices: ['maintaining', 'maintained', 'maintain', 'maintenance'],
+    answer: 'maintaining',
+    explanation:
+      '現在完了進行形 has been maintaining（維持し続けている）が正解です。',
+  },
+  {
+    id: 'gram-837',
+    type: 'grammar',
+    content:
+      'All conference rooms are _____ on a first-come, first-served basis.',
+    choices: ['allocated', 'allocating', 'allocate', 'allocation'],
+    answer: 'allocated',
+    explanation: '受動態 are allocated（割り当てられる）が正解です。',
+  },
+  {
+    id: 'gram-838',
+    type: 'grammar',
+    content:
+      'The product _____ for the award is well-designed and user-friendly.',
+    choices: ['nominated', 'nominating', 'nomination', 'nominates'],
+    answer: 'nominated',
+    explanation: '過去分詞 nominated が名詞 product を後置修飾します。',
+  },
+  {
+    id: 'gram-839',
+    type: 'grammar',
+    content: 'The company expects its costs _____ significantly next year.',
+    choices: ['to decrease', 'decreasing', 'decreased', 'decrease'],
+    answer: 'to decrease',
+    explanation: 'expect + 目的語 + to不定詞 の形をとります。',
+  },
+  {
+    id: 'gram-840',
+    type: 'grammar',
+    content:
+      'The seminar is designed _____ professionals at all levels of experience.',
+    choices: ['for', 'to', 'at', 'with'],
+    answer: 'for',
+    explanation: 'be designed for は「〜向けに設計されている」という表現です。',
+  },
+  {
+    id: 'gram-841',
+    type: 'grammar',
+    content:
+      'The CEO announced that the company _____ 200 new stores next year.',
+    choices: ['will open', 'has opened', 'was opening', 'had opened'],
+    answer: 'will open',
+    explanation:
+      'next year という未来を示す表現があるため、未来形 will open が正解です。',
+  },
+  {
+    id: 'gram-842',
+    type: 'grammar',
+    content:
+      'The price increase has been attributed _____ rising material costs.',
+    choices: ['to', 'for', 'by', 'from'],
+    answer: 'to',
+    explanation: 'be attributed to は「〜に起因する」という定型表現です。',
+  },
+  {
+    id: 'gram-843',
+    type: 'grammar',
+    content:
+      'The company is seeking candidates _____ can speak multiple languages.',
+    choices: ['who', 'which', 'whose', 'what'],
+    answer: 'who',
+    explanation: '先行詞が人（candidates）なので関係代名詞 who が正解です。',
+  },
+  {
+    id: 'gram-844',
+    type: 'grammar',
+    content:
+      'The research team presented its _____ at the international symposium.',
+    choices: ['findings', 'finding', 'found', 'founds'],
+    answer: 'findings',
+    explanation: 'findings（調査結果）は通常複数形で使います。',
+  },
+  {
+    id: 'gram-845',
+    type: 'grammar',
+    content: 'The manager was not _____ of the changes in the schedule.',
+    choices: ['aware', 'knowing', 'informed', 'conscious'],
+    answer: 'aware',
+    explanation:
+      'be aware of は「〜を知っている・気づいている」という定型表現です。',
+  },
+  {
+    id: 'gram-846',
+    type: 'grammar',
+    content:
+      'The board approved the merger, _____ the legal team had raised concerns.',
+    choices: ['even though', 'because', 'provided that', 'as long as'],
+    answer: 'even though',
+    explanation:
+      'even though は「〜であるにもかかわらず」という強い逆接の接続詞です。',
+  },
+  {
+    id: 'gram-847',
+    type: 'grammar',
+    content: 'The conference _____ by over 500 delegates from 40 countries.',
+    choices: ['was attended', 'attended', 'has attended', 'attends'],
+    answer: 'was attended',
+    explanation: '受動態の過去形 was attended（出席された）が正解です。',
+  },
+  {
+    id: 'gram-848',
+    type: 'grammar',
+    content:
+      'The company has _____ a reputation for delivering quality products.',
+    choices: ['built', 'build', 'building', 'made'],
+    answer: 'built',
+    explanation:
+      '現在完了形 has built（築いた）が正解です。build a reputation for〜。',
+  },
+  {
+    id: 'gram-849',
+    type: 'grammar',
+    content:
+      'The CEO will be speaking _____ behalf of the entire organization.',
+    choices: ['on', 'in', 'for', 'at'],
+    answer: 'on',
+    explanation: 'on behalf of は「〜を代表して」という定型表現です。',
+  },
+  {
+    id: 'gram-850',
+    type: 'grammar',
+    content: 'The client specifically requested that the work _____ by June.',
+    choices: ['be finished', 'is finished', 'will be finished', 'finishes'],
+    answer: 'be finished',
+    explanation:
+      'requested that〜 の後は仮定法現在（動詞の原形）です。受動態なので be finished となります。',
+  },
+  {
+    id: 'gram-851',
+    type: 'grammar',
+    content:
+      'The team worked _____ to finalize the proposal before the deadline.',
+    choices: ['diligently', 'diligent', 'diligence', 'earnest'],
+    answer: 'diligently',
+    explanation:
+      '動詞 worked を修飾するので副詞 diligently（勤勉に）が正解です。',
+  },
+  {
+    id: 'gram-852',
+    type: 'grammar',
+    content: 'The contract will be valid _____ both parties sign it.',
+    choices: ['once', 'while', 'unless', 'since'],
+    answer: 'once',
+    explanation: 'once は「〜したら」という条件の接続詞です。',
+  },
+  {
+    id: 'gram-853',
+    type: 'grammar',
+    content: 'We regret _____ you that your application was not successful.',
+    choices: ['to inform', 'informing', 'inform', 'information'],
+    answer: 'to inform',
+    explanation:
+      'regret to do は「残念ながら〜しなければならない」という丁寧な表現です。',
+  },
+  {
+    id: 'gram-854',
+    type: 'grammar',
+    content:
+      'The IT department is responsible _____ maintaining all computer systems.',
+    choices: ['for', 'of', 'in', 'to'],
+    answer: 'for',
+    explanation:
+      'be responsible for doing は「〜することに責任がある」という定型表現です。',
+  },
+  {
+    id: 'gram-855',
+    type: 'grammar',
+    content:
+      'The company has been _____ cited as one of the best places to work.',
+    choices: ['consistently', 'consistent', 'consistency', 'consist'],
+    answer: 'consistently',
+    explanation:
+      '過去分詞 cited を修飾するので副詞 consistently（継続的に）が正解です。',
+  },
+  {
+    id: 'gram-856',
+    type: 'grammar',
+    content:
+      'The proposal _____ the executive team will be evaluated carefully.',
+    choices: ['submitted by', 'submitting by', 'submitted to', 'submitting to'],
+    answer: 'submitted by',
+    explanation:
+      '過去分詞句 submitted by〜 が proposal を後置修飾します。submitted by the executive team（経営チームが提出した）。',
+  },
+  {
+    id: 'gram-857',
+    type: 'grammar',
+    content:
+      'The company has taken steps to _____ data security throughout the organization.',
+    choices: ['strengthen', 'strong', 'strength', 'firmly'],
+    answer: 'strengthen',
+    explanation:
+      'to の後には動詞の原形が続きます。strengthen（強化する）が正解です。',
+  },
+  {
+    id: 'gram-858',
+    type: 'grammar',
+    content: 'The new system will eliminate _____ errors in data entry.',
+    choices: ['manual', 'manually', 'manualize', 'manuals'],
+    answer: 'manual',
+    explanation:
+      '名詞 errors を修飾するので形容詞 manual（手作業による）が正解です。',
+  },
+  {
+    id: 'gram-859',
+    type: 'grammar',
+    content: 'The project will be executed _____ strict quality standards.',
+    choices: [
+      'in accordance with',
+      'in accordance to',
+      'according with',
+      'accorded to',
+    ],
+    answer: 'in accordance with',
+    explanation: 'in accordance with は「〜に従って」という定型表現です。',
+  },
+  {
+    id: 'gram-860',
+    type: 'grammar',
+    content:
+      'The company _____ to provide a safe and inclusive work environment.',
+    choices: ['strives', 'striving', 'strived', 'strife'],
+    answer: 'strives',
+    explanation:
+      '主語 The company（単数）に対して現在形 strives が正解です。strive to do（〜しようと努力する）。',
+  },
+  {
+    id: 'gram-861',
+    type: 'grammar',
+    content:
+      'The presentation was so _____ that the audience applauded enthusiastically.',
+    choices: ['compelling', 'compelled', 'compel', 'compellingly'],
+    answer: 'compelling',
+    explanation:
+      'so の後に形容詞が来て「非常に〜な」という意味になります。compelling（説得力のある）が正解です。',
+  },
+  {
+    id: 'gram-862',
+    type: 'grammar',
+    content: 'The supplier was _____ a penalty for failing to deliver on time.',
+    choices: ['charged', 'charging', 'charge', 'charges'],
+    answer: 'charged',
+    explanation:
+      '受動態の過去形 was charged（科された）が正解です。be charged a penalty（ペナルティを科される）。',
+  },
+  {
+    id: 'gram-863',
+    type: 'grammar',
+    content:
+      'The board of directors _____ an emergency meeting to discuss the crisis.',
+    choices: ['convened', 'convening', 'convenes', 'convene'],
+    answer: 'convened',
+    explanation: '過去形 convened（招集した）が正解です。',
+  },
+  {
+    id: 'gram-864',
+    type: 'grammar',
+    content:
+      'The HR department is _____ a comprehensive review of all job descriptions.',
+    choices: ['conducting', 'conducted', 'conduct', 'conduction'],
+    answer: 'conducting',
+    explanation: '現在進行形 is conducting（実施中である）が正解です。',
+  },
+  {
+    id: 'gram-865',
+    type: 'grammar',
+    content:
+      'The company has earned a _____ for delivering high-quality products.',
+    choices: ['reputation', 'reputable', 'reputably', 'repute'],
+    answer: 'reputation',
+    explanation:
+      'earn a reputation for〜 は「〜で評判を得る」という定型表現です。',
+  },
+  {
+    id: 'gram-866',
+    type: 'grammar',
+    content:
+      'The team lead _____ the project efficiently despite having limited resources.',
+    choices: ['managed', 'managing', 'manages', 'management'],
+    answer: 'managed',
+    explanation: '過去形 managed（管理した）が正解です。',
+  },
+  {
+    id: 'gram-867',
+    type: 'grammar',
+    content:
+      'The project was _____ by a cross-functional team from three departments.',
+    choices: ['undertaken', 'undertaking', 'undertake', 'undertook'],
+    answer: 'undertaken',
+    explanation: '受動態の過去形 was undertaken（実施された）が正解です。',
+  },
+  {
+    id: 'gram-868',
+    type: 'grammar',
+    content:
+      'The chairman _____ the meeting to order and began the proceedings.',
+    choices: ['called', 'brought', 'opened', 'started'],
+    answer: 'called',
+    explanation:
+      'call the meeting to order は「会議を開会する」という定型表現です。',
+  },
+  {
+    id: 'gram-869',
+    type: 'grammar',
+    content: 'The workshop is open _____ recent graduates from any field.',
+    choices: ['to', 'for', 'at', 'with'],
+    answer: 'to',
+    explanation:
+      'be open to は「〜に開かれている・〜が参加できる」という表現です。',
+  },
+  {
+    id: 'gram-870',
+    type: 'grammar',
+    content:
+      'The company has been _____ its product portfolio to meet diverse needs.',
+    choices: ['diversifying', 'diversified', 'diversify', 'diversification'],
+    answer: 'diversifying',
+    explanation:
+      '現在完了進行形 has been diversifying（多様化し続けている）が正解です。',
+  },
+  {
+    id: 'gram-871',
+    type: 'grammar',
+    content: 'The policy applies to all staff, _____ of their seniority level.',
+    choices: ['regardless', 'irrespective', 'despite', 'notwithstanding'],
+    answer: 'regardless',
+    explanation: 'regardless of は「〜にかかわらず」という定型表現です。',
+  },
+  {
+    id: 'gram-872',
+    type: 'grammar',
+    content: 'The company _____ its three-year expansion plan last quarter.',
+    choices: ['completed', 'completing', 'completion', 'completes'],
+    answer: 'completed',
+    explanation: '過去形 completed（完了した）が正解です。',
+  },
+  {
+    id: 'gram-873',
+    type: 'grammar',
+    content: 'The budget for next year has _____ been finalized.',
+    choices: ['not yet', 'yet not', 'already not', 'not already'],
+    answer: 'not yet',
+    explanation:
+      'has not yet been finalized は「まだ確定していない」という現在完了の否定形です。',
+  },
+  {
+    id: 'gram-874',
+    type: 'grammar',
+    content:
+      'The internship program is open _____ recent graduates from any field.',
+    choices: ['to', 'for', 'at', 'with'],
+    answer: 'to',
+    explanation: 'be open to は「〜に開かれている」という表現です。',
+  },
+  {
+    id: 'gram-875',
+    type: 'grammar',
+    content:
+      'All travel arrangements must be _____ through the corporate travel agency.',
+    choices: ['booked', 'booking', 'book', 'books'],
+    answer: 'booked',
+    explanation:
+      'must be の後に過去分詞で受動態を作ります。booked（予約された）が正解です。',
+  },
+  {
+    id: 'gram-876',
+    type: 'grammar',
+    content: 'The manager _____ all travel expenses promptly after each trip.',
+    choices: ['reimburses', 'reimbursing', 'reimbursed', 'reimbursement'],
+    answer: 'reimburses',
+    explanation:
+      '主語 The manager（単数）に対して現在形 reimburses（払い戻す）が正解です。',
+  },
+  {
+    id: 'gram-877',
+    type: 'grammar',
+    content: 'The contractor is _____ with all local building regulations.',
+    choices: ['familiar', 'familiarity', 'familiarly', 'familiarize'],
+    answer: 'familiar',
+    explanation:
+      'be familiar with は「〜をよく知っている」という定型表現です。',
+  },
+  {
+    id: 'gram-878',
+    type: 'grammar',
+    content: 'The branch office opened _____ three years ago.',
+    choices: ['just over', 'just under', 'only about', 'roughly'],
+    answer: 'just over',
+    explanation:
+      'just over は「〜をわずかに超えて」という表現です。just over three years ago（ちょうど3年少し前）。',
+  },
+  {
+    id: 'gram-879',
+    type: 'grammar',
+    content:
+      "The company's new direction is _____ on innovation and customer focus.",
+    choices: ['centered', 'centering', 'center', 'central'],
+    answer: 'centered',
+    explanation: 'be centered on は「〜を中心としている」という定型表現です。',
+  },
+  {
+    id: 'gram-880',
+    type: 'grammar',
+    content: 'The agreement _____ that both parties share the costs equally.',
+    choices: ['stipulates', 'stipulating', 'stipulated', 'stipulation'],
+    answer: 'stipulates',
+    explanation:
+      '主語 The agreement（単数）に対して現在形 stipulates（定めている）が正解です。',
+  },
+  {
+    id: 'gram-881',
+    type: 'grammar',
+    content: 'The company was _____ in 2001 with just five employees.',
+    choices: ['established', 'establishing', 'establishment', 'establishes'],
+    answer: 'established',
+    explanation: '受動態の過去形 was established（設立された）が正解です。',
+  },
+  {
+    id: 'gram-882',
+    type: 'grammar',
+    content:
+      'Please _____ a copy of your identification when submitting the form.',
+    choices: ['enclose', 'attaching', 'provides', 'attach'],
+    answer: 'enclose',
+    explanation:
+      '命令文は動詞の原形で始まります。enclose（同封する）が正解です。',
+  },
+  {
+    id: 'gram-883',
+    type: 'grammar',
+    content:
+      'The new product line is _____ at the premium segment of the market.',
+    choices: ['targeted', 'targeting', 'target', 'targets'],
+    answer: 'targeted',
+    explanation: 'be targeted at は「〜を対象としている」という定型表現です。',
+  },
+  {
+    id: 'gram-884',
+    type: 'grammar',
+    content: 'The office will _____ closed on Friday for the national holiday.',
+    choices: ['remain', 'stay', 'be', 'keep'],
+    answer: 'remain',
+    explanation:
+      'remain closed（閉まったままである）という表現で remain が正解です。',
+  },
+  {
+    id: 'gram-885',
+    type: 'grammar',
+    content:
+      'The company provided _____ assistance to employees affected by the layoffs.',
+    choices: ['financial', 'financially', 'finance', 'finances'],
+    answer: 'financial',
+    explanation:
+      '名詞 assistance を修飾するので形容詞 financial（財政的な）が正解です。',
+  },
+  {
+    id: 'gram-886',
+    type: 'grammar',
+    content:
+      'The audit results revealed _____ improvements in financial controls.',
+    choices: ['significant', 'significantly', 'significance', 'signify'],
+    answer: 'significant',
+    explanation:
+      '名詞 improvements を修飾するので形容詞 significant（著しい）が正解です。',
+  },
+  {
+    id: 'gram-887',
+    type: 'grammar',
+    content:
+      'The plant manager ensured that all workers _____ the proper safety gear.',
+    choices: ['wore', 'wear', 'wearing', 'worn'],
+    answer: 'wore',
+    explanation:
+      '間接話法の時制は主節に合わせます。ensured that〜 の後に過去形 wore が正解です。',
+  },
+  {
+    id: 'gram-888',
+    type: 'grammar',
+    content:
+      'The operations manager _____ the project efficiently despite limited resources.',
+    choices: ['handled', 'handling', 'handles', 'handle'],
+    answer: 'handled',
+    explanation: '過去形 handled（処理した）が正解です。',
+  },
+  {
+    id: 'gram-889',
+    type: 'grammar',
+    content:
+      'The new software will be rolled _____ to all departments next month.',
+    choices: ['out', 'up', 'in', 'over'],
+    answer: 'out',
+    explanation: 'roll out は「展開する・導入する」という句動詞です。',
+  },
+  {
+    id: 'gram-890',
+    type: 'grammar',
+    content: 'The company _____ great lengths to ensure customer satisfaction.',
+    choices: ['goes', 'go', 'went', 'gone'],
+    answer: 'goes',
+    explanation:
+      'go to great lengths は「多大な努力をする」という定型表現です。主語 The company（単数）に goes が正解です。',
+  },
+  {
+    id: 'gram-891',
+    type: 'grammar',
+    content:
+      'The team has been working _____ on the new sustainability initiative.',
+    choices: [
+      'collaboratively',
+      'collaborative',
+      'collaboration',
+      'collaborate',
+    ],
+    answer: 'collaboratively',
+    explanation:
+      '動詞句 has been working を修飾するので副詞 collaboratively（協力して）が正解です。',
+  },
+  {
+    id: 'gram-892',
+    type: 'grammar',
+    content:
+      'The training materials are available _____ download on the intranet.',
+    choices: ['for', 'to', 'in', 'at'],
+    answer: 'for',
+    explanation:
+      'available for download は「ダウンロード可能」という定型表現です。',
+  },
+  {
+    id: 'gram-893',
+    type: 'grammar',
+    content: 'The budget meeting is _____ to last approximately two hours.',
+    choices: ['expected', 'expecting', 'expects', 'expectation'],
+    answer: 'expected',
+    explanation:
+      'be expected to do は「〜すると予想されている」という定型表現です。',
+  },
+  {
+    id: 'gram-894',
+    type: 'grammar',
+    content:
+      'The company will hold a _____ review of its strategic objectives.',
+    choices: [
+      'comprehensive',
+      'comprehensively',
+      'comprehend',
+      'comprehension',
+    ],
+    answer: 'comprehensive',
+    explanation:
+      '名詞 review を修飾するので形容詞 comprehensive（包括的な）が正解です。',
+  },
+  {
+    id: 'gram-895',
+    type: 'grammar',
+    content:
+      'The newly appointed director brings _____ experience in global markets.',
+    choices: ['extensive', 'extensively', 'extension', 'extend'],
+    answer: 'extensive',
+    explanation:
+      '名詞 experience を修飾するので形容詞 extensive（豊富な）が正解です。',
+  },
+  {
+    id: 'gram-896',
+    type: 'grammar',
+    content: "The CEO expressed _____ for the entire team's hard work.",
+    choices: ['gratitude', 'grateful', 'gratefully', 'gratefulness'],
+    answer: 'gratitude',
+    explanation:
+      '動詞 expressed の目的語として名詞 gratitude（感謝）が正解です。',
+  },
+  {
+    id: 'gram-897',
+    type: 'grammar',
+    content:
+      'The company is seeking individuals _____ a passion for customer service.',
+    choices: ['with', 'who have', 'having', 'that has'],
+    answer: 'with',
+    explanation:
+      'with a passion for〜（〜への情熱を持つ）という前置詞句が individuals を後置修飾します。',
+  },
+  {
+    id: 'gram-898',
+    type: 'grammar',
+    content:
+      'The project benefited _____ the additional resources provided by management.',
+    choices: ['from', 'by', 'with', 'through'],
+    answer: 'from',
+    explanation: 'benefit from は「〜から恩恵を受ける」という定型表現です。',
+  },
+  {
+    id: 'gram-899',
+    type: 'grammar',
+    content: 'The lease for the office space _____ next March.',
+    choices: ['expires', 'expiring', 'expired', 'expiration'],
+    answer: 'expires',
+    explanation:
+      '主語 The lease（単数）に対して現在形 expires が正解です。確定した近い未来を現在形で表しています。',
+  },
+  {
+    id: 'gram-900',
+    type: 'grammar',
+    content:
+      'The company has been _____ profitable since its founding in 1990.',
+    choices: ['consistently', 'consistent', 'consistency', 'consist'],
+    answer: 'consistently',
+    explanation:
+      '形容詞 profitable を修飾するので副詞 consistently（一貫して）が正解です。',
+  },
+  {
+    id: 'gram-901',
+    type: 'grammar',
+    content: 'The board _____ the decision to expand into new markets.',
+    choices: ['made', 'did', 'took', 'had'],
+    answer: 'made',
+    explanation: 'make a decision は「決定を下す」という定型表現です。',
+  },
+  {
+    id: 'gram-902',
+    type: 'grammar',
+    content: 'All expense claims must _____ receipts for items over $50.',
+    choices: ['include', 'including', 'included', 'includes'],
+    answer: 'include',
+    explanation:
+      'must の後には動詞の原形が続きます。include（含む）が正解です。',
+  },
+  {
+    id: 'gram-903',
+    type: 'grammar',
+    content:
+      'The company is _____ to making a positive difference in the community.',
+    choices: ['dedicated', 'dedicating', 'dedicate', 'dedication'],
+    answer: 'dedicated',
+    explanation: 'be dedicated to は「〜に専念している」という定型表現です。',
+  },
+  {
+    id: 'gram-904',
+    type: 'grammar',
+    content:
+      'The director _____ the new policy to the staff at the all-hands meeting.',
+    choices: ['explained', 'explaining', 'explanation', 'explains'],
+    answer: 'explained',
+    explanation: '過去形 explained（説明した）が正解です。',
+  },
+  {
+    id: 'gram-905',
+    type: 'grammar',
+    content:
+      'The quarterly report _____ that revenue grew by 12% year over year.',
+    choices: ['shows', 'showing', 'shown', 'showed'],
+    answer: 'shows',
+    explanation:
+      '主語 The quarterly report（単数）に対して現在形 shows が正解です。',
+  },
+  {
+    id: 'gram-906',
+    type: 'grammar',
+    content:
+      'The company will _____ a major announcement at the press conference.',
+    choices: ['make', 'do', 'give', 'have'],
+    answer: 'make',
+    explanation: 'make an announcement は「発表をする」という定型表現です。',
+  },
+  {
+    id: 'gram-907',
+    type: 'grammar',
+    content:
+      'The new regulation _____ all manufacturers to label their products clearly.',
+    choices: ['requires', 'requiring', 'required', 'requirement'],
+    answer: 'requires',
+    explanation:
+      '主語 The new regulation（単数）に対して現在形 requires が正解です。require + 目的語 + to〜。',
+  },
+  {
+    id: 'gram-908',
+    type: 'grammar',
+    content:
+      'The team was _____ for its exceptional performance at the awards ceremony.',
+    choices: ['commended', 'commending', 'commend', 'commendation'],
+    answer: 'commended',
+    explanation: '受動態の過去形 was commended（称賛された）が正解です。',
+  },
+  {
+    id: 'gram-909',
+    type: 'grammar',
+    content: 'The training program is _____ for all new employees.',
+    choices: ['mandatory', 'mandate', 'mandating', 'mandatorily'],
+    answer: 'mandatory',
+    explanation: 'be動詞の補語として形容詞 mandatory（義務的な）が正解です。',
+  },
+  {
+    id: 'gram-910',
+    type: 'grammar',
+    content: 'The CEO _____ the company as a leader in sustainable innovation.',
+    choices: ['positions', 'position', 'positioned', 'positioning'],
+    answer: 'positions',
+    explanation: '主語 The CEO（単数）に対して現在形 positions が正解です。',
+  },
+  {
+    id: 'gram-911',
+    type: 'grammar',
+    content: 'The document should be _____ in a secure location at all times.',
+    choices: ['kept', 'keeping', 'keep', 'keeps'],
+    answer: 'kept',
+    explanation:
+      'should be の後に過去分詞で受動態を作ります。kept（保管された）が正解です。',
+  },
+  {
+    id: 'gram-912',
+    type: 'grammar',
+    content:
+      'The company _____ to expand its digital services over the next two years.',
+    choices: ['plans', 'planning', 'planned', 'plan'],
+    answer: 'plans',
+    explanation:
+      '主語 The company（単数）に対して現在形 plans が正解です。plan to do（〜する計画を立てている）。',
+  },
+  {
+    id: 'gram-913',
+    type: 'grammar',
+    content:
+      'The financial statements must be _____ by a certified public accountant.',
+    choices: ['audited', 'auditing', 'audit', 'auditor'],
+    answer: 'audited',
+    explanation:
+      'must be の後に過去分詞で受動態を作ります。audited（監査された）が正解です。',
+  },
+  {
+    id: 'gram-914',
+    type: 'grammar',
+    content:
+      'Employees _____ to the new health insurance plan must enroll before Friday.',
+    choices: ['switching', 'switched', 'switch', 'switches'],
+    answer: 'switching',
+    explanation:
+      '現在分詞 switching が Employees を後置修飾します。Employees switching to〜（〜に切り替える従業員）。',
+  },
+  {
+    id: 'gram-915',
+    type: 'grammar',
+    content: 'The results of the satisfaction survey _____ encouraging.',
+    choices: ['were', 'was', 'are being', 'has been'],
+    answer: 'were',
+    explanation: '主語 The results（複数）に対して過去形 were が正解です。',
+  },
+  {
+    id: 'gram-916',
+    type: 'grammar',
+    content:
+      'The company _____ its suppliers to adhere to ethical sourcing standards.',
+    choices: ['expects', 'expecting', 'expectation', 'expected'],
+    answer: 'expects',
+    explanation:
+      '主語 The company（単数）に対して現在形 expects が正解です。expect + 目的語 + to do の形をとります。',
+  },
+  {
+    id: 'gram-917',
+    type: 'grammar',
+    content:
+      'The new headquarters building is equipped _____ the latest technology.',
+    choices: ['with', 'by', 'in', 'for'],
+    answer: 'with',
+    explanation: 'be equipped with は「〜が備わっている」という定型表現です。',
+  },
+  {
+    id: 'gram-918',
+    type: 'grammar',
+    content:
+      'The candidate _____ impressed the interviewers with her in-depth knowledge.',
+    choices: ['clearly', 'clear', 'clarity', 'clarify'],
+    answer: 'clearly',
+    explanation:
+      '動詞 impressed を修飾するので副詞 clearly（明らかに）が正解です。',
+  },
+  {
+    id: 'gram-919',
+    type: 'grammar',
+    content:
+      'All policies are _____ review on an annual basis to ensure relevance.',
+    choices: ['subject to', 'subjected', 'liable to', 'prone to'],
+    answer: 'subject to',
+    explanation: 'be subject to は「〜の対象である」という定型表現です。',
+  },
+  {
+    id: 'gram-920',
+    type: 'grammar',
+    content:
+      'The company _____ customer privacy above all other considerations.',
+    choices: ['places', 'puts', 'sets', 'keeps'],
+    answer: 'places',
+    explanation:
+      'place something above は「〜を〜より上位に置く」という表現です。',
+  },
+  {
+    id: 'gram-921',
+    type: 'grammar',
+    content:
+      '_____ the risk of delays, contingency plans have been established.',
+    choices: ['Given', 'Give', 'Giving', 'To give'],
+    answer: 'Given',
+    explanation: 'Given〜 は「〜を考慮すると」という意味の前置詞的分詞です。',
+  },
+  {
+    id: 'gram-922',
+    type: 'grammar',
+    content:
+      'The company has _____ its operating expenses by 15% this fiscal year.',
+    choices: ['reduced', 'reducing', 'reduction', 'reduces'],
+    answer: 'reduced',
+    explanation: '現在完了形 has reduced（削減した）が正解です。',
+  },
+  {
+    id: 'gram-923',
+    type: 'grammar',
+    content:
+      'The seminar will cover _____ strategies for business development.',
+    choices: ['effective', 'effectively', 'effectiveness', 'effect'],
+    answer: 'effective',
+    explanation:
+      '名詞 strategies を修飾するので形容詞 effective（効果的な）が正解です。',
+  },
+  {
+    id: 'gram-924',
+    type: 'grammar',
+    content:
+      'The vendor was _____ of the raw material shortage and took corrective action.',
+    choices: ['notified', 'notifying', 'notification', 'notify'],
+    answer: 'notified',
+    explanation:
+      '受動態の過去形 was notified（通知された）が正解です。be notified of〜（〜を知らされる）。',
+  },
+  {
+    id: 'gram-925',
+    type: 'grammar',
+    content:
+      'The new software update _____ several bugs that users had reported.',
+    choices: ['addressed', 'addressing', 'addresses', 'address'],
+    answer: 'addressed',
+    explanation: '過去形 addressed（対処した）が正解です。',
+  },
+  {
+    id: 'gram-926',
+    type: 'grammar',
+    content:
+      'The company _____ in its commitment to delivering quality service.',
+    choices: ['is unwavering', 'unwavering', 'waver', 'wavers'],
+    answer: 'is unwavering',
+    explanation:
+      'be unwavering in〜 は「〜において揺るぎない」という表現です。',
+  },
+  {
+    id: 'gram-927',
+    type: 'grammar',
+    content:
+      'The policy change was met _____ resistance from several departments.',
+    choices: ['with', 'by', 'for', 'to'],
+    answer: 'with',
+    explanation:
+      'be met with は「〜で迎えられる・〜を受ける」という定型表現です。',
+  },
+  {
+    id: 'gram-928',
+    type: 'grammar',
+    content:
+      'The company has _____ strong ties with the local community for decades.',
+    choices: ['maintained', 'maintaining', 'maintains', 'is maintaining'],
+    answer: 'maintained',
+    explanation:
+      '現在完了形 has maintained（維持してきた）が正解です。for decades という継続期間が示されています。',
+  },
+  {
+    id: 'gram-929',
+    type: 'grammar',
+    content: 'The team celebrated _____ the annual sales target early.',
+    choices: ['having achieved', 'to achieve', 'achieving', 'achievement of'],
+    answer: 'having achieved',
+    explanation:
+      '完了動名詞 having achieved は「達成したこと」という過去の動作を表します。',
+  },
+  {
+    id: 'gram-930',
+    type: 'grammar',
+    content:
+      'The CEO is _____ to deliver a keynote speech at the opening ceremony.',
+    choices: ['scheduled', 'scheduling', 'schedule', 'schedules'],
+    answer: 'scheduled',
+    explanation:
+      'be scheduled to do は「〜する予定である」という定型表現です。',
+  },
+  {
+    id: 'gram-931',
+    type: 'grammar',
+    content:
+      'The company will provide _____ for all costs associated with the business trip.',
+    choices: ['reimbursement', 'reimburse', 'reimbursing', 'reimbursed'],
+    answer: 'reimbursement',
+    explanation:
+      '動詞 provide の目的語として名詞 reimbursement（払い戻し）が正解です。',
+  },
+  {
+    id: 'gram-932',
+    type: 'grammar',
+    content:
+      'The company _____ its headquarters from London to Singapore last year.',
+    choices: ['relocated', 'relocating', 'relocation', 'relocates'],
+    answer: 'relocated',
+    explanation:
+      '過去形 relocated（移転した）が正解です。last year という過去の時点が示されています。',
+  },
+  {
+    id: 'gram-933',
+    type: 'grammar',
+    content: 'The CEO _____ the company as a global leader in clean energy.',
+    choices: ['envisions', 'envisioning', 'envision', 'envisioned'],
+    answer: 'envisions',
+    explanation:
+      '主語 The CEO（単数）に対して現在形 envisions（思い描いている）が正解です。',
+  },
+  {
+    id: 'gram-934',
+    type: 'grammar',
+    content:
+      'The proposal must _____ all legal requirements before being approved.',
+    choices: ['meet', 'satisfy', 'fulfill', 'comply'],
+    answer: 'meet',
+    explanation: 'meet requirements は「要件を満たす」という定型表現です。',
+  },
+  {
+    id: 'gram-935',
+    type: 'grammar',
+    content: 'The company has been _____ since its founding.',
+    choices: ['profitable', 'profit', 'profitably', 'profitability'],
+    answer: 'profitable',
+    explanation:
+      'has been の後に補語として形容詞 profitable（収益性のある）が正解です。',
+  },
+  {
+    id: 'gram-936',
+    type: 'grammar',
+    content:
+      'The new product _____ in the market after three years of research.',
+    choices: ['was launched', 'launched', 'has launched', 'launching'],
+    answer: 'was launched',
+    explanation: '受動態の過去形 was launched（発売された）が正解です。',
+  },
+  {
+    id: 'gram-937',
+    type: 'grammar',
+    content: 'The committee _____ together once a month to review progress.',
+    choices: ['convenes', 'convene', 'convened', 'convening'],
+    answer: 'convenes',
+    explanation:
+      '主語 The committee（単数）に対して現在形 convenes が正解です。convene（集まる）。',
+  },
+  {
+    id: 'gram-938',
+    type: 'grammar',
+    content:
+      'The job posting _____ on the company website and major job boards.',
+    choices: ['appeared', 'appearing', 'appears', 'appearance'],
+    answer: 'appeared',
+    explanation: '過去形 appeared（掲載された）が正解です。',
+  },
+  {
+    id: 'gram-939',
+    type: 'grammar',
+    content:
+      'The project team _____ regular progress meetings throughout the development phase.',
+    choices: ['held', 'holding', 'holds', 'hold'],
+    answer: 'held',
+    explanation:
+      '過去形 held（開催した）が正解です。throughout the development phase という過去の期間が示されています。',
+  },
+  {
+    id: 'gram-940',
+    type: 'grammar',
+    content:
+      'The new policy is intended _____ improve productivity across all departments.',
+    choices: ['to', 'for', 'in order', 'so as'],
+    answer: 'to',
+    explanation:
+      'be intended to do は「〜することを目的としている」という定型表現です。',
+  },
+  {
+    id: 'gram-941',
+    type: 'grammar',
+    content:
+      'The company is _____ for any inconvenience caused by the system maintenance.',
+    choices: ['apologetic', 'apology', 'apologizing', 'apologetically'],
+    answer: 'apologetic',
+    explanation:
+      'be apologetic for は「〜について申し訳なく思っている」という表現です。',
+  },
+  {
+    id: 'gram-942',
+    type: 'grammar',
+    content: 'The staff handbook is _____ upon request from the HR department.',
+    choices: ['available', 'availability', 'availably', 'availing'],
+    answer: 'available',
+    explanation:
+      'be available upon request（要望に応じて入手可能）という定型表現です。',
+  },
+  {
+    id: 'gram-943',
+    type: 'grammar',
+    content:
+      'The project plan was _____ to incorporate feedback from all stakeholders.',
+    choices: ['revised', 'revising', 'revision', 'revise'],
+    answer: 'revised',
+    explanation: '受動態の過去形 was revised（改訂された）が正解です。',
+  },
+  {
+    id: 'gram-944',
+    type: 'grammar',
+    content:
+      'The architect presented a _____ design for the new corporate campus.',
+    choices: ['detailed', 'detailing', 'detail', 'details'],
+    answer: 'detailed',
+    explanation:
+      '名詞 design を修飾するので形容詞 detailed（詳細な）が正解です。',
+  },
+  {
+    id: 'gram-945',
+    type: 'grammar',
+    content: 'The new equipment is _____ with the existing infrastructure.',
+    choices: ['compatible', 'compatibility', 'compatibly', 'incompatible'],
+    answer: 'compatible',
+    explanation:
+      'be compatible with は「〜と互換性がある」という定型表現です。',
+  },
+  {
+    id: 'gram-946',
+    type: 'grammar',
+    content:
+      'The market analysis _____ that demand for the product is growing.',
+    choices: ['suggests', 'suggesting', 'suggested', 'suggestion'],
+    answer: 'suggests',
+    explanation:
+      '主語 The market analysis（単数）に対して現在形 suggests が正解です。',
+  },
+  {
+    id: 'gram-947',
+    type: 'grammar',
+    content: 'The director has _____ concerns about the project timeline.',
+    choices: ['raised', 'risen', 'arose', 'arising'],
+    answer: 'raised',
+    explanation:
+      '現在完了形 has raised（提起した）が正解です。raise concerns（懸念を示す）。',
+  },
+  {
+    id: 'gram-948',
+    type: 'grammar',
+    content: 'The company will be celebrating its 25th _____ this year.',
+    choices: ['anniversary', 'annual', 'annually', 'annualize'],
+    answer: 'anniversary',
+    explanation: 'anniversary（記念日・周年）が正解です。',
+  },
+  {
+    id: 'gram-949',
+    type: 'grammar',
+    content:
+      'Participation in the wellness program is _____ but strongly encouraged.',
+    choices: ['voluntary', 'voluntarily', 'volunteer', 'compulsory'],
+    answer: 'voluntary',
+    explanation: 'be動詞の補語として形容詞 voluntary（自発的な）が正解です。',
+  },
+  {
+    id: 'gram-950',
+    type: 'grammar',
+    content:
+      'The company has _____ its workforce by 10% through natural attrition.',
+    choices: ['reduced', 'reducing', 'reduction', 'reduces'],
+    answer: 'reduced',
+    explanation: '現在完了形 has reduced（削減した）が正解です。',
+  },
+  {
+    id: 'gram-951',
+    type: 'grammar',
+    content:
+      'The merger is expected to _____ significant synergies for both companies.',
+    choices: ['create', 'creating', 'created', 'creates'],
+    answer: 'create',
+    explanation: 'be expected to do の形で、to の後には動詞の原形が続きます。',
+  },
+  {
+    id: 'gram-952',
+    type: 'grammar',
+    content:
+      'The revised budget is _____ to be adopted at the next board meeting.',
+    choices: ['expected', 'expecting', 'expect', 'expectation'],
+    answer: 'expected',
+    explanation:
+      'be expected to do は「〜すると予想されている」という定型表現です。',
+  },
+  {
+    id: 'gram-953',
+    type: 'grammar',
+    content:
+      'The company offers _____ relocation assistance to new hires from other cities.',
+    choices: ['generous', 'generously', 'generosity', 'generousness'],
+    answer: 'generous',
+    explanation:
+      '名詞 assistance を修飾するので形容詞 generous（手厚い）が正解です。',
+  },
+  {
+    id: 'gram-954',
+    type: 'grammar',
+    content: 'The CEO will be _____ at the annual shareholders meeting.',
+    choices: ['present', 'presence', 'presented', 'presently'],
+    answer: 'present',
+    explanation:
+      'be present（出席している）という表現で、形容詞 present が正解です。',
+  },
+  {
+    id: 'gram-955',
+    type: 'grammar',
+    content:
+      'The manager _____ to the team on the new expense reporting procedures.',
+    choices: ['briefed', 'briefing', 'briefs', 'brief'],
+    answer: 'briefed',
+    explanation:
+      '過去形 briefed（説明した）が正解です。brief someone on〜（〜について説明する）。',
+  },
+  {
+    id: 'gram-956',
+    type: 'grammar',
+    content:
+      'The production targets were not _____ due to supply chain issues.',
+    choices: ['met', 'meeting', 'meet', 'meets'],
+    answer: 'met',
+    explanation: '受動態の過去形 were not met（達成されなかった）が正解です。',
+  },
+  {
+    id: 'gram-957',
+    type: 'grammar',
+    content: 'The board decided _____ the proposal pending further review.',
+    choices: ['to table', 'tabling', 'table', 'tabled'],
+    answer: 'to table',
+    explanation:
+      'decide to do の形で to の後には動詞の原形が続きます。table（棚上げにする）が正解です。',
+  },
+  {
+    id: 'gram-958',
+    type: 'grammar',
+    content:
+      'The marketing strategy needs to be _____ to reflect changing consumer trends.',
+    choices: ['adjusted', 'adjusting', 'adjust', 'adjustment'],
+    answer: 'adjusted',
+    explanation:
+      'needs to be の後に過去分詞で受動態を作ります。adjusted（調整された）が正解です。',
+  },
+  {
+    id: 'gram-959',
+    type: 'grammar',
+    content:
+      'The operations team is responsible _____ ensuring timely delivery.',
+    choices: ['for', 'of', 'in', 'with'],
+    answer: 'for',
+    explanation:
+      'be responsible for doing は「〜することに責任がある」という定型表現です。',
+  },
+  {
+    id: 'gram-960',
+    type: 'grammar',
+    content: 'The new headquarters _____ in the city center for easy access.',
+    choices: ['is situated', 'situates', 'has situated', 'situating'],
+    answer: 'is situated',
+    explanation: 'be situated in は「〜に位置している」という定型表現です。',
+  },
+  {
+    id: 'gram-961',
+    type: 'grammar',
+    content:
+      'The company has _____ steps to address the concerns raised by employees.',
+    choices: ['taken', 'made', 'done', 'set'],
+    answer: 'taken',
+    explanation:
+      'take steps to do は「〜するための措置を講じる」という定型表現です。',
+  },
+  {
+    id: 'gram-962',
+    type: 'grammar',
+    content: 'The new branch will serve customers _____ the northern region.',
+    choices: ['throughout', 'through', 'across from', 'about'],
+    answer: 'throughout',
+    explanation: 'throughout は「〜全体にわたって」という意味の前置詞です。',
+  },
+  {
+    id: 'gram-963',
+    type: 'grammar',
+    content:
+      'The company is _____ a series of workshops on leadership development.',
+    choices: ['organizing', 'organized', 'organize', 'organization'],
+    answer: 'organizing',
+    explanation: '現在進行形 is organizing（開催中・計画中）が正解です。',
+  },
+  {
+    id: 'gram-964',
+    type: 'grammar',
+    content:
+      'The manufacturing defect was _____ before the product reached the market.',
+    choices: ['detected', 'detecting', 'detect', 'detection'],
+    answer: 'detected',
+    explanation: '受動態の過去形 was detected（発見された）が正解です。',
+  },
+  {
+    id: 'gram-965',
+    type: 'grammar',
+    content:
+      'The new policy will _____ effect from the beginning of next quarter.',
+    choices: ['take', 'make', 'bring', 'put'],
+    answer: 'take',
+    explanation:
+      'take effect は「効力を発する・施行される」という定型表現です。',
+  },
+  {
+    id: 'gram-966',
+    type: 'grammar',
+    content:
+      'The company is planning _____ into the Southeast Asian market next year.',
+    choices: ['to expand', 'expanding', 'expand', 'expansion'],
+    answer: 'to expand',
+    explanation:
+      'plan to do は「〜する計画を立てている」という表現で、to不定詞を目的語にとります。',
+  },
+  {
+    id: 'gram-967',
+    type: 'grammar',
+    content: 'The CFO warned _____ the risks of expanding too quickly.',
+    choices: ['against', 'about', 'from', 'of'],
+    answer: 'against',
+    explanation: 'warn against は「〜に反対して警告する」という定型表現です。',
+  },
+  {
+    id: 'gram-968',
+    type: 'grammar',
+    content:
+      'The salary increase is _____ on the outcome of the annual performance review.',
+    choices: ['contingent', 'conditional', 'dependent', 'relying'],
+    answer: 'contingent',
+    explanation: 'be contingent on は「〜次第である」という定型表現です。',
+  },
+  {
+    id: 'gram-969',
+    type: 'grammar',
+    content: 'The manager _____ the team to stay focused on their priorities.',
+    choices: ['reminded', 'reminded of', 'reminded about', 'reminded to'],
+    answer: 'reminded',
+    explanation:
+      'remind + 目的語 + to do の形で「〜に〜することを思い出させる」という意味です。',
+  },
+  {
+    id: 'gram-970',
+    type: 'grammar',
+    content: 'The company is proud _____ its 50-year history of innovation.',
+    choices: ['of', 'for', 'about', 'in'],
+    answer: 'of',
+    explanation: 'be proud of は「〜を誇りに思う」という定型表現です。',
+  },
+  {
+    id: 'gram-971',
+    type: 'grammar',
+    content: 'The conference room is _____ for the presentation at 2 p.m.',
+    choices: ['reserved', 'reserving', 'reserve', 'reservation'],
+    answer: 'reserved',
+    explanation:
+      'be reserved（予約されている）という表現で、過去分詞 reserved が正解です。',
+  },
+  {
+    id: 'gram-972',
+    type: 'grammar',
+    content:
+      'The company is _____ at increasing its market share in the region.',
+    choices: ['aiming', 'aimed', 'aim', 'aims'],
+    answer: 'aiming',
+    explanation: '現在進行形 is aiming（目指している）が正解です。',
+  },
+  {
+    id: 'gram-973',
+    type: 'grammar',
+    content:
+      'The revised proposal was submitted to management _____ review and approval.',
+    choices: ['for', 'to', 'with', 'at'],
+    answer: 'for',
+    explanation:
+      'for review and approval は「レビューと承認のために」という目的を表す表現です。',
+  },
+  {
+    id: 'gram-974',
+    type: 'grammar',
+    content:
+      'The sales team exceeded _____ monthly quota for the third consecutive month.',
+    choices: ['its', 'their', 'our', 'the'],
+    answer: 'its',
+    explanation:
+      '主語 The sales team（集合名詞・単数扱い）に対して所有格 its が正解です。',
+  },
+  {
+    id: 'gram-975',
+    type: 'grammar',
+    content: 'The company _____ to all feedback from customers and partners.',
+    choices: ['is receptive', 'receptive', 'receives', 'is receiving'],
+    answer: 'is receptive',
+    explanation:
+      'be receptive to は「〜を受け入れる姿勢がある」という表現です。',
+  },
+  {
+    id: 'gram-976',
+    type: 'grammar',
+    content:
+      "The presentation was very _____ and held the audience's attention.",
+    choices: ['engaging', 'engaged', 'engagement', 'engagingly'],
+    answer: 'engaging',
+    explanation:
+      'be動詞の後に補語として形容詞 engaging（興味を引く）が正解です。',
+  },
+  {
+    id: 'gram-977',
+    type: 'grammar',
+    content: 'The company is _____ for providing excellent customer service.',
+    choices: ['known', 'knowing', 'know', 'knowledge'],
+    answer: 'known',
+    explanation: 'be known for は「〜で知られている」という定型表現です。',
+  },
+  {
+    id: 'gram-978',
+    type: 'grammar',
+    content: 'The new product is expected to _____ a significant market share.',
+    choices: ['capture', 'capturing', 'captured', 'captures'],
+    answer: 'capture',
+    explanation:
+      'be expected to do の形で、to の後には動詞の原形が続きます。capture market share（市場シェアを獲得する）。',
+  },
+  {
+    id: 'gram-979',
+    type: 'grammar',
+    content: 'The company has achieved _____ growth over the past three years.',
+    choices: ['remarkable', 'remarkably', 'remark', 'remarkableness'],
+    answer: 'remarkable',
+    explanation:
+      '名詞 growth を修飾するので形容詞 remarkable（目覚ましい）が正解です。',
+  },
+  {
+    id: 'gram-980',
+    type: 'grammar',
+    content: 'The updated version of the policy will be _____ next month.',
+    choices: ['released', 'releasing', 'release', 'releases'],
+    answer: 'released',
+    explanation: '受動態 will be released（公開される）が正解です。',
+  },
+  {
+    id: 'gram-981',
+    type: 'grammar',
+    content: 'The firm is dedicated _____ providing high-quality legal advice.',
+    choices: ['to', 'for', 'at', 'in'],
+    answer: 'to',
+    explanation:
+      'be dedicated to doing は「〜することに専念している」という定型表現です。',
+  },
+  {
+    id: 'gram-982',
+    type: 'grammar',
+    content:
+      'The CEO will be _____ for the next three weeks while on a business trip.',
+    choices: ['away', 'absent from', 'out of', 'off'],
+    answer: 'away',
+    explanation: 'be away は「不在である」という表現です。',
+  },
+  {
+    id: 'gram-983',
+    type: 'grammar',
+    content:
+      'The company has a policy _____ accepting gifts from business partners.',
+    choices: ['regarding', 'regard to', 'with regard', 'in regard'],
+    answer: 'regarding',
+    explanation:
+      'regarding は「〜に関して」という前置詞で、名詞 policy を修飾します。',
+  },
+  {
+    id: 'gram-984',
+    type: 'grammar',
+    content:
+      'The budget allocation was _____ by the finance director last Friday.',
+    choices: ['approved', 'approving', 'approve', 'approval'],
+    answer: 'approved',
+    explanation: '受動態の過去形 was approved（承認された）が正解です。',
+  },
+  {
+    id: 'gram-985',
+    type: 'grammar',
+    content:
+      'Our new digital platform allows customers _____ their orders in real time.',
+    choices: ['to track', 'tracking', 'track', 'tracked'],
+    answer: 'to track',
+    explanation:
+      'allow + 目的語 + to不定詞 の形をとります。allows customers to track（顧客が追跡できる）。',
+  },
+  {
+    id: 'gram-986',
+    type: 'grammar',
+    content: 'The company was _____ in 1985 by two entrepreneurs.',
+    choices: ['founded', 'founding', 'found', 'foundation'],
+    answer: 'founded',
+    explanation: '受動態の過去形 was founded（設立された）が正解です。',
+  },
+  {
+    id: 'gram-987',
+    type: 'grammar',
+    content:
+      'The terms of the contract are subject _____ change without notice.',
+    choices: ['to', 'for', 'at', 'by'],
+    answer: 'to',
+    explanation:
+      'be subject to change は「変更される可能性がある」という定型表現です。',
+  },
+  {
+    id: 'gram-988',
+    type: 'grammar',
+    content:
+      'The company needs to take _____ of the current market conditions.',
+    choices: ['advantage', 'advantageous', 'advantages', 'advantageously'],
+    answer: 'advantage',
+    explanation: 'take advantage of は「〜を活用する」という定型表現です。',
+  },
+  {
+    id: 'gram-989',
+    type: 'grammar',
+    content: 'The proposal was _____ rejected by the investment committee.',
+    choices: ['unanimously', 'unanimous', 'unanimity', 'unanimousness'],
+    answer: 'unanimously',
+    explanation:
+      '過去分詞 rejected を修飾するので副詞 unanimously（全会一致で）が正解です。',
+  },
+  {
+    id: 'gram-990',
+    type: 'grammar',
+    content:
+      'The company is _____ to comply with all environmental regulations.',
+    choices: ['committed', 'committing', 'commitment', 'commits'],
+    answer: 'committed',
+    explanation:
+      'be committed to doing は「〜することに専念している」という定型表現です。',
+  },
+  {
+    id: 'gram-991',
+    type: 'grammar',
+    content: 'The manager _____ the team to stay focused on their priorities.',
+    choices: ['urged', 'urging', 'urges', 'urgency'],
+    answer: 'urged',
+    explanation:
+      '過去形 urged（強く勧めた）が正解です。urge + 目的語 + to do の形をとります。',
+  },
+  {
+    id: 'gram-992',
+    type: 'grammar',
+    content:
+      'The company has a reputation _____ delivering projects on time and on budget.',
+    choices: ['for', 'of', 'in', 'with'],
+    answer: 'for',
+    explanation:
+      'have a reputation for doing は「〜することで評判がある」という定型表現です。',
+  },
+  {
+    id: 'gram-993',
+    type: 'grammar',
+    content:
+      'The new facilities will be _____ to accommodate up to 500 employees.',
+    choices: ['designed', 'designing', 'design', 'designs'],
+    answer: 'designed',
+    explanation:
+      'be designed to do は「〜するように設計されている」という定型表現です。',
+  },
+  {
+    id: 'gram-994',
+    type: 'grammar',
+    content:
+      'The financial year _____ on March 31st for most companies in Japan.',
+    choices: ['ends', 'ending', 'ended', 'end'],
+    answer: 'ends',
+    explanation:
+      '一般的な事実を述べる現在形 ends が正解です。主語 The financial year（単数）に合わせます。',
+  },
+  {
+    id: 'gram-995',
+    type: 'grammar',
+    content: 'The contract _____ between the two parties last week.',
+    choices: ['was signed', 'signed', 'sign', 'has signed'],
+    answer: 'was signed',
+    explanation:
+      '受動態の過去形 was signed（署名された）が正解です。last week は過去の時点を示します。',
+  },
+  {
+    id: 'gram-996',
+    type: 'grammar',
+    content:
+      "The board will _____ the quarterly results at next week's meeting.",
+    choices: ['review', 'reviewing', 'reviewed', 'reviews'],
+    answer: 'review',
+    explanation: 'will の後には動詞の原形が続きます。',
+  },
+  {
+    id: 'gram-997',
+    type: 'grammar',
+    content:
+      'The company is looking _____ qualified candidates for the new position.',
+    choices: ['for', 'at', 'into', 'through'],
+    answer: 'for',
+    explanation: 'look for は「〜を探している」という句動詞です。',
+  },
+  {
+    id: 'gram-998',
+    type: 'grammar',
+    content:
+      'The new employee has been _____ with a mentor to support her transition.',
+    choices: ['paired', 'pairing', 'pair', 'pairs'],
+    answer: 'paired',
+    explanation:
+      '現在完了の受動態 has been paired（ペアにされた）が正解です。be paired with〜（〜とペアになる）。',
+  },
+  {
+    id: 'gram-999',
+    type: 'grammar',
+    content: "The sales figures are _____ with last year's performance.",
+    choices: ['consistent', 'consistently', 'consistency', 'consist'],
+    answer: 'consistent',
+    explanation:
+      'be consistent with は「〜と一致している」という定型表現です。形容詞 consistent が正解です。',
+  },
+  {
+    id: 'gram-1000',
+    type: 'grammar',
+    content:
+      'The company has _____ to become one of the most trusted brands in the industry.',
+    choices: ['grown', 'growing', 'grow', 'growth'],
+    answer: 'grown',
+    explanation:
+      '現在完了形 has grown（成長した）が正解です。grow to become〜（〜になるまでに成長する）。',
+  },
 ];

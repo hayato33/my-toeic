@@ -940,11 +940,11 @@ export const vocabularyQuestions: SeedQuestion[] = [
   {
     id: 'vocab-105',
     type: 'vocabulary',
-    content: 'table a motion at the board meeting',
+    content: 'submit a motion at the board meeting',
     choices: ['提出する', '保留する', '記録する', '削除する'],
     answer: '提出する',
     explanation:
-      'table a motion は「動議を提出する」という意味です。委員会や役員会の運営に関する文脈で使われます。',
+      'submit a motion は「動議を提出する」という意味です。委員会や役員会の運営に関する文脈で使われます。',
   },
   {
     id: 'vocab-106',
@@ -1166,7 +1166,7 @@ export const vocabularyQuestions: SeedQuestion[] = [
     id: 'vocab-130',
     type: 'vocabulary',
     content: 'diversify the investment portfolio',
-    choices: ['分散する', '多様化する', '発展する', '相違する'],
+    choices: ['多様化する', '縮小する', '発展する', '相違する'],
     answer: '多様化する',
     explanation:
       'diversify は「多様化する、分散投資する」という意味です。投資や事業戦略の文脈で頻出します。',
@@ -1229,10 +1229,10 @@ export const vocabularyQuestions: SeedQuestion[] = [
     id: 'vocab-137',
     type: 'vocabulary',
     content: 'attract potential customers',
-    choices: ['潜在的な', '可能性のある', '有力な', '前回の'],
+    choices: ['潜在的な', '過去の', '有力な', '前回の'],
     answer: '潜在的な',
     explanation:
-      'potential は「潜在的な、可能性のある」という意味です。見込み客や将来の機会を表す文脈でTOEICに頻出します。',
+      'potential は「潜在的な」という意味です。見込み客や将来の機会を表す文脈でTOEICに頻出します。',
   },
   {
     id: 'vocab-138',

@@ -1232,16 +1232,12 @@ export const grammarQuestions: SeedQuestion[] = [
   {
     id: 'gram-127',
     type: 'grammar',
-    content: 'Please ensure that the document is _____ before submission.',
-    choices: [
-      'proofread',
-      'proofread carefully',
-      'carefully proofread',
-      'carefully proofreading',
-    ],
-    answer: 'carefully proofread',
+    content:
+      'Please ensure that the document is _____ reviewed before submission.',
+    choices: ['carefully', 'careful', 'carefulness', 'caring'],
+    answer: 'carefully',
     explanation:
-      'be動詞の後に副詞＋過去分詞の形で受動態を作ります。carefully proofread（注意深く校正された）が正解です。',
+      '過去分詞 reviewed を修飾するので副詞 carefully（注意深く）が正解です。形容詞 careful は名詞を修飾するため不可です。',
   },
   {
     id: 'gram-128',
@@ -1734,7 +1730,7 @@ export const grammarQuestions: SeedQuestion[] = [
     type: 'grammar',
     content:
       'It is _____ that all participants submit their forms before the deadline.',
-    choices: ['essential', 'essentially', 'essence', 'essentially'],
+    choices: ['essential', 'essentially', 'essence', 'essentiality'],
     answer: 'essential',
     explanation:
       'It is essential that〜 の形で「〜することが不可欠だ」という意味です。形容詞 essential が正解です。',
@@ -3021,7 +3017,7 @@ export const grammarQuestions: SeedQuestion[] = [
     choices: ['binding', 'bind', 'bound', 'binds'],
     answer: 'binding',
     explanation:
-      'be binding on〜 は「〜を拘束する・〜に義務を負わせる」という表現です。binding to both parties で「両者に対して拘束力がある」。',
+      'be binding（拘束力がある）が正解です。The terms are binding to both parties で「契約条件は両者を拘束する」という意味になります。binding は形容詞として使われています。',
   },
   {
     id: 'gram-323',
@@ -4765,7 +4761,7 @@ export const grammarQuestions: SeedQuestion[] = [
     choices: ['collaboration', 'collaborating', 'collaborate', 'collaborative'],
     answer: 'collaboration',
     explanation:
-      '前置詞 requires の後に動名詞または名詞が続きます。collaboration（協業）が正解です。',
+      '他動詞 requires の目的語として名詞 collaboration（協業）が正解です。require は名詞または動名詞を目的語に取ります。',
   },
   {
     id: 'gram-508',
@@ -9647,9 +9643,9 @@ export const grammarQuestions: SeedQuestion[] = [
     type: 'grammar',
     content:
       'The company _____ its annual revenue target by the end of September, two months ahead of schedule.',
-    choices: ['had surpassed', 'surpassed', 'has surpassed', 'surpasses'],
-    answer: 'had surpassed',
+    choices: ['surpassed', 'had surpassed', 'has surpassed', 'surpasses'],
+    answer: 'surpassed',
     explanation:
-      '過去完了（had surpassed）が正解です。過去の特定の時点（by the end of September）までに完了していた動作を表す時制です。',
+      '単純過去形（surpassed）が正解です。過去の完了した出来事を述べており、過去完了を使うには過去の別の基準点が必要ですが、この文にはそれがありません。',
   },
 ];

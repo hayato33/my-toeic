@@ -8,6 +8,10 @@ import { auth } from '@/lib/auth';
 import { DAILY_QUOTA } from '@/lib/constants';
 import { getStartOfDay, getEndOfDay } from '@/lib/date-utils';
 import { calculateStreak } from '@/lib/streak';
+import { Button } from '@/components/ui/button';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Progress } from '@/components/ui/progress';
 
 export default async function Home() {
   const session = await auth.api.getSession({ headers: await headers() });
@@ -33,54 +37,89 @@ export default async function Home() {
     DAILY_QUOTA.STUDY_QUESTIONS - answeredTodayCount,
   );
 
+  const progressPercent = Math.min(
+    100,
+    Math.round((answeredTodayCount / DAILY_QUOTA.STUDY_QUESTIONS) * 100),
+  );
+
   return (
     <main>
       <div className="mx-auto max-w-lg">
-        <h1 className="mb-8 text-3xl font-bold">ダッシュボード</h1>
-
-        <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <div className="rounded-xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-            <p className="text-sm text-zinc-500 dark:text-zinc-400">復習</p>
-            <p className="mt-1 text-3xl font-bold">{reviewCount} 問</p>
-          </div>
-          <div className="rounded-xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-            <p className="text-sm text-zinc-500 dark:text-zinc-400">新規問題</p>
-            <p className="mt-1 text-3xl font-bold">
-              残り {newQuotaRemaining} 問
-            </p>
-          </div>
-        </div>
-
-        <div className="mb-8 rounded-xl border border-zinc-200 bg-white p-4 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-          <p className="text-center text-lg">
-            🔥 連続 <span className="font-bold">{streak}</span> 日学習中
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-3">
-          <Link
-            href="/study"
-            className="block rounded-lg bg-blue-600 px-6 py-3 text-center text-white hover:bg-blue-700"
-          >
-            学習を始める
-          </Link>
-          {reviewCount === 0 ? (
-            <span className="block rounded-lg border border-zinc-300 px-6 py-3 text-center opacity-50 dark:border-zinc-700">
-              復習する
-            </span>
-          ) : (
-            <Link
-              href="/review"
-              className="block rounded-lg border border-zinc-300 px-6 py-3 text-center hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
-            >
-              復習する
-            </Link>
+        <div className="mb-8 flex items-center justify-between">
+          <h1 className="text-3xl font-bold tracking-tight">ダッシュボード</h1>
+          {streak > 0 && (
+            <Badge variant="secondary" className="gap-1 px-3 py-1 text-sm">
+              🔥 {streak} 日連続
+            </Badge>
           )}
         </div>
 
-        <p className="mt-6 text-center text-sm text-zinc-500 dark:text-zinc-400">
-          今日の学習: {answeredTodayCount} 問回答済み
-        </p>
+        <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm font-medium text-muted-foreground">
+                復習
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-3xl font-bold">{reviewCount} 問</p>
+              <p className="mt-1 text-xs text-muted-foreground">
+                {reviewCount > 0 ? '復習が溜まっています' : '復習なし'}
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm font-medium text-muted-foreground">
+                新規問題
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-3xl font-bold">残り {newQuotaRemaining} 問</p>
+              <p className="mt-1 text-xs text-muted-foreground">
+                今日の上限: {DAILY_QUOTA.STUDY_QUESTIONS} 問
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        <Card className="mb-8">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-sm font-medium text-muted-foreground">
+              今日の学習進捗
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm text-muted-foreground">
+                {answeredTodayCount} / {DAILY_QUOTA.STUDY_QUESTIONS} 問回答済み
+              </span>
+              <span className="text-sm font-semibold">{progressPercent}%</span>
+            </div>
+            <Progress value={progressPercent} className="h-2" />
+          </CardContent>
+        </Card>
+
+        <div className="flex flex-col gap-3">
+          <Button render={<Link href="/study" />} size="lg" className="w-full">
+            学習を始める
+          </Button>
+          {reviewCount === 0 ? (
+            <Button variant="outline" size="lg" className="w-full" disabled>
+              復習する
+            </Button>
+          ) : (
+            <Button
+              render={<Link href="/review" />}
+              variant="outline"
+              size="lg"
+              className="w-full"
+            >
+              復習する
+            </Button>
+          )}
+        </div>
       </div>
     </main>
   );

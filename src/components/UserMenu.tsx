@@ -1,6 +1,15 @@
 'use client';
 
 import { authClient } from '@/lib/auth-client';
+import { Button } from '@/components/ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 interface UserMenuProps {
   name: string;
@@ -18,17 +27,38 @@ export function UserMenu({ name, email }: UserMenuProps) {
     }
   }
 
+  const displayName = name || email;
+  const initial = displayName.charAt(0).toUpperCase();
+
   return (
-    <div className="flex items-center gap-3">
-      <span className="hidden text-sm text-zinc-600 dark:text-zinc-400 sm:block">
-        {name || email}
-      </span>
-      <button
-        onClick={() => void handleSignOut()}
-        className="rounded-md border border-zinc-300 px-3 py-1 text-sm hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
-      >
-        ログアウト
-      </button>
-    </div>
+    <DropdownMenu>
+      <DropdownMenuTrigger
+        render={
+          <Button variant="ghost" size="sm" className="gap-2 px-2">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-semibold text-primary-foreground">
+              {initial}
+            </span>
+            <span className="hidden max-w-[140px] truncate text-sm sm:block">
+              {displayName}
+            </span>
+          </Button>
+        }
+      />
+      <DropdownMenuContent align="end">
+        <DropdownMenuLabel className="flex flex-col gap-0.5">
+          <span className="font-medium">{name || '—'}</span>
+          <span className="text-xs font-normal text-muted-foreground">
+            {email}
+          </span>
+        </DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem
+          variant="destructive"
+          onClick={() => void handleSignOut()}
+        >
+          ログアウト
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }

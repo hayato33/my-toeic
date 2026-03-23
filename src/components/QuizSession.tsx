@@ -4,6 +4,14 @@ import { useState, useTransition } from 'react';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import type { Question } from '@/types';
+import { Button } from '@/components/ui/button';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import {
+  Progress,
+  ProgressLabel,
+  ProgressValue,
+} from '@/components/ui/progress';
 
 export type { Question };
 
@@ -108,27 +116,37 @@ export function QuizSession({
     return 'border border-zinc-200 dark:border-zinc-700 opacity-50';
   }
 
+  const progressValue =
+    questions.length > 0
+      ? Math.round((currentIndex / questions.length) * 100)
+      : 0;
+
   if (state === 'complete') {
     return (
       <main>
         <div className="mx-auto max-w-lg py-8">
-          <div className="flex flex-col items-center gap-6 py-16 text-center">
-            <p className="text-5xl">🎉</p>
-            <h1 className="text-2xl font-bold">{completeTitle}</h1>
-            {questions.length > 0 ? (
-              <p className="text-zinc-500 dark:text-zinc-400">
-                {questions.length} 問中 {correctCount} 問正解
-              </p>
-            ) : (
-              <p className="text-zinc-500 dark:text-zinc-400">{emptyMessage}</p>
-            )}
-            <Link
-              href="/"
-              className="rounded-lg bg-blue-600 px-6 py-3 text-white hover:bg-blue-700"
-            >
-              ダッシュボードに戻る
-            </Link>
-          </div>
+          <Card>
+            <CardContent className="flex flex-col items-center gap-6 py-16 text-center">
+              <p className="text-5xl">🎉</p>
+              <CardTitle className="text-2xl font-bold">
+                {completeTitle}
+              </CardTitle>
+              {questions.length > 0 ? (
+                <p className="text-muted-foreground">
+                  {questions.length} 問中{' '}
+                  <span className="font-semibold text-foreground">
+                    {correctCount} 問
+                  </span>
+                  正解
+                </p>
+              ) : (
+                <p className="text-muted-foreground">{emptyMessage}</p>
+              )}
+              <Button size="lg" render={<Link href="/" />}>
+                ダッシュボードに戻る
+              </Button>
+            </CardContent>
+          </Card>
         </div>
       </main>
     );
@@ -139,14 +157,24 @@ export function QuizSession({
   return (
     <main>
       <div className="mx-auto max-w-lg py-8">
-        <p className="mb-4 text-sm text-zinc-500 dark:text-zinc-400">
-          問題 {currentIndex + 1} / {questions.length}
-        </p>
+        {/* 進捗表示 */}
+        <Progress value={progressValue} className="mb-6">
+          <ProgressLabel>
+            問題 {currentIndex + 1} / {questions.length}
+          </ProgressLabel>
+          <ProgressValue />
+        </Progress>
 
-        <div className="mb-6 rounded-xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-          <p className="text-xl font-medium">{question.content}</p>
-        </div>
+        {/* 問題カード */}
+        <Card className="mb-6">
+          <CardHeader>
+            <CardTitle className="text-xl font-medium leading-relaxed">
+              {question.content}
+            </CardTitle>
+          </CardHeader>
+        </Card>
 
+        {/* 選択肢 */}
         <div className="mb-6 flex flex-col gap-2">
           {question.choices.map((choice, idx) => (
             <button
@@ -154,92 +182,118 @@ export function QuizSession({
               data-testid="choice"
               onClick={() => handleAnswer(choice)}
               disabled={isSubmitting || state !== 'question'}
-              className={`rounded-lg px-4 py-3 text-left transition-colors ${getChoiceClass(choice)}`}
+              className={`rounded-lg px-4 py-3 text-left text-sm transition-colors ${getChoiceClass(choice)}`}
             >
               {choice}
             </button>
           ))}
         </div>
 
+        {/* 結果・解説カード */}
         {(state === 'result' || state === 'feedback') && (
-          <div className="mb-6 rounded-xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-            <p className="mb-3 text-lg font-bold">
-              {isCorrect ? '✅ 正解！' : '❌ 不正解'}
-            </p>
-            {!isCorrect && (
-              <p className="mb-2 text-sm text-zinc-600 dark:text-zinc-400">
-                正解: {question.answer}
-                <br />
-                あなたの回答: {selectedAnswer}
-              </p>
-            )}
-            <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
-              解説:
-            </p>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">
-              {question.explanation}
-            </p>
-
-            {state === 'feedback' && feedback && (
-              <div className="mt-4 border-t border-zinc-200 pt-4 dark:border-zinc-700">
-                <p className="mb-1 text-sm font-medium text-zinc-700 dark:text-zinc-300">
-                  AI フィードバック
-                </p>
-                <div className="prose prose-sm prose-zinc dark:prose-invert max-w-none text-sm text-zinc-600 dark:text-zinc-400">
-                  <ReactMarkdown>{feedback}</ReactMarkdown>
-                </div>
+          <Card className="mb-6">
+            <CardHeader className="pb-2">
+              <div className="flex items-center gap-2">
+                {isCorrect ? (
+                  <Badge variant="default">正解</Badge>
+                ) : (
+                  <Badge variant="destructive">不正解</Badge>
+                )}
+                <span className="text-lg font-bold">
+                  {isCorrect ? '✅ 正解！' : '❌ 不正解'}
+                </span>
               </div>
-            )}
-          </div>
+            </CardHeader>
+            <CardContent className="flex flex-col gap-3">
+              {!isCorrect && (
+                <div className="rounded-lg bg-muted px-3 py-2 text-sm">
+                  <p>
+                    <span className="font-medium">正解:</span> {question.answer}
+                  </p>
+                  <p>
+                    <span className="font-medium">あなたの回答:</span>{' '}
+                    {selectedAnswer}
+                  </p>
+                </div>
+              )}
+              <div>
+                <p className="mb-1 text-sm font-medium text-foreground">
+                  解説:
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  {question.explanation}
+                </p>
+              </div>
+
+              {state === 'feedback' && feedback && (
+                <div className="border-t pt-3">
+                  <p className="mb-2 text-sm font-medium text-foreground">
+                    AI フィードバック
+                  </p>
+                  <div className="prose prose-sm prose-zinc dark:prose-invert max-w-none text-sm text-muted-foreground">
+                    <ReactMarkdown>{feedback}</ReactMarkdown>
+                  </div>
+                </div>
+              )}
+            </CardContent>
+          </Card>
         )}
 
+        {/* result 状態のアクションボタン */}
         {state === 'result' && (
           <div className="flex flex-col gap-3">
             {feedbackError && (
-              <div className="rounded-lg border border-red-300 bg-red-50 p-3 text-sm text-red-700 dark:border-red-700 dark:bg-red-900/20 dark:text-red-400">
-                フィードバックの取得に失敗しました
-                <div className="mt-2 flex gap-2">
-                  <button
-                    onClick={handleFeedback}
-                    className="rounded bg-red-600 px-3 py-1 text-white hover:bg-red-700"
-                  >
-                    再読み込み
-                  </button>
-                  <button
-                    onClick={() => setFeedbackError(false)}
-                    className="rounded border border-red-300 px-3 py-1 hover:bg-red-100 dark:border-red-700 dark:hover:bg-red-900/30"
-                  >
-                    スキップ
-                  </button>
-                </div>
-              </div>
+              <Card>
+                <CardContent className="py-3">
+                  <p className="mb-2 text-sm text-destructive">
+                    フィードバックの取得に失敗しました
+                  </p>
+                  <div className="flex gap-2">
+                    <Button
+                      variant="destructive"
+                      size="sm"
+                      onClick={handleFeedback}
+                    >
+                      再読み込み
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setFeedbackError(false)}
+                    >
+                      スキップ
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
             )}
             {!feedbackError && (
-              <button
+              <Button
+                variant="outline"
+                size="lg"
                 onClick={handleFeedback}
                 disabled={feedbackPending}
-                className="rounded-lg border border-zinc-300 px-6 py-3 hover:bg-zinc-100 disabled:opacity-50 dark:border-zinc-700 dark:hover:bg-zinc-800"
+                className="w-full"
               >
                 {feedbackPending ? '生成中...' : 'フィードバックを見る'}
-              </button>
+              </Button>
             )}
-            <button
+            <Button
+              size="lg"
               onClick={handleNext}
               disabled={feedbackPending}
-              className="rounded-lg bg-blue-600 px-6 py-3 text-white hover:bg-blue-700 disabled:opacity-50"
+              className="w-full"
             >
               次の問題へ
-            </button>
+            </Button>
           </div>
         )}
 
+        {/* feedback 状態のアクションボタン */}
         {state === 'feedback' && (
-          <button
-            onClick={handleNext}
-            className="w-full rounded-lg bg-blue-600 px-6 py-3 text-white hover:bg-blue-700"
-          >
+          <Button size="lg" onClick={handleNext} className="w-full">
             次の問題へ
-          </button>
+          </Button>
         )}
       </div>
     </main>

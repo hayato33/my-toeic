@@ -33,9 +33,12 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-background text-foreground antialiased`}
       >
-        <header className="border-b border-zinc-200 dark:border-zinc-800">
+        <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <div className="mx-auto flex max-w-4xl items-center justify-between px-4 py-3">
-            <Link href="/" className="text-lg font-bold hover:opacity-80">
+            <Link
+              href="/"
+              className="text-lg font-bold tracking-tight text-foreground hover:text-foreground/80 transition-colors"
+            >
               My TOEIC
             </Link>
             {session?.user && (

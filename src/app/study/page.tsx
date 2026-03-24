@@ -17,9 +17,17 @@ function shuffle<T>(array: T[]): T[] {
   return arr;
 }
 
-export default async function StudyPage() {
+export default async function StudyPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ type?: string }>;
+}) {
   const session = await auth.api.getSession({ headers: await headers() });
   if (!session) redirect('/login');
+
+  const { type } = await searchParams;
+  const questionType =
+    type === 'vocabulary' || type === 'grammar' ? type : undefined;
 
   const userId = session.user.id;
   const todayStart = getStartOfDay();
@@ -37,10 +45,12 @@ export default async function StudyPage() {
 
   // 今日未回答の問題を全件取得（ReviewSchedule の有無も含めて）
   const candidates = await prisma.question.findMany({
-    where:
-      answeredTodayIds.length > 0
+    where: {
+      ...(answeredTodayIds.length > 0
         ? { id: { notIn: answeredTodayIds } }
-        : undefined,
+        : {}),
+      ...(questionType ? { type: questionType } : {}),
+    },
     include: {
       reviewSchedules: {
         where: { userId },

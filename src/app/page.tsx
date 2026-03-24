@@ -101,25 +101,52 @@ export default async function Home() {
           </CardContent>
         </Card>
 
-        <div className="flex flex-col gap-3">
-          <Button render={<Link href="/study" />} size="lg" className="w-full">
-            学習を始める
-          </Button>
-          {reviewCount === 0 ? (
-            <Button variant="outline" size="lg" className="w-full" disabled>
-              復習する
-            </Button>
-          ) : (
-            <Button
-              render={<Link href="/review" />}
-              variant="outline"
-              size="lg"
-              className="w-full"
-            >
-              復習する
-            </Button>
-          )}
+        <div className="mb-6">
+          <p className="mb-3 text-sm font-medium text-muted-foreground">
+            学習モードを選択
+          </p>
+          <div className="grid grid-cols-3 gap-3">
+            <Link href="/study?type=vocabulary" className="block">
+              <Card className="cursor-pointer transition-colors hover:bg-muted/50">
+                <CardContent className="flex flex-col items-center gap-2 py-6 text-center">
+                  <span className="text-2xl">📚</span>
+                  <span className="text-sm font-medium">単語</span>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/study?type=grammar" className="block">
+              <Card className="cursor-pointer transition-colors hover:bg-muted/50">
+                <CardContent className="flex flex-col items-center gap-2 py-6 text-center">
+                  <span className="text-2xl">✏️</span>
+                  <span className="text-sm font-medium">文法</span>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/study" className="block">
+              <Card className="cursor-pointer transition-colors hover:bg-muted/50">
+                <CardContent className="flex flex-col items-center gap-2 py-6 text-center">
+                  <span className="text-2xl">🎲</span>
+                  <span className="text-sm font-medium">ごちゃまぜ</span>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
         </div>
+
+        {reviewCount === 0 ? (
+          <Button variant="outline" size="lg" className="w-full" disabled>
+            復習する
+          </Button>
+        ) : (
+          <Button
+            render={<Link href="/review" />}
+            variant="outline"
+            size="lg"
+            className="w-full"
+          >
+            復習する
+          </Button>
+        )}
       </div>
     </main>
   );

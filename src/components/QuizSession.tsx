@@ -166,10 +166,25 @@ export function QuizSession({
         </Progress>
 
         {/* 問題カード */}
+        {question.type === 'vocabulary' && (
+          <p className="mb-3 text-sm text-muted-foreground">
+            太字の語句の意味を選んでください
+          </p>
+        )}
         <Card className="mb-6">
           <CardHeader>
             <CardTitle className="text-xl font-medium leading-relaxed">
-              {question.content}
+              {question.type === 'vocabulary' ? (
+                <>
+                  <strong className="underline">
+                    {question.content.split(' ')[0]}
+                  </strong>
+                  {question.content.includes(' ') &&
+                    ' ' + question.content.split(' ').slice(1).join(' ')}
+                </>
+              ) : (
+                question.content
+              )}
             </CardTitle>
           </CardHeader>
         </Card>

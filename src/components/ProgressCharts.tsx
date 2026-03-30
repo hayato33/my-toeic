@@ -48,7 +48,7 @@ export function ProgressCharts({ data }: { data: ProgressData }) {
         {/* 7日おきに X軸ラベル */}
         <div className="mt-1 flex justify-between text-xs text-muted-foreground">
           {dailyActivity
-            .filter((_, i) => i % 7 === 0 || i === 29)
+            .filter((_, i) => i % 7 === 0 || i === dailyActivity.length - 1)
             .map((d) => (
               <span key={d.date}>{d.date}</span>
             ))}

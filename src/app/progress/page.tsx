@@ -21,12 +21,12 @@ type TypeRow = {
   correct: number;
 };
 
-function buildDailyActivity(rows: DailyRow[]): DailyActivity[] {
+function buildDailyActivity(rows: DailyRow[], now: number): DailyActivity[] {
   const map = new Map(rows.map((r) => [r.answer_date, r]));
   const result: DailyActivity[] = [];
 
   for (let i = 29; i >= 0; i--) {
-    const d = getStartOfDay(new Date(Date.now() - i * 24 * 60 * 60 * 1000));
+    const d = getStartOfDay(new Date(now - i * 24 * 60 * 60 * 1000));
     const dateStr = d.toISOString().split('T')[0];
     const entry = map.get(dateStr) ?? { correct: 0, incorrect: 0 };
 
@@ -65,9 +65,8 @@ export default async function ProgressPage() {
   if (!session) redirect('/login');
 
   const userId = session.user.id;
-  const thirtyDaysAgo = getStartOfDay(
-    new Date(Date.now() - 29 * 24 * 60 * 60 * 1000),
-  );
+  const now = Date.now();
+  const thirtyDaysAgo = getStartOfDay(new Date(now - 29 * 24 * 60 * 60 * 1000));
 
   const [dailyRows, typeRows] = await Promise.all([
     prisma.$queryRaw<DailyRow[]>`
@@ -91,7 +90,7 @@ export default async function ProgressPage() {
     `,
   ]);
 
-  const dailyActivity = buildDailyActivity(dailyRows);
+  const dailyActivity = buildDailyActivity(dailyRows, now);
   const typeStats = buildTypeStats(typeRows);
   const total = typeStats.reduce((s, t) => s + t.total, 0);
   const correct = typeStats.reduce((s, t) => s + t.correct, 0);

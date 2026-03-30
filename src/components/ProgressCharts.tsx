@@ -13,11 +13,7 @@ export function ProgressCharts({ data }: { data: ProgressData }) {
         <CardTitle>過去30日の学習記録</CardTitle>
       </CardHeader>
       <CardContent>
-        <svg
-          viewBox="0 0 300 100"
-          className="h-40 w-full"
-          aria-label="過去30日の正解・不正解数"
-        >
+        <svg viewBox="0 0 300 100" className="h-40 w-full" aria-hidden="true">
           {dailyActivity.map((day, i) => {
             const barW = 8;
             const gap = 2;
@@ -53,6 +49,26 @@ export function ProgressCharts({ data }: { data: ProgressData }) {
               <span key={d.date}>{d.date}</span>
             ))}
         </div>
+        {/* スクリーンリーダー向け隠しテーブル */}
+        <table className="sr-only">
+          <caption>過去30日の正解・不正解数</caption>
+          <thead>
+            <tr>
+              <th scope="col">日付</th>
+              <th scope="col">正解</th>
+              <th scope="col">不正解</th>
+            </tr>
+          </thead>
+          <tbody>
+            {dailyActivity.map((day) => (
+              <tr key={day.date}>
+                <td>{day.date}</td>
+                <td>{day.correct}</td>
+                <td>{day.incorrect}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
         {/* 凡例 */}
         <div className="mt-2 flex gap-4 text-xs text-muted-foreground">
           <span className="flex items-center gap-1">

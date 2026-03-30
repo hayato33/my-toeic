@@ -42,10 +42,18 @@ export default async function RootLayout({
               My TOEIC
             </Link>
             {session?.user && (
-              <UserMenu
-                name={session.user.name ?? ''}
-                email={session.user.email}
-              />
+              <div className="flex items-center gap-4">
+                <Link
+                  href="/progress"
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  記録
+                </Link>
+                <UserMenu
+                  name={session.user.name ?? ''}
+                  email={session.user.email}
+                />
+              </div>
             )}
           </div>
         </header>

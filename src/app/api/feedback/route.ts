@@ -92,12 +92,12 @@ export async function POST(request: NextRequest) {
     let feedback = text;
     let translation: string | null = null;
     try {
-      const parsed = JSON.parse(text) as {
-        translation?: string;
-        feedback?: string;
-      };
-      feedback = parsed.feedback ?? text;
-      translation = parsed.translation ?? null;
+      const parsed: unknown = JSON.parse(text);
+      if (parsed !== null && typeof parsed === 'object') {
+        const obj = parsed as Record<string, unknown>;
+        if (typeof obj.feedback === 'string') feedback = obj.feedback;
+        if (typeof obj.translation === 'string') translation = obj.translation;
+      }
     } catch {
       // JSON解析失敗時はそのままfeedbackとして扱う
     }

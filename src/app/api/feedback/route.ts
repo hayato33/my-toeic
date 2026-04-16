@@ -87,9 +87,22 @@ export async function POST(request: NextRequest) {
       Array.isArray(message.content) && message.content.length > 0
         ? message.content[0]
         : null;
-    const feedback = firstContent?.type === 'text' ? firstContent.text : '';
+    const text = firstContent?.type === 'text' ? firstContent.text : '';
 
-    return NextResponse.json({ feedback });
+    let feedback = text;
+    let translation: string | null = null;
+    try {
+      const parsed = JSON.parse(text) as {
+        translation?: string;
+        feedback?: string;
+      };
+      feedback = parsed.feedback ?? text;
+      translation = parsed.translation ?? null;
+    } catch {
+      // JSON解析失敗時はそのままfeedbackとして扱う
+    }
+
+    return NextResponse.json({ feedback, translation });
   } catch {
     return NextResponse.json(
       { error: 'フィードバックの生成に失敗しました。' },

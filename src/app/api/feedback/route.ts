@@ -89,6 +89,13 @@ export async function POST(request: NextRequest) {
         : null;
     const text = firstContent?.type === 'text' ? firstContent.text : '';
 
+    if (!text.trim()) {
+      return NextResponse.json(
+        { error: 'フィードバックの生成結果が空です。' },
+        { status: 502 },
+      );
+    }
+
     let feedback = text;
     let translation: string | null = null;
     try {

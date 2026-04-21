@@ -27,6 +27,6 @@ export function buildFeedbackPrompt(params: FeedbackPromptParams): string {
 以下のJSON形式で回答してください（マークダウンコードブロック不要）:
 {
   "translation": "問題文の自然な日本語訳",
-  "feedback": "以下の観点で3〜5文程度の日本語フィードバック:\\n${feedbackPoints.replace(/\n/g, '\\\\n')}"
+  "feedback": "以下の観点で3〜5文程度の日本語フィードバック:\\n${feedbackPoints.replace(/\n/g, '\\n')}"
 }`;
 }

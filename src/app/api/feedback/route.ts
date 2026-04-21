@@ -87,9 +87,29 @@ export async function POST(request: NextRequest) {
       Array.isArray(message.content) && message.content.length > 0
         ? message.content[0]
         : null;
-    const feedback = firstContent?.type === 'text' ? firstContent.text : '';
+    const text = firstContent?.type === 'text' ? firstContent.text : '';
 
-    return NextResponse.json({ feedback });
+    if (!text.trim()) {
+      return NextResponse.json(
+        { error: 'フィードバックの生成結果が空です。' },
+        { status: 502 },
+      );
+    }
+
+    let feedback = text;
+    let translation: string | null = null;
+    try {
+      const parsed: unknown = JSON.parse(text);
+      if (parsed !== null && typeof parsed === 'object') {
+        const obj = parsed as Record<string, unknown>;
+        if (typeof obj.feedback === 'string') feedback = obj.feedback;
+        if (typeof obj.translation === 'string') translation = obj.translation;
+      }
+    } catch {
+      // JSON解析失敗時はそのままfeedbackとして扱う
+    }
+
+    return NextResponse.json({ feedback, translation });
   } catch {
     return NextResponse.json(
       { error: 'フィードバックの生成に失敗しました。' },

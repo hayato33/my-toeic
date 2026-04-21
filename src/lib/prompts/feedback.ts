@@ -15,7 +15,7 @@ export function buildFeedbackPrompt(params: FeedbackPromptParams): string {
     ? '- なぜこれが正解なのか簡単な補足\n- 関連する表現や覚え方のヒント'
     : '- なぜ間違えたのかの分析\n- 正解の覚え方のヒント\n- 似た表現との違い';
 
-  return `あなたはTOEIC学習のチューターです。以下の問題に対するフィードバックを日本語で簡潔に提供してください。
+  return `あなたはTOEIC学習のチューターです。以下の問題に対して、JSON形式で回答してください。
 
 問題タイプ: ${typeLabel}
 問題: ${content}
@@ -24,8 +24,9 @@ export function buildFeedbackPrompt(params: FeedbackPromptParams): string {
 ユーザーの回答: ${userAnswer}
 結果: ${resultLabel}
 
-以下の観点でフィードバックしてください:
-${feedbackPoints}
-
-3〜5文程度で簡潔にお願いします。`;
+以下のJSON形式で回答してください（マークダウンコードブロック不要）:
+{
+  "translation": "問題文の自然な日本語訳",
+  "feedback": "以下の観点で3〜5文程度の日本語フィードバック:\\n${feedbackPoints.replace(/\n/g, '\\n')}"
+}`;
 }

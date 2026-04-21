@@ -35,6 +35,7 @@ export function QuizSession({
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
   const [feedback, setFeedback] = useState<string | null>(null);
+  const [translation, setTranslation] = useState<string | null>(null);
   const [feedbackPending, startFeedbackTransition] = useTransition();
   const [feedbackError, setFeedbackError] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
@@ -81,6 +82,7 @@ export function QuizSession({
 
         const data = await res.json();
         setFeedback(data.feedback);
+        setTranslation(data.translation ?? null);
         setState('feedback');
       } catch {
         setFeedbackError(true);
@@ -96,6 +98,7 @@ export function QuizSession({
       setSelectedAnswer(null);
       setIsCorrect(null);
       setFeedback(null);
+      setTranslation(null);
       setFeedbackError(false);
       setState('question');
     }
@@ -240,15 +243,29 @@ export function QuizSession({
                 </p>
               </div>
 
-              {state === 'feedback' && feedback && (
-                <div className="border-t pt-3">
-                  <p className="mb-2 text-sm font-medium text-foreground">
-                    AI フィードバック
-                  </p>
-                  <div className="prose prose-sm prose-zinc dark:prose-invert max-w-none text-sm text-muted-foreground">
-                    <ReactMarkdown>{feedback}</ReactMarkdown>
-                  </div>
-                </div>
+              {state === 'feedback' && (
+                <>
+                  {translation && (
+                    <div className="border-t pt-3">
+                      <p className="mb-2 text-sm font-medium text-foreground">
+                        日本語訳
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        {translation}
+                      </p>
+                    </div>
+                  )}
+                  {feedback && (
+                    <div className="border-t pt-3">
+                      <p className="mb-2 text-sm font-medium text-foreground">
+                        AI フィードバック
+                      </p>
+                      <div className="prose prose-sm prose-zinc dark:prose-invert max-w-none text-sm text-muted-foreground">
+                        <ReactMarkdown>{feedback}</ReactMarkdown>
+                      </div>
+                    </div>
+                  )}
+                </>
               )}
             </CardContent>
           </Card>
